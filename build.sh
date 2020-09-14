@@ -2,7 +2,7 @@
 
 set -e
 
-DEPLOY_REPO="https://${DEPLOY_BLOG_TOKEN}@github.com/hoanganhduc/hoanganhduc.github.io.git"
+DEPLOY_REPO="https://${DEPLOY_TOKEN}@github.com/hoanganhduc/hoanganhduc.github.io.git"
 
 function build_jekyll_site () {
 	bundle exec jekyll build --config _config.yml
