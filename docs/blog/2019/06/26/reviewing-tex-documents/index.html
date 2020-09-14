@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html  lang="en" >
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Reviewing TeX Documents </title>
+	
+	
+	<meta name="description" content="This post contains some information collected by Duc A. Hoang on reviewing and editing TeX documents">
+	
+	
+	<meta name="author" content="Duc A. Hoang">
+	
+	
+	<meta name="keywords" content="tex, easyReview, edit, Duc A. Hoang">
+	
+	
+	<meta name="generator" content="Jekyll, MathJax, Travis CI">
+	<meta name="google-site-verification" content="kVN3FDkRoOErNs0auO3-jBDYtW4xzFqVGBCiugmymHM">
+	
+	<!-- Personal CSS configuration -->
+	<link rel="stylesheet" href="/static/css/custom.css">
+
+	
+	<!-- MathJax -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		tex2jax: {
+		inlineMath: [['$','$'], ['\\(','\\)']],
+		processEscapes: true
+		}
+		});
+	</script>
+	
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/static/img/Duc.ico" type='image/x-icon'>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+</head>
+
+
+<body>
+
+<div class="container">
+
+<!-- Navigation -->
+<!-- <table style="border-collapse: separate;">
+  <tr>
+  	
+    <th style="padding: 15px; background-color: #A3E4D7;"> 
+    	<a href="/"><span style="font-size: 20pt;">Home</span></a>
+    </th>
+    
+    <th style="padding: 15px; background-color: #A3E4D7;"> 
+    	<a href="/about/"><span style="font-size: 20pt;">About</span></a>
+    </th>
+    
+    <th style="padding: 15px; background-color: #A3E4D7;"> 
+    	<a href="/activities/"><span style="font-size: 20pt;">Activities</span></a>
+    </th>
+    
+    <th style="padding: 15px; background-color: #A3E4D7;"> 
+    	<a href="/publications/"><span style="font-size: 20pt;">Publications</span></a>
+    </th>
+    
+    <th style="padding: 15px; background-color: #A3E4D7;"> 
+    	<a href="/events/"><span style="font-size: 20pt;">Events</span></a>
+    </th>
+    
+    <th style="padding: 15px; background-color: #A3E4D7;"> 
+    	<a href="/teaching/"><span style="font-size: 20pt;">Teaching</span></a>
+    </th>
+    
+    <th style="padding: 15px; background-color: #A3E4D7;"> 
+    	<a href="/misc/"><span style="font-size: 20pt;">Misc</span></a>
+    </th>
+    
+  </tr>
+</table> -->
+
+<!--
+<div style="text-align: center;">
+
+<span style="font-size: 20pt;">[<a href="/"><strong>Home</strong></a>]&emsp;</span>
+
+<span style="font-size: 20pt;">[<a href="/about/"><strong>About</strong></a>]&emsp;</span>
+
+<span style="font-size: 20pt;">[<a href="/activities/"><strong>Activities</strong></a>]&emsp;</span>
+
+<span style="font-size: 20pt;">[<a href="/publications/"><strong>Publications</strong></a>]&emsp;</span>
+
+<span style="font-size: 20pt;">[<a href="/events/"><strong>Events</strong></a>]&emsp;</span>
+
+<span style="font-size: 20pt;">[<a href="/teaching/"><strong>Teaching</strong></a>]&emsp;</span>
+
+<span style="font-size: 20pt;">[<a href="/misc/"><strong>Misc</strong></a>]&emsp;</span>
+
+</div>
+
+<hr>
+-->
+
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<h1>Reviewing TeX Documents</h1>
+<div style="text-align: right	;">
+<strong>Created:</strong> 2019-06-26 &emsp;
+
+<strong>Category:</strong> tex &emsp; 
+<a href="#" onclick="window.print();return false;">Print this page</a> &emsp;
+<a href="/">Back to Home</a>
+</div>
+<hr>
+
+<div class="alert alert-info">
+  <h1 class="alert-heading">Summary</h1>
+  <p>This post contains some information I collected on reviewing and editing \(\TeX\) documents.</p>
+</div>
+
+<h1><code class="highlighter-rouge">latexdiff</code></h1>
+
+<p><code class="highlighter-rouge">latexdiff</code> is a Perl script for vi­sual mark up and re­vi­sion of sig­nif­i­cant dif­fer­ences be­tween two $\LaTeX$ files. A short introduction on how to use <code class="highlighter-rouge">latexdiff</code> can be found <a href="https://www.overleaf.com/learn/latex/Articles/Using_Latexdiff_For_Marking_Changes_To_Tex_Documents">here</a>.</p>
+
+<h1><code class="highlighter-rouge">easyReview</code> package</h1>
+
+<p>Another option for editing $\TeX$ documents is to use the <a href="https://ctan.org/pkg/easyreview"><code class="highlighter-rouge">easyReview</code> package</a>. See the package’s <a href="http://mirrors.ctan.org/macros/latex/contrib/easyreview/doc/easyReview.pdf">documentation</a> to know how to use this package.</p>
+
+<h1><code class="highlighter-rouge">todonotes</code> package</h1>
+
+<p>The <a href="https://ctan.org/pkg/todonotes"><code class="highlighter-rouge">todonotes</code> pack­age</a> allows the user to mark things to do later, in a sim­ple and vi­su­ally ap­peal­ing way. See its <a href="http://ftp.jaist.ac.jp/pub/CTAN/macros/latex/contrib/todonotes/todonotes.pdf">documentation</a> for more information.</p>
+
+<h1><code class="highlighter-rouge">minorrevision</code> package</h1>
+
+<p>The <a href="https://ctan.org/pkg/minorrevision"><code class="highlighter-rouge">minorrevision</code> package</a> sup­ports those who pub­lish ar­ti­cles in peer-re­viewed jour­nals. In the fi­nal stages of the re­view pro­cess, the au­thors typ­i­cally have to pro­vide an ad­di­tional doc­u­ment (such as a let­ter to the ed­i­tors), in which they pro­vide a list of mod­i­fi­ca­tions that they made to the manuscript. The pack­age au­to­mat­i­cally pro­vides line num­bers and quo­ta­tions from the manuscript, for this let­ter.
+The pack­age loads the pack­age <a href="https://ctan.org/pkg/lineno"><code class="highlighter-rouge">lineno</code></a>, so (in ef­fect) shares <code class="highlighter-rouge">lineno</code>’s in­com­pat­i­bil­i­ties.</p>
+
+
+<hr>
+
+<div>
+	<span style="float: right;">
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+		<a href="https://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border:0;width:88px;height:31px"
+				src="/static/img/vcss"
+				alt="Valid CSS!">
+		</a>
+		<a href="https://validator.w3.org/check?uri=referer">
+			<img src="/static/img/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88">
+		</a>
+	</span>
+	<a href="#">
+	Back to Top
+	</a>
+	<br>Powered by <a href="https://jekyllrb.com/">Jekyll</a>
+	<br>The content on this site is shared under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 license</a>, unless otherwise noted
+</div>
+  
+
+	
+</div>
+</div>
+</div>
+
+</body>
+</html>
+
+

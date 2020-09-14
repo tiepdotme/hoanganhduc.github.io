@@ -1,0 +1,10 @@
+---
+---
+
+{{ reference }}
+
+{% if entry.bibbase_note %}
+<div>{{ entry.bibbase_note }}</div>
+{% endif %}
+
+{% if entry.doi %} [<a href="{{ entry.doi | prepend: 'https://doi.org/'}}">DOI</a>] {% endif %} {% if entry.url_arxiv %} [<a href="{{ entry.url_arxiv }}">ArXiv</a>] {% endif %} {% if entry.url_hdl %} [<a href="{{ entry.url_hdl }}">HDL</a>] {% endif %} {% if entry.url_slides %} [<a href="{{ site.baseurl }}/{{ entry.url_slides }}">Slides</a>] {% endif %} {% if entry.url_video %} [<a href="{{ entry.url_video }}">Video</a>] {% endif %} {% if entry.url_paper %} [<a href="{{ site.baseurl }}/{{ entry.url_paper }}">PDF</a>] {% endif %}

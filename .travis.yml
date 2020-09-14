@@ -1,0 +1,32 @@
+language: ruby
+dist: xenial
+rvm:
+  - 2.6.5
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
+    - python
+    - secure-delete # for deleting `PGP-key.asc` after importing
+sudo: true # route your build to the container-based infrastructure for a faster build
+#services:
+#  - docker
+cache: bundler
+before_script:
+# - docker pull hoanganhduc/workspace
+ - wget http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2016d-0ubuntu0.16.04_all.deb && sudo dpkg -i tzdata_2016d-0ubuntu0.16.04_all.deb && rm -rf tzdata_2016d-0ubuntu0.16.04_all.deb
+ - chmod +x build.sh # or do this locally and commit
+ - gem install bundler -v 2.0.2
+ - bundle install
+ - openssl aes-256-cbc -K $encrypted_5a5211807c5e_key -iv $encrypted_5a5211807c5e_iv -in PGP-key.asc.enc -out PGP-key.asc -d
+ - gpg2 --import PGP-key.asc
+ - srm -rvf PGP-key.asc
+ - git config --global user.name 'Duc A. Hoang'
+ - git config --global user.email 'anhduc.hoang1990@gmail.com'
+ - git config --global gpg.program gpg2
+ - git config --global user.signingkey D4E51506
+ - export TZ=Asia/Tokyo
+script:
+#- docker run -ti -v $(pwd):/tmp hoanganhduc/workspace /bin/sh -c "cd /tmp/_includes/events/WALCOM2017/note/ && bash generate.sh pdf all && bash generate.sh html all"
+#- docker ps -a
+- "./build.sh"

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html {% if page.lang %} lang="{{ page.lang }}" {% else %} lang="en" {% endif %}>
+
+{% include head.html %}
+
+<body>
+
+<div class="container">
+
+<!-- Navigation -->
+<!-- <table style="border-collapse: separate;">
+  <tr>
+  	{% for nav in site.data.navbar %}
+    <th style="padding: 15px; background-color: #A3E4D7;"> 
+    	<a href="{{ nav.href }}"><span style="font-size: 20pt;">{{ nav.title }}</span></a>
+    </th>
+    {% endfor %}
+  </tr>
+</table> -->
+
+<!--
+<div style="text-align: center;">
+{% for nav in site.data.navbar %}
+<span style="font-size: 20pt;">[<a href="{{ nav.href }}"><strong>{{ nav.title }}</strong></a>]&emsp;</span>
+{% endfor %}
+</div>
+
+<hr>
+-->
+
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<h1>{{ page.title }}</h1>
+<div style="text-align: right	;">
+<strong>{% if page.lang == "vi" %}Khởi tạo{% else %}Created{% endif %}:</strong> {{ page.date | date: '%Y-%m-%d' }} &emsp;
+{% if page.updated %} <strong>{% if page.lang == "vi" %}Cập nhật{% else %}Updated{% endif %}:</strong> {{ page.updated | date: '%Y-%m-%d' }} &emsp; {% endif %}
+{% if page.categories %}<strong>{% if page.lang == "vi" %}Phân loại{% else %}Category{% endif %}:</strong> {{ page.categories | join: ', ' }} &emsp; {% endif %}
+<a href="#" onclick="window.print();return false;">{% if page.lang == "vi" %}In trang này{% else %}Print this page{% endif %}</a> &emsp;
+<a href="{{ site.baseurl }}/">{% if page.lang == "vi" %}Trở lại trang chủ{% else %}Back to Home{% endif %}</a>
+</div>
+<hr>
+
+{{ content }}
+
+<hr>
+
+{% include footer.html %}
+	
+</div>
+</div>
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,41 @@
+<header>
+	<nav class="navbar-expand-lg navbar-light fixed-top">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+	<!--	<a class="navbar-brand" href="#">Navbar</a>-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+		{% for nav in site.data.navbar %}
+		{% if nav.sub-item != null %}
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="{{ nav.href }}" id="navbarDropdown{{ nav.title | replace:' ','' }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<i class="{{ nav.fa-icon }}" aria-hidden="true"></i> {{ nav.title }}
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown{{ nav.title | replace:' ','' }}">
+			{% for item in nav.sub-item %}
+			<a class="dropdown-item" href="{{ item.sub-href }}"><i class="{{ item.sub-fa-icon }}" aria-hidden="true"></i> {{ item.sub-title }}</a>
+			{% endfor %}
+			</div>
+		</li>
+		{% else %}
+			{% if page.url == nav.href %}
+			<li class="nav-item active"><a class="nav-link" href="{{ nav.href }}"><i class="{{ nav.fa-icon }}" aria-hidden="true"></i> {{ nav.title }}</a></li>
+			{% else %}
+			<li class="nav-item"><a class="nav-link" href="{{ nav.href }}"><i class="{{ nav.fa-icon }}" aria-hidden="true"></i> {{ nav.title }}</a></li>
+			{% endif %}
+		{% endif %}
+		{% endfor %}
+		</ul>
+	<!--	<ul class="navbar-nav">-->
+	<!--	<li class="nav-item"><a class="nav-link" href="https://github.com/hoanganhduc/hoanganhduc.github.io/tree/source" data-toggle="tooltip" data-placement="bottom" title="Source"><i class="fas fa-download"></i></a></li>-->
+	<!--	<li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/feed.xml" data-toggle="tooltip" data-placement="bottom" title="Blog RSS Feed"><i class="fas fa-rss-square"></i></a></li>-->
+	<!--	<li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/sitemap.xml" data-toggle="tooltip" data-placement="bottom" title="Sitemap"><i class="fas fa-sitemap"></i></a></li>-->
+	<!--	</ul>-->
+		</div>
+	</div>
+	</nav>
+	</header>

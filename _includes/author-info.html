@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-xs-12 col-sm-3 col md-3 col-lg-3">
+		<p style="text-align: center;">
+		<img src="{{ site.baseurl }}/static/img/Duc.jpg" alt="Duc A. Hoang (December 06, 2019)" title="Duc A. Hoang (January 18, 2020)" style="width:210px;">
+		</p>
+	</div>
+	<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+		<h1>{{ site.auth_current_position }}</h1>
+		<ul>
+			<li><strong>Email (work):</strong> <span style="font-family: monospace;">{{ site.email_work }}</span> </li>
+			<li><strong>Email (personal):</strong> <span style="font-family: monospace;">{{ site.email_personal }}</span> </li>
+			<!-- <li><strong>Web:</strong> <a href="{{ site.baseurl }}">{{ site.website }}</a> </li> -->
+			<li><strong>Institution:</strong> {{ site.institute_address }} </li>
+			<li><strong>Curriculum Vitae (PDF):</strong> [<a href="{{ site.baseurl }}/CV.pdf">English</a>] [<a href="{{ site.baseurl }}/CV-vi.pdf">Tiếng Việt</a>] </li>
+			<li><strong>ORCID:</strong> <a href="https://orcid.org/{{ site.orcid }}">orcid.org/{{ site.orcid }}</a> </li>
+			<li><strong>Research Interests:</strong> {{ site.interests }} </li>
+		</ul>
+	</div>
+</div>
