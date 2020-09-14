@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
 </head>
 
 
@@ -121,7 +121,7 @@
 
 <p>Run the following command in Windows command prompt under administrator.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 </code></pre></div></div>
 
 <p>Close the command prompt.</p>
@@ -130,19 +130,19 @@
 
 <p>Run the following commands in Windows command prompt under administrator.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>choco install ruby -y
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>choco install ruby -y
 </code></pre></div></div>
 
-<p>Since I’ve already got my own <code class="highlighter-rouge">Gemfile</code> and <code class="highlighter-rouge">Gemfile.lock</code> files, I install Jekyll and all other dependencies using <code class="highlighter-rouge">bundler</code>. Please note that the version of <code class="highlighter-rouge">bundler</code> should match the version indicated in the <code class="highlighter-rouge">Gemfile.lock</code> file (otherwise, you may get some error message saying <code class="highlighter-rouge">can't find gem bundler (&gt;= 0.a) with executable bundler (Gem::GemNotFoundException)</code>).</p>
+<p>Since I’ve already got my own <code class="language-plaintext highlighter-rouge">Gemfile</code> and <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> files, I install Jekyll and all other dependencies using <code class="language-plaintext highlighter-rouge">bundler</code>. Please note that the version of <code class="language-plaintext highlighter-rouge">bundler</code> should match the version indicated in the <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> file (otherwise, you may get some error message saying <code class="language-plaintext highlighter-rouge">can't find gem bundler (&gt;= 0.a) with executable bundler (Gem::GemNotFoundException)</code>).</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler -v 1.14.6
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler -v 1.14.6
 # Move to the folder that contains `Gemfile` and `Gemfile.lock`
 bundle install
 </code></pre></div></div>
 
-<p>The content of my file <code class="highlighter-rouge">Gemfile</code></p>
+<p>The content of my file <code class="language-plaintext highlighter-rouge">Gemfile</code></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source 'https://rubygems.org'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source 'https://rubygems.org'
 
 gem 'jekyll'
 gem 'rouge'
@@ -155,9 +155,9 @@ gem 'jekyll-feed'
 gem 'jekyll-email-protect'
 </code></pre></div></div>
 
-<p>The content of my file <code class="highlighter-rouge">Gemfile.lock</code></p>
+<p>The content of my file <code class="language-plaintext highlighter-rouge">Gemfile.lock</code></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GEM
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.5.1)
@@ -251,23 +251,23 @@ BUNDLED WITH
 
 <h3>If you get an error about SSL, here is how to fix it</h3>
 
-<p>Download <a href="https://rubygems.org/downloads/rubygems-update-2.6.7.gem">rubygems-update-2.6.7.gem</a> to the folder <code class="highlighter-rouge">%USERPROFILE%\Downloads</code> (indeed you can save it to any folder you like). Then, open a command prompt as administrator and move to the folder using the <code class="highlighter-rouge">cd</code> command, and run the following</p>
+<p>Download <a href="https://rubygems.org/downloads/rubygems-update-2.6.7.gem">rubygems-update-2.6.7.gem</a> to the folder <code class="language-plaintext highlighter-rouge">%USERPROFILE%\Downloads</code> (indeed you can save it to any folder you like). Then, open a command prompt as administrator and move to the folder using the <code class="language-plaintext highlighter-rouge">cd</code> command, and run the following</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install --local rubygems-update-2.6.7.gem
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install --local rubygems-update-2.6.7.gem
 update_rubygems --no-ri --no-rdoc
 </code></pre></div></div>
 
-<p>After this, run <code class="highlighter-rouge">gem --version</code> to see the new update version.
-Then, uninstall <code class="highlighter-rouge">rubygems-update</code> gem using the command</p>
+<p>After this, run <code class="language-plaintext highlighter-rouge">gem --version</code> to see the new update version.
+Then, uninstall <code class="language-plaintext highlighter-rouge">rubygems-update</code> gem using the command</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem uninstall rubygems-update -x
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem uninstall rubygems-update -x
 </code></pre></div></div>
 
-<h3>If you get an error when installing <code class="highlighter-rouge">unicode</code> gem</h3>
+<h3>If you get an error when installing <code class="language-plaintext highlighter-rouge">unicode</code> gem</h3>
 
 <p>I got the following error</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR:  Error installing jekyll:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ERROR:  Error installing jekyll:
         The 'unicode' native gem requires installed build tools.
 
 Please update your PATH to include build tools or download the DevKit
@@ -275,22 +275,22 @@ from 'http://rubyinstaller.org/downloads' and follow the instructions
 at 'http://github.com/oneclick/rubyinstaller/wiki/Development-Kit'
 </code></pre></div></div>
 
-<p>To fix this, first you need to check the installed Ruby (which version?) and your OS (32-bit or 64-bit?) to download the suitable <a href="http://rubyinstaller.org/downloads/">development kit</a>. Then, extract the file to some folder, in my case <code class="highlighter-rouge">%USERPROFILE%\DevKit</code>. Then, move to this folder in the command prompt under administrator, and run the followings.</p>
+<p>To fix this, first you need to check the installed Ruby (which version?) and your OS (32-bit or 64-bit?) to download the suitable <a href="http://rubyinstaller.org/downloads/">development kit</a>. Then, extract the file to some folder, in my case <code class="language-plaintext highlighter-rouge">%USERPROFILE%\DevKit</code>. Then, move to this folder in the command prompt under administrator, and run the followings.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby dk.rb init # For generating the config.yml file
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby dk.rb init # For generating the config.yml file
 ruby dk.rb install
 </code></pre></div></div>
 
-<p>In case you use <strong>Windows 64-bit</strong>, before running the commands, you need to edit the file <code class="highlighter-rouge">dk.rb</code> (say, using Notepad++) by changing the <code class="highlighter-rouge">REG_KEYS</code> array to</p>
+<p>In case you use <strong>Windows 64-bit</strong>, before running the commands, you need to edit the file <code class="language-plaintext highlighter-rouge">dk.rb</code> (say, using Notepad++) by changing the <code class="language-plaintext highlighter-rouge">REG_KEYS</code> array to</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REG_KEYS = [
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REG_KEYS = [
     'Software\RubyInstaller\MRI',
     'Software\RubyInstaller\Rubinius',
     'Software\Wow6432Node\RubyInstaller\MRI'
 ]
 </code></pre></div></div>
 
-<p>Then, just simply run <code class="highlighter-rouge">bundle install</code> again.</p>
+<p>Then, just simply run <code class="language-plaintext highlighter-rouge">bundle install</code> again.</p>
 
 <h2>Install Ruby with Cygwin (updated 2018-11-10)</h2>
 
@@ -300,14 +300,14 @@ ruby dk.rb install
   <li>Install some necessary packages</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-cyg install git gcc-core gcc-g++ make zlib-devel curl autoconf libiconv libiconv-devel rsync patch unzip openssh openssl-devel libxml2-devel libxslt-devel libffi-devel libgdbm-devel libreadline-devel
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-cyg install git gcc-core gcc-g++ make zlib-devel curl autoconf libiconv libiconv-devel rsync patch unzip openssh openssl-devel libxml2-devel libxslt-devel libffi-devel libgdbm-devel libreadline-devel
 </code></pre></div></div>
 
 <ul>
   <li>Install <a href="https://github.com/rbenv/rbenv">rbenv</a></li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bash_profile
 ~/.rbenv/bin/rbenv init
 </code></pre></div></div>
@@ -316,7 +316,7 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bash_profile
   <li>Install <a href="https://github.com/rbenv/ruby-build">ruby-build</a></li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p "$(rbenv root)"/plugins
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 </code></pre></div></div>
 
@@ -324,7 +324,7 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
   <li>Install Ruby</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv install --list # lists all available versions of Ruby
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv install --list # lists all available versions of Ruby
 rbenv install 2.3.0 # installs Ruby 2.3.0 to ~/.rbenv/versions
 rbenv global 2.3.0
 rbenv rehash
@@ -334,7 +334,7 @@ rbenv rehash
   <li>Verify that everything is properly set up using <a href="https://github.com/rbenv/rbenv-installer/blob/master/bin/rbenv-doctor">rbenv-doctor</a>.</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 </code></pre></div></div>
 
 <h2>SSH for Windows</h2>
@@ -345,18 +345,18 @@ rbenv rehash
 
 <h3>Generate new SSH key and add to GitHub</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 </code></pre></div></div>
 
-<p>When you’re prompted to <code class="highlighter-rouge">Enter a file in which to save the key</code> press <code class="highlighter-rouge">Enter</code>. This accepts the default file location (which is indeed <code class="highlighter-rouge">%USERPROFILE%\.ssh\id_rsa</code>).</p>
+<p>When you’re prompted to <code class="language-plaintext highlighter-rouge">Enter a file in which to save the key</code> press <code class="language-plaintext highlighter-rouge">Enter</code>. This accepts the default file location (which is indeed <code class="language-plaintext highlighter-rouge">%USERPROFILE%\.ssh\id_rsa</code>).</p>
 
-<p>Then, add the contents of the file <code class="highlighter-rouge">id_rsa.pub</code> (open with Notepad++) to GitHub.</p>
+<p>Then, add the contents of the file <code class="language-plaintext highlighter-rouge">id_rsa.pub</code> (open with Notepad++) to GitHub.</p>
 
 <h3>Adding your SSH key to the ssh-agent</h3>
 
-<p>Move to the folder <code class="highlighter-rouge">%USERPROFILE%\.ssh</code> in command prompt and run</p>
+<p>Move to the folder <code class="language-plaintext highlighter-rouge">%USERPROFILE%\.ssh</code> in command prompt and run</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-agent /bin/sh
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-agent /bin/sh
 ssh-add id_rsa
 </code></pre></div></div>
 
@@ -364,7 +364,7 @@ ssh-add id_rsa
 
 <p>See <a href="https://help.github.com/articles/testing-your-ssh-connection/">here</a>.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
 </code></pre></div></div>
 
 <h2>Using PGP</h2>
@@ -379,7 +379,7 @@ ssh-add id_rsa
 
 <h3>Global Setup</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "&lt;your-name&gt;"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "&lt;your-name&gt;"
 git config --global user.email "your_email@example.com"
 git config --global gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg.exe"
 git config --global user.signingkey &lt;your-gpg-key-id&gt;
@@ -389,7 +389,7 @@ git config --global user.signingkey &lt;your-gpg-key-id&gt;
 
 <p>To set up the git repo for my personal page, I use the follwing commands:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir %USERPROFILE%\hoanganhduc.github.io # create the directory for my repo
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir %USERPROFILE%\hoanganhduc.github.io # create the directory for my repo
 xcopy /E /Y /F _site\* %USERPROFILE%\hoanganhduc.github.io # Copy all Jekyll generated files to the folder
 cd %USERPROFILE%\hoanganhduc.github.io # Move to the folder
 git init
@@ -399,11 +399,11 @@ git commit -S -m "%date%-%time% - commit"
 git push -f origin master
 </code></pre></div></div>
 
-<p>In case you’ve already have the GitHub repo and just want to update, use the command <code class="highlighter-rouge">git pull origin master</code> after <code class="highlighter-rouge">git remote add origin git@github.com:hoanganhduc/hoanganhduc.github.io.git</code>. If you get the error <code class="highlighter-rouge">gpg: signing failed: Inappropriate ioctl for device</code>, then use <code class="highlighter-rouge">export GPG_TTY=$(tty)</code> before <code class="highlighter-rouge">git commit -S -m "%date%-%time% - commit"</code>.</p>
+<p>In case you’ve already have the GitHub repo and just want to update, use the command <code class="language-plaintext highlighter-rouge">git pull origin master</code> after <code class="language-plaintext highlighter-rouge">git remote add origin git@github.com:hoanganhduc/hoanganhduc.github.io.git</code>. If you get the error <code class="language-plaintext highlighter-rouge">gpg: signing failed: Inappropriate ioctl for device</code>, then use <code class="language-plaintext highlighter-rouge">export GPG_TTY=$(tty)</code> before <code class="language-plaintext highlighter-rouge">git commit -S -m "%date%-%time% - commit"</code>.</p>
 
-<p>For conventional reason, I create a simple <code class="highlighter-rouge">BAT</code> file named <code class="highlighter-rouge">make.bat</code> to generate and upload the webpage.</p>
+<p>For conventional reason, I create a simple <code class="language-plaintext highlighter-rouge">BAT</code> file named <code class="language-plaintext highlighter-rouge">make.bat</code> to generate and upload the webpage.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build --config _config.yml &amp;&amp; xcopy /E /Y /F _site\* %USERPROFILE%\hoanganhduc.github.io &amp;&amp; cd %USERPROFILE%\hoanganhduc.github.io &amp;&amp; git add --all . &amp;&amp; git commit -S -m "%date%-%time% - commit" &amp;&amp; git push -f origin master
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build --config _config.yml &amp;&amp; xcopy /E /Y /F _site\* %USERPROFILE%\hoanganhduc.github.io &amp;&amp; cd %USERPROFILE%\hoanganhduc.github.io &amp;&amp; git add --all . &amp;&amp; git commit -S -m "%date%-%time% - commit" &amp;&amp; git push -f origin master
 </code></pre></div></div>
 
 <h2>References</h2>
@@ -426,7 +426,7 @@ git push -f origin master
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"

@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
 </head>
 
 
@@ -128,7 +128,7 @@
 
 <h1>Download Ubuntu 16.04 Distro</h1>
 
-<p>You can download the distro from <a href="https://aka.ms/wsl-ubuntu-1604">https://aka.ms/wsl-ubuntu-1604</a>. At the time of writing this post, the file I downloaded is <code class="highlighter-rouge">Ubuntu.1604.2017.711.0_v1.appx</code>.</p>
+<p>You can download the distro from <a href="https://aka.ms/wsl-ubuntu-1604">https://aka.ms/wsl-ubuntu-1604</a>. At the time of writing this post, the file I downloaded is <code class="language-plaintext highlighter-rouge">Ubuntu.1604.2017.711.0_v1.appx</code>.</p>
 
 <p>It is also possible to download the file using PowerShell</p>
 
@@ -137,25 +137,25 @@
 
 <h1>Installing your distro</h1>
 
-<p>Once I have downloaded <code class="highlighter-rouge">Ubuntu.1604.2017.711.0_v1.appx</code>, in PowerShell, I use</p>
+<p>Once I have downloaded <code class="language-plaintext highlighter-rouge">Ubuntu.1604.2017.711.0_v1.appx</code>, in PowerShell, I use</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Rename-Item .<span class="se">\U</span>buntu.1604.2017.711.0_v1.appx .<span class="se">\U</span>buntu.1604.2017.711.0_v1.zip
 Expand-Archive .<span class="se">\U</span>buntu.1604.2017.711.0_v1.zip C:<span class="se">\U</span>sers<span class="se">\[</span>your-windows-username]<span class="se">\U</span>buntu <span class="c"># or pick any folder you like</span>
 </code></pre></div></div>
 
-<p>Replace <code class="highlighter-rouge">[your-windows-username]</code> with your Windows username.</p>
+<p>Replace <code class="language-plaintext highlighter-rouge">[your-windows-username]</code> with your Windows username.</p>
 
-<p>Next, move to <code class="highlighter-rouge">C:\Users\[your-windows-username]\Ubuntu</code> and run <code class="highlighter-rouge">ubuntu.exe</code> to <a href="https://docs.microsoft.com/en-us/windows/wsl/initialize-distro">initialize the new distro</a>.</p>
+<p>Next, move to <code class="language-plaintext highlighter-rouge">C:\Users\[your-windows-username]\Ubuntu</code> and run <code class="language-plaintext highlighter-rouge">ubuntu.exe</code> to <a href="https://docs.microsoft.com/en-us/windows/wsl/initialize-distro">initialize the new distro</a>.</p>
 
-<p>Finally, add <code class="highlighter-rouge">C:\Users\[your-windows-username]\Ubuntu</code> to the Windows environment <code class="highlighter-rouge">PATH</code> using PowerShell</p>
+<p>Finally, add <code class="language-plaintext highlighter-rouge">C:\Users\[your-windows-username]\Ubuntu</code> to the Windows environment <code class="language-plaintext highlighter-rouge">PATH</code> using PowerShell</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$userenv</span> <span class="o">=</span> <span class="o">[</span>System.Environment]::GetEnvironmentVariable<span class="o">(</span><span class="s2">"Path"</span>, <span class="s2">"User"</span><span class="o">)</span>
 <span class="o">[</span>System.Environment]::SetEnvironmentVariable<span class="o">(</span><span class="s2">"PATH"</span>, <span class="nv">$userenv</span> + <span class="s2">"C:</span><span class="se">\U</span><span class="s2">sers</span><span class="se">\[</span><span class="s2">your-windows-username]</span><span class="se">\U</span><span class="s2">buntu"</span>, <span class="s2">"User"</span><span class="o">)</span>
 </code></pre></div></div>
 
-<h1>Add username to <code class="highlighter-rouge">/etc/sudoers</code></h1>
+<h1>Add username to <code class="language-plaintext highlighter-rouge">/etc/sudoers</code></h1>
 
-<p>Suppose that your Ubuntu’s username is <code class="highlighter-rouge">username</code>, then add <code class="highlighter-rouge">username ALL=(ALL:ALL) ALL</code> to <code class="highlighter-rouge">/etc/sudoers</code>.</p>
+<p>Suppose that your Ubuntu’s username is <code class="language-plaintext highlighter-rouge">username</code>, then add <code class="language-plaintext highlighter-rouge">username ALL=(ALL:ALL) ALL</code> to <code class="language-plaintext highlighter-rouge">/etc/sudoers</code>.</p>
 
 <h1>Set default login user</h1>
 
@@ -166,7 +166,7 @@ Expand-Archive .<span class="se">\U</span>buntu.1604.2017.711.0_v1.zip C:<span c
 
 <h1>Change Ubuntu mirrors</h1>
 
-<p>One can replace the default Ubuntu mirror <code class="highlighter-rouge">http://archive.ubuntu.com/ubuntu/</code> in <code class="highlighter-rouge">/etc/apt/sources.list</code> with others. See <a href="https://launchpad.net/ubuntu/+archivemirrors">Official Archive Mirrors for Ubuntu</a>.</p>
+<p>One can replace the default Ubuntu mirror <code class="language-plaintext highlighter-rouge">http://archive.ubuntu.com/ubuntu/</code> in <code class="language-plaintext highlighter-rouge">/etc/apt/sources.list</code> with others. See <a href="https://launchpad.net/ubuntu/+archivemirrors">Official Archive Mirrors for Ubuntu</a>.</p>
 
 <h1>Vanilla TexLive</h1>
 
@@ -177,7 +177,7 @@ Expand-Archive .<span class="se">\U</span>buntu.1604.2017.711.0_v1.zip C:<span c
 
 <h1>Add Bash to the context menu</h1>
 
-<p>See <a href="https://www.howtogeek.com/270810/how-to-quickly-launch-a-bash-shell-from-windows-10s-file-explorer/">this instruction</a>, or simply download <a href="https://www.howtogeek.com/wp-content/uploads/2016/09/Add-Bash-to-the-Context-Menu.zip">this ZIP archive</a>, unzip, and double-click the <code class="highlighter-rouge">Add Bash to Your Context Menu.reg</code> file to get the context menu option. Double-click the <code class="highlighter-rouge">Remove Bash From Your Context Menu.reg</code> file to remove the option.</p>
+<p>See <a href="https://www.howtogeek.com/270810/how-to-quickly-launch-a-bash-shell-from-windows-10s-file-explorer/">this instruction</a>, or simply download <a href="https://www.howtogeek.com/wp-content/uploads/2016/09/Add-Bash-to-the-Context-Menu.zip">this ZIP archive</a>, unzip, and double-click the <code class="language-plaintext highlighter-rouge">Add Bash to Your Context Menu.reg</code> file to get the context menu option. Double-click the <code class="language-plaintext highlighter-rouge">Remove Bash From Your Context Menu.reg</code> file to remove the option.</p>
 
 <h1>Re-mount C: drive</h1>
 
@@ -192,7 +192,7 @@ Expand-Archive .<span class="se">\U</span>buntu.1604.2017.711.0_v1.zip C:<span c
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"

@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
 </head>
 
 
@@ -129,11 +129,11 @@ Unfortunately, the process somehow does not work with my Windows 10 64-bit, and 
 The steps are as follows.</p>
 
 <ol>
-  <li>Check if the phone’s bootloader can be unlocked: Type <code class="highlighter-rouge">*#*#7378423#*#*#</code>, then choose <code class="highlighter-rouge">Service info --&gt; Configuration --&gt; Rooting status</code>.
+  <li>Check if the phone’s bootloader can be unlocked: Type <code class="language-plaintext highlighter-rouge">*#*#7378423#*#*#</code>, then choose <code class="language-plaintext highlighter-rouge">Service info --&gt; Configuration --&gt; Rooting status</code>.
     <ul>
-      <li><code class="highlighter-rouge">Bootloader unlocked : Yes</code> (The phone’s bootloader has been unlocked).</li>
-      <li><code class="highlighter-rouge">Bootloader unlock allowed : Yes</code> (The phone’s bootloader has not been unlocked).</li>
-      <li><code class="highlighter-rouge">Bootloader unlock allowed : No</code> (The phone’s bootloader cannot be unlocked).</li>
+      <li><code class="language-plaintext highlighter-rouge">Bootloader unlocked : Yes</code> (The phone’s bootloader has been unlocked).</li>
+      <li><code class="language-plaintext highlighter-rouge">Bootloader unlock allowed : Yes</code> (The phone’s bootloader has not been unlocked).</li>
+      <li><code class="language-plaintext highlighter-rouge">Bootloader unlock allowed : No</code> (The phone’s bootloader cannot be unlocked).</li>
     </ul>
   </li>
   <li>Install the device drivers and platform tools.
@@ -142,18 +142,18 @@ The steps are as follows.</p>
     </ul>
   </li>
   <li>Download and extract the <a href="https://developer.android.com/studio/releases/platform-tools.html">Platform tools</a> zip file.</li>
-  <li>On your device, turn on <code class="highlighter-rouge">USB debugging</code> by going to <code class="highlighter-rouge">Settings --&gt; Developer options</code> and click to enable USB debugging.
-For Android 4.2+, the <code class="highlighter-rouge">Developer options</code> are hidden by default.
-To enable, tap on <code class="highlighter-rouge">Settings --&gt; About Phone --&gt; Build Version</code> multiple times (around 7 times).</li>
+  <li>On your device, turn on <code class="language-plaintext highlighter-rouge">USB debugging</code> by going to <code class="language-plaintext highlighter-rouge">Settings --&gt; Developer options</code> and click to enable USB debugging.
+For Android 4.2+, the <code class="language-plaintext highlighter-rouge">Developer options</code> are hidden by default.
+To enable, tap on <code class="language-plaintext highlighter-rouge">Settings --&gt; About Phone --&gt; Build Version</code> multiple times (around 7 times).</li>
   <li>Connect to Fastboot
     <ul>
       <li>Turn off your device.</li>
       <li>Connect a USB-cable to your computer.</li>
       <li>On your device, press the Volume up key at the same time as you connect the other end of the USB-cable.</li>
-      <li>When your device is connected, open a command window on your computer and go to the platform-tools folder within the Android SDK folder. Enter <code class="highlighter-rouge">fastboot devices</code> and verify that you get an answer back without any error.</li>
+      <li>When your device is connected, open a command window on your computer and go to the platform-tools folder within the Android SDK folder. Enter <code class="language-plaintext highlighter-rouge">fastboot devices</code> and verify that you get an answer back without any error.</li>
     </ul>
   </li>
-  <li>Enter the <a href="https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/">unlock key</a> taken from Sony, using the command <code class="highlighter-rouge">fastboot -i 0x0fce oem unlock 0x[insert your unlock code]</code></li>
+  <li>Enter the <a href="https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/">unlock key</a> taken from Sony, using the command <code class="language-plaintext highlighter-rouge">fastboot -i 0x0fce oem unlock 0x[insert your unlock code]</code></li>
 </ol>
 
 <p>For steps 2 and 3, I recommend download and install <a href="https://www.kingoapp.com/">KingoRoot</a>. 
@@ -165,7 +165,7 @@ It automatically installs the USB drivers of your phone, and contains a collecti
 Basically, what I did are:</p>
 <ul>
   <li>Connect to Fastboot.</li>
-  <li>Download <a href="https://basketbuild.com/filedl/devs?dev=AdrianDC&amp;dl=AdrianDC/Huashan/TWRP-Recovery/twrp-3.2.2-20180708-boot-huashan.img">twrp-3.2.2-20180708-boot-huashan.img</a> and flash the image with <code class="highlighter-rouge">fastboot flash boot twrp-3.2.2-20180708-boot-huashan.img</code>.</li>
+  <li>Download <a href="https://basketbuild.com/filedl/devs?dev=AdrianDC&amp;dl=AdrianDC/Huashan/TWRP-Recovery/twrp-3.2.2-20180708-boot-huashan.img">twrp-3.2.2-20180708-boot-huashan.img</a> and flash the image with <code class="language-plaintext highlighter-rouge">fastboot flash boot twrp-3.2.2-20180708-boot-huashan.img</code>.</li>
   <li>Reboot the system. The phone will boot into TWRP Recovery 3.2.2.</li>
   <li>Copy the custom ROM (ZIP file) to the phone, and flash it with TWRP. Some custom ROMs for Sony Xperia SP are:
     <ul>
@@ -184,13 +184,13 @@ Basically, what I did are:</p>
 <h1>Some apps I installed</h1>
 
 <ul>
-  <li><code class="highlighter-rouge">SuperSU</code>: For managing root access.</li>
-  <li><code class="highlighter-rouge">K-9 Mail</code> and <code class="highlighter-rouge">OpenKeychain</code>: For sending email with <a href="https://keybase.io/hoanganhduc#show-public">my PGP signature</a>. 
-Other interesting features of <code class="highlighter-rouge">K-9 Mail</code> are exporting/importing app settings, and using dark theme.</li>
-  <li><code class="highlighter-rouge">Orbot</code>: For browsing Internet with <a href="https://www.torproject.org/">Tor</a>.</li>
-  <li><code class="highlighter-rouge">Termux</code> and <code class="highlighter-rouge">BusyBox</code>: For playing with Linux commands in Android. You may also need <code class="highlighter-rouge">Hacker's Keyboard</code>. At the first time using <code class="highlighter-rouge">Termux</code>, you should use the command <code class="highlighter-rouge">termux-setup-storage</code> to allow <code class="highlighter-rouge">Termux</code> access to your storage devices.</li>
-  <li><code class="highlighter-rouge">SHAREit</code>: For sharing files among different devices.</li>
-  <li><code class="highlighter-rouge">VLC</code>: For playing audio and video files. An interesting feature is that it allows the option for playing music in the background.</li>
+  <li><code class="language-plaintext highlighter-rouge">SuperSU</code>: For managing root access.</li>
+  <li><code class="language-plaintext highlighter-rouge">K-9 Mail</code> and <code class="language-plaintext highlighter-rouge">OpenKeychain</code>: For sending email with <a href="https://keybase.io/hoanganhduc#show-public">my PGP signature</a>. 
+Other interesting features of <code class="language-plaintext highlighter-rouge">K-9 Mail</code> are exporting/importing app settings, and using dark theme.</li>
+  <li><code class="language-plaintext highlighter-rouge">Orbot</code>: For browsing Internet with <a href="https://www.torproject.org/">Tor</a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">Termux</code> and <code class="language-plaintext highlighter-rouge">BusyBox</code>: For playing with Linux commands in Android. You may also need <code class="language-plaintext highlighter-rouge">Hacker's Keyboard</code>. At the first time using <code class="language-plaintext highlighter-rouge">Termux</code>, you should use the command <code class="language-plaintext highlighter-rouge">termux-setup-storage</code> to allow <code class="language-plaintext highlighter-rouge">Termux</code> access to your storage devices.</li>
+  <li><code class="language-plaintext highlighter-rouge">SHAREit</code>: For sharing files among different devices.</li>
+  <li><code class="language-plaintext highlighter-rouge">VLC</code>: For playing audio and video files. An interesting feature is that it allows the option for playing music in the background.</li>
 </ul>
 
 <h1>Screenshot</h1>
@@ -199,31 +199,31 @@ Other interesting features of <code class="highlighter-rouge">K-9 Mail</code> ar
 
 <!-- <div class="text-center">
 
-<img src="/static/posts/my-first-experience-with-android-phones/screen1.png" class="figure-img img-fluid rounded" >
+<img src="/static/posts/my-first-experience-with-android-phones/screen1.png" class="figure-img img-fluid rounded"  >
 
 </div> -->
-<div class="figure"><img src="/static/posts/my-first-experience-with-android-phones/screen1.png" alt="screen1.png"></div>
+<div class="figure"><img src="/static/posts/my-first-experience-with-android-phones/screen1.png" alt="screen1.png" ></div>
 
 <!-- <div class="text-center">
 
-<img src="/static/posts/my-first-experience-with-android-phones/screen2.png" class="figure-img img-fluid rounded" >
+<img src="/static/posts/my-first-experience-with-android-phones/screen2.png" class="figure-img img-fluid rounded"  >
 
 </div> -->
-<div class="figure"><img src="/static/posts/my-first-experience-with-android-phones/screen2.png" alt="screen2.png"></div>
+<div class="figure"><img src="/static/posts/my-first-experience-with-android-phones/screen2.png" alt="screen2.png" ></div>
 
 <!-- <div class="text-center">
 
-<img src="/static/posts/my-first-experience-with-android-phones/screen3.png" class="figure-img img-fluid rounded" >
+<img src="/static/posts/my-first-experience-with-android-phones/screen3.png" class="figure-img img-fluid rounded"  >
 
 </div> -->
-<div class="figure"><img src="/static/posts/my-first-experience-with-android-phones/screen3.png" alt="screen3.png"></div>
+<div class="figure"><img src="/static/posts/my-first-experience-with-android-phones/screen3.png" alt="screen3.png" ></div>
 
 <!-- <div class="text-center">
 
-<img src="/static/posts/my-first-experience-with-android-phones/screen4.png" class="figure-img img-fluid rounded" >
+<img src="/static/posts/my-first-experience-with-android-phones/screen4.png" class="figure-img img-fluid rounded"  >
 
 </div> -->
-<div class="figure"><img src="/static/posts/my-first-experience-with-android-phones/screen4.png" alt="screen4.png"></div>
+<div class="figure"><img src="/static/posts/my-first-experience-with-android-phones/screen4.png" alt="screen4.png" ></div>
 
 
 
@@ -231,7 +231,7 @@ Other interesting features of <code class="highlighter-rouge">K-9 Mail</code> ar
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"

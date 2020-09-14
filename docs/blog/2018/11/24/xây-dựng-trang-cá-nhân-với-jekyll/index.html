@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
 </head>
 
 
@@ -126,17 +126,17 @@
 <ul>
   <li>Sử dụng GitHub để <a href="https://pages.github.com/">host trang cá nhân</a>.
     <ul>
-      <li>Khi bạn <a href="https://github.com/join">đăng ký tài khoản GitHub</a>, bạn có thể tạo một trang cá nhân ở địa chỉ <code class="highlighter-rouge">username.github.io</code>, trong đó <code class="highlighter-rouge">username</code> là tên đăng nhập bạn đăng ký vói GitHub.</li>
-      <li>Để tạo trang cá nhân, bạn cần tạo một repository với tên <code class="highlighter-rouge">username.github.io</code>. Tôi dự định tạo hai branch: <code class="highlighter-rouge">master</code> và <code class="highlighter-rouge">source</code>.
+      <li>Khi bạn <a href="https://github.com/join">đăng ký tài khoản GitHub</a>, bạn có thể tạo một trang cá nhân ở địa chỉ <code class="language-plaintext highlighter-rouge">username.github.io</code>, trong đó <code class="language-plaintext highlighter-rouge">username</code> là tên đăng nhập bạn đăng ký vói GitHub.</li>
+      <li>Để tạo trang cá nhân, bạn cần tạo một repository với tên <code class="language-plaintext highlighter-rouge">username.github.io</code>. Tôi dự định tạo hai branch: <code class="language-plaintext highlighter-rouge">master</code> và <code class="language-plaintext highlighter-rouge">source</code>.
         <ul>
-          <li>Branch <code class="highlighter-rouge">master</code> chứa các sản phẩm sinh bởi Jekyll.</li>
-          <li>Branch <code class="highlighter-rouge">source</code> chứa mã nguồn sẽ được sử dụng bởi Jekyll.</li>
+          <li>Branch <code class="language-plaintext highlighter-rouge">master</code> chứa các sản phẩm sinh bởi Jekyll.</li>
+          <li>Branch <code class="language-plaintext highlighter-rouge">source</code> chứa mã nguồn sẽ được sử dụng bởi Jekyll.</li>
         </ul>
       </li>
     </ul>
   </li>
   <li>Cài đặt Jekyll trên máy tính cá nhân để sinh và kiểm tra nội dung của trang cá nhân trước khi đưa lên GitHub.</li>
-  <li>(Tùy chọn) Sử dụng <a href="https://travis-ci.org/">Travis CI</a> để sinh tự động trang cá nhân mỗi khi có cập nhật từ branch <code class="highlighter-rouge">source</code>. Để làm được điều này, bạn cần đăng nhập Travis CI với tài khoản GitHub.</li>
+  <li>(Tùy chọn) Sử dụng <a href="https://travis-ci.org/">Travis CI</a> để sinh tự động trang cá nhân mỗi khi có cập nhật từ branch <code class="language-plaintext highlighter-rouge">source</code>. Để làm được điều này, bạn cần đăng nhập Travis CI với tài khoản GitHub.</li>
 </ul>
 
 <h1>Môi trường làm việc</h1>
@@ -165,7 +165,7 @@ wget https://raw.githubusercontent.com/username/username.github.io/source/Gemfil
 bundle <span class="nb">install</span>
 </code></pre></div></div>
 
-<p>Nội dung các tệp <code class="highlighter-rouge">Gemfile</code> và <code class="highlighter-rouge">Gemfile.lock</code> tính đến thời gian tôi viết bài này là như sau.</p>
+<p>Nội dung các tệp <code class="language-plaintext highlighter-rouge">Gemfile</code> và <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> tính đến thời gian tôi viết bài này là như sau.</p>
 
 <p>Tệp <code>Gemfile</code></p>
 
@@ -301,20 +301,20 @@ BUNDLED WITH
 <h2>Git + GnuPG + OpenSSH + Travis CI CLI</h2>
 
 <ul>
-  <li>Trong Arch Linux, việc cài đặt các gói <a href="https://wiki.archlinux.org/index.php/Git">Git</a>, <a href="https://wiki.archlinux.org/index.php/GnuPG">GnuPG</a>, và <a href="https://wiki.archlinux.org/index.php/OpenSSH">OpenSSH</a> được thực hiện đơn giản thông qua lệnh <code class="highlighter-rouge">sudo pacman -S --needed --noconfirm git gnupg openssh</code>. Trong Ubuntu, bạn sử dụng lệnh <code class="highlighter-rouge">sudo apt install git gnupg2 ssh</code>. <strong>Việc sử dụng GnuPG và OpenSSH hay không là tùy bạn</strong>.
+  <li>Trong Arch Linux, việc cài đặt các gói <a href="https://wiki.archlinux.org/index.php/Git">Git</a>, <a href="https://wiki.archlinux.org/index.php/GnuPG">GnuPG</a>, và <a href="https://wiki.archlinux.org/index.php/OpenSSH">OpenSSH</a> được thực hiện đơn giản thông qua lệnh <code class="language-plaintext highlighter-rouge">sudo pacman -S --needed --noconfirm git gnupg openssh</code>. Trong Ubuntu, bạn sử dụng lệnh <code class="language-plaintext highlighter-rouge">sudo apt install git gnupg2 ssh</code>. <strong>Việc sử dụng GnuPG và OpenSSH hay không là tùy bạn</strong>.
     <ul>
       <li>Sử dụng SSH key với GitHub:
         <ul>
-          <li>Tạo một SSH key bằng lệnh <code class="highlighter-rouge">ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code> (thay <code class="highlighter-rouge">your_email@example.com</code> bằng địa chỉ email của bạn) nếu bạn chưa có. Khi bạn được hỏi <code class="highlighter-rouge">Enter a file in which to save the key</code>, nhấn <kbd>Enter</kbd> để chấp nhận vị trí lưu key mặc định <code class="highlighter-rouge">$HOME/.ssh/id_rsa</code>. Tiếp đó, nhập passphrase bất kỳ để kết thúc quá trình tạo key. Để sử dụng key với GitHub, mở tệp <code class="highlighter-rouge">$HOME/.ssh/id_rsa</code> bằng một trình soạn thảo văn bản nào đó (tôi dùng <code class="highlighter-rouge">gedit</code>) và chép tất cả nội dung vào GitHub (bằng cách đăng nhập vào GitHub, sau đó truy cập tới địa chỉ <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> và nhấn vào nút <code class="highlighter-rouge">New SSH key</code>).</li>
-          <li>Để kiểm tra, gõ lệnh <code class="highlighter-rouge">ssh -T git@github.com</code> và nhập passphrase bạn khởi tạo khi tạo SSH key. Nếu bạn thấy dòng <code class="highlighter-rouge">Hi username! You've successfully authenticated, but GitHub does not provide shell access</code> thì tức là bạn đã cài đặt thành công.</li>
+          <li>Tạo một SSH key bằng lệnh <code class="language-plaintext highlighter-rouge">ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code> (thay <code class="language-plaintext highlighter-rouge">your_email@example.com</code> bằng địa chỉ email của bạn) nếu bạn chưa có. Khi bạn được hỏi <code class="language-plaintext highlighter-rouge">Enter a file in which to save the key</code>, nhấn <kbd>Enter</kbd> để chấp nhận vị trí lưu key mặc định <code class="language-plaintext highlighter-rouge">$HOME/.ssh/id_rsa</code>. Tiếp đó, nhập passphrase bất kỳ để kết thúc quá trình tạo key. Để sử dụng key với GitHub, mở tệp <code class="language-plaintext highlighter-rouge">$HOME/.ssh/id_rsa</code> bằng một trình soạn thảo văn bản nào đó (tôi dùng <code class="language-plaintext highlighter-rouge">gedit</code>) và chép tất cả nội dung vào GitHub (bằng cách đăng nhập vào GitHub, sau đó truy cập tới địa chỉ <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> và nhấn vào nút <code class="language-plaintext highlighter-rouge">New SSH key</code>).</li>
+          <li>Để kiểm tra, gõ lệnh <code class="language-plaintext highlighter-rouge">ssh -T git@github.com</code> và nhập passphrase bạn khởi tạo khi tạo SSH key. Nếu bạn thấy dòng <code class="language-plaintext highlighter-rouge">Hi username! You've successfully authenticated, but GitHub does not provide shell access</code> thì tức là bạn đã cài đặt thành công.</li>
         </ul>
       </li>
       <li>Sử dụng GnuPG với GitHub:
         <ul>
-          <li>Tạo một GPG key bằng lệnh <code class="highlighter-rouge">gpg --full-generate-key</code> (với <code class="highlighter-rouge">gnupg &gt;= 2.1.17</code>) nếu bạn chưa có.</li>
-          <li>Để liệt kê tất cả các GPG secret key (tức là gồm cả private và public key) bạn đang có, sử dụng lệnh <code class="highlighter-rouge">gpg --list-secret-keys --keyid-format LONG</code>.</li>
-          <li>Xác định ID của key bạn muốn sử dụng với GitHub, ví dụ <code class="highlighter-rouge">3AA5C34371567BD2</code>, sau đó export public key của key này bằng lệnh <code class="highlighter-rouge">gpg --armor --export 3AA5C34371567BD2</code>, và chép phần bắt đầu từ <code class="highlighter-rouge">-----BEGIN PGP PUBLIC KEY BLOCK-----</code> và kết thúc bởi <code class="highlighter-rouge">-----END PGP PUBLIC KEY BLOCK-----</code> vào GitHub (bằng cách đăng nhập vào GitHub, sau đó truy cập tới địa chỉ <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> và nhấn vào nút <code class="highlighter-rouge">New GPG key</code>).</li>
-          <li>Chú ý là trong Ubuntu, bạn cần dùng lệnh <code class="highlighter-rouge">gpg2</code> thay vì <code class="highlighter-rouge">gpg</code>.</li>
+          <li>Tạo một GPG key bằng lệnh <code class="language-plaintext highlighter-rouge">gpg --full-generate-key</code> (với <code class="language-plaintext highlighter-rouge">gnupg &gt;= 2.1.17</code>) nếu bạn chưa có.</li>
+          <li>Để liệt kê tất cả các GPG secret key (tức là gồm cả private và public key) bạn đang có, sử dụng lệnh <code class="language-plaintext highlighter-rouge">gpg --list-secret-keys --keyid-format LONG</code>.</li>
+          <li>Xác định ID của key bạn muốn sử dụng với GitHub, ví dụ <code class="language-plaintext highlighter-rouge">3AA5C34371567BD2</code>, sau đó export public key của key này bằng lệnh <code class="language-plaintext highlighter-rouge">gpg --armor --export 3AA5C34371567BD2</code>, và chép phần bắt đầu từ <code class="language-plaintext highlighter-rouge">-----BEGIN PGP PUBLIC KEY BLOCK-----</code> và kết thúc bởi <code class="language-plaintext highlighter-rouge">-----END PGP PUBLIC KEY BLOCK-----</code> vào GitHub (bằng cách đăng nhập vào GitHub, sau đó truy cập tới địa chỉ <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> và nhấn vào nút <code class="language-plaintext highlighter-rouge">New GPG key</code>).</li>
+          <li>Chú ý là trong Ubuntu, bạn cần dùng lệnh <code class="language-plaintext highlighter-rouge">gpg2</code> thay vì <code class="language-plaintext highlighter-rouge">gpg</code>.</li>
         </ul>
       </li>
       <li>Một số cài đặt mặc định cho Git.
@@ -326,15 +326,15 @@ git config <span class="nt">--global</span> user.signingkey your-gpg-key-id <spa
       </li>
     </ul>
   </li>
-  <li>Tôi cũng sử dụng <a href="https://github.com/travis-ci/travis.rb#command-line-client">Travis CI CLI</a>. Việc cài đặt được thực hiện thông qua lệnh <code class="highlighter-rouge">gem install travis</code>.</li>
+  <li>Tôi cũng sử dụng <a href="https://github.com/travis-ci/travis.rb#command-line-client">Travis CI CLI</a>. Việc cài đặt được thực hiện thông qua lệnh <code class="language-plaintext highlighter-rouge">gem install travis</code>.</li>
 </ul>
 
 <h2>Một số cài đặt khác</h2>
 
 <ul>
   <li>Thư mục gốc của tôi được đặt ở Dropbox.</li>
-  <li>Tôi tạo thư mục <code class="highlighter-rouge">$HOME/username.github.io</code> và hai thư mục con <code class="highlighter-rouge">$HOME/username.github.io/master</code> và <code class="highlighter-rouge">$HOME/username.github.io/source</code> tương ứng với các branch <code class="highlighter-rouge">master</code> và <code class="highlighter-rouge">source</code> tôi tạo ra trên GitHub. Branch <code class="highlighter-rouge">master</code> được mặc định khi bạn tạo repository <code class="highlighter-rouge">username.github.io</code> của mình. Để tạo branch <code class="highlighter-rouge">source</code>, bạn mở trang chính của repossitory (URL thường có dạng <code class="highlighter-rouge">https://github.com/username/username.github.io/</code>), chọn menu thả xuống <code class="highlighter-rouge">Branch</code> và gõ tên <code class="highlighter-rouge">source</code> để tạo branch mới.</li>
-  <li>Trong thư mục <code class="highlighter-rouge">$HOME/username.github.io/master</code>, tôi khởi tạo như sau:</li>
+  <li>Tôi tạo thư mục <code class="language-plaintext highlighter-rouge">$HOME/username.github.io</code> và hai thư mục con <code class="language-plaintext highlighter-rouge">$HOME/username.github.io/master</code> và <code class="language-plaintext highlighter-rouge">$HOME/username.github.io/source</code> tương ứng với các branch <code class="language-plaintext highlighter-rouge">master</code> và <code class="language-plaintext highlighter-rouge">source</code> tôi tạo ra trên GitHub. Branch <code class="language-plaintext highlighter-rouge">master</code> được mặc định khi bạn tạo repository <code class="language-plaintext highlighter-rouge">username.github.io</code> của mình. Để tạo branch <code class="language-plaintext highlighter-rouge">source</code>, bạn mở trang chính của repossitory (URL thường có dạng <code class="language-plaintext highlighter-rouge">https://github.com/username/username.github.io/</code>), chọn menu thả xuống <code class="language-plaintext highlighter-rouge">Branch</code> và gõ tên <code class="language-plaintext highlighter-rouge">source</code> để tạo branch mới.</li>
+  <li>Trong thư mục <code class="language-plaintext highlighter-rouge">$HOME/username.github.io/master</code>, tôi khởi tạo như sau:</li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="nv">$HOME</span>/username.github.io/master
@@ -344,7 +344,7 @@ git pull origin master
 </code></pre></div></div>
 
 <ul>
-  <li>Trong thư mục <code class="highlighter-rouge">$HOME/username.github.io/source</code>, tôi khởi tạo như sau:</li>
+  <li>Trong thư mục <code class="language-plaintext highlighter-rouge">$HOME/username.github.io/source</code>, tôi khởi tạo như sau:</li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="nv">$HOME</span>/username.github.io/source
@@ -589,19 +589,19 @@ git pull origin <span class="nb">source</span>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">static</span></td>
-        <td style="text-align: left">Chứa các tệp và thư mục cần thiết để xây dựng trang cá nhân. Các tệp trong thư mục <code class="highlighter-rouge">static/css</code> được sử dụng để tùy chỉnh các cách hiển thị trang cá nhân (font chữ, màu, v.v…). Các tệp trong thư mục <code class="highlighter-rouge">static/js</code> là một số mã Javascript được sử dụng trong trang cá nhân. Các tệp trong thư mục <code class="highlighter-rouge">static/img</code> chứa các hình ảnh được sử dụng trong trang cá nhân. Các tệp trong thư mục <code class="highlighter-rouge">static/files</code> chứa các tệp liên quan đến các bài viết (blog posts).</td>
+        <td style="text-align: left">Chứa các tệp và thư mục cần thiết để xây dựng trang cá nhân. Các tệp trong thư mục <code class="language-plaintext highlighter-rouge">static/css</code> được sử dụng để tùy chỉnh các cách hiển thị trang cá nhân (font chữ, màu, v.v…). Các tệp trong thư mục <code class="language-plaintext highlighter-rouge">static/js</code> là một số mã Javascript được sử dụng trong trang cá nhân. Các tệp trong thư mục <code class="language-plaintext highlighter-rouge">static/img</code> chứa các hình ảnh được sử dụng trong trang cá nhân. Các tệp trong thư mục <code class="language-plaintext highlighter-rouge">static/files</code> chứa các tệp liên quan đến các bài viết (blog posts).</td>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">_includes</span></td>
-        <td style="text-align: left">Chứa các thành phần cần thiết (tệp dạng <code class="highlighter-rouge">*.html</code>), ví dụ như đầu trang (<code class="highlighter-rouge">head.html</code>), thanh di chuyển (<code class="highlighter-rouge">navbar</code>, được đặt trong <code class="highlighter-rouge">header.html</code>), cuối trang (<code class="highlighter-rouge">footer.html</code>), v.v… để xây dựng một cấu trúc hoàn chỉnh, ví dụ như một trang (page), một bài viết (blog post), v.v… Bạn có thể thêm nội dung bất kỳ một tệp nào trong thư mục này vào một tệp khác bằng cách sử dụng Liquid tag, ví dụ như <code>{% include head.html %}  </code></td>
+        <td style="text-align: left">Chứa các thành phần cần thiết (tệp dạng <code class="language-plaintext highlighter-rouge">*.html</code>), ví dụ như đầu trang (<code class="language-plaintext highlighter-rouge">head.html</code>), thanh di chuyển (<code class="language-plaintext highlighter-rouge">navbar</code>, được đặt trong <code class="language-plaintext highlighter-rouge">header.html</code>), cuối trang (<code class="language-plaintext highlighter-rouge">footer.html</code>), v.v… để xây dựng một cấu trúc hoàn chỉnh, ví dụ như một trang (page), một bài viết (blog post), v.v… Bạn có thể thêm nội dung bất kỳ một tệp nào trong thư mục này vào một tệp khác bằng cách sử dụng Liquid tag, ví dụ như <code>{% include head.html %}  </code></td>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">_layouts</span></td>
-        <td style="text-align: left">Các cấu trúc hoàn chỉnh (tệp dạng <code class="highlighter-rouge">*.html</code>), ví dụ như một trang (page), một bài viết (blog post), được xây dựng phần lớn các cấu trúc ở thư mục <code class="highlighter-rouge">_includes</code></td>
+        <td style="text-align: left">Các cấu trúc hoàn chỉnh (tệp dạng <code class="language-plaintext highlighter-rouge">*.html</code>), ví dụ như một trang (page), một bài viết (blog post), được xây dựng phần lớn các cấu trúc ở thư mục <code class="language-plaintext highlighter-rouge">_includes</code></td>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">_plugins</span></td>
-        <td style="text-align: left">Chứa các plugins tôi cần: <code class="highlighter-rouge">hook-add-last-modified-date.rb</code> để lấy thời gian chỉnh sửa tệp cuối cùng, và <code class="highlighter-rouge">version_reporter.rb</code> để lấy phiên bản Jekyll tôi đang sử dụng</td>
+        <td style="text-align: left">Chứa các plugins tôi cần: <code class="language-plaintext highlighter-rouge">hook-add-last-modified-date.rb</code> để lấy thời gian chỉnh sửa tệp cuối cùng, và <code class="language-plaintext highlighter-rouge">version_reporter.rb</code> để lấy phiên bản Jekyll tôi đang sử dụng</td>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">index.md</span></td>
@@ -609,7 +609,7 @@ git pull origin <span class="nb">source</span>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">_posts</span></td>
-        <td style="text-align: left">Chứa các bài viết (blog post). Tên tệp thường có dạng <code class="highlighter-rouge">YYYY-MM-DD-name-of-blog-post.md</code></td>
+        <td style="text-align: left">Chứa các bài viết (blog post). Tên tệp thường có dạng <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-blog-post.md</code></td>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">search.html</span></td>
@@ -617,7 +617,7 @@ git pull origin <span class="nb">source</span>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">_drafts</span></td>
-        <td style="text-align: left">Chứa bản nháp (chưa publish) của các bài viết (blog post). Tên tệp thường có định dạng <code class="highlighter-rouge">name-of-blog-post.md</code></td>
+        <td style="text-align: left">Chứa bản nháp (chưa publish) của các bài viết (blog post). Tên tệp thường có định dạng <code class="language-plaintext highlighter-rouge">name-of-blog-post.md</code></td>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">misc.html</span></td>
@@ -625,11 +625,11 @@ git pull origin <span class="nb">source</span>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">_data</span></td>
-        <td style="text-align: left">Chứa một số tệp dữ liệu nhỏ định dạng <code class="highlighter-rouge">*.yml</code> để xây dựng một số phần, ví dụ như danh sách các tin tức mới (news), hay danh sách các đồng tác giả (co-authors), hay danh sách các thành phần của thanh di chuyển (navigation bar items), v.v…</td>
+        <td style="text-align: left">Chứa một số tệp dữ liệu nhỏ định dạng <code class="language-plaintext highlighter-rouge">*.yml</code> để xây dựng một số phần, ví dụ như danh sách các tin tức mới (news), hay danh sách các đồng tác giả (co-authors), hay danh sách các thành phần của thanh di chuyển (navigation bar items), v.v…</td>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">_bibliography</span></td>
-        <td style="text-align: left">Chứa các tệp dạng <code class="highlighter-rouge">*.bib</code> phục vụ cho mục đích trích dẫn tài liệu tham khảo (lấy từ tệp <code class="highlighter-rouge">_bibliography/references.bib</code>) hoặc xây dựng danh sách các ấn phẩm khoa học (list of publications) của tôi (lấy từ các tệp trong thư mục <code class="highlighter-rouge">_bibliography/publications</code>) sử dụng <a href="https://github.com/inukshuk/jekyll-scholar">Jekyll Scholar</a></td>
+        <td style="text-align: left">Chứa các tệp dạng <code class="language-plaintext highlighter-rouge">*.bib</code> phục vụ cho mục đích trích dẫn tài liệu tham khảo (lấy từ tệp <code class="language-plaintext highlighter-rouge">_bibliography/references.bib</code>) hoặc xây dựng danh sách các ấn phẩm khoa học (list of publications) của tôi (lấy từ các tệp trong thư mục <code class="language-plaintext highlighter-rouge">_bibliography/publications</code>) sử dụng <a href="https://github.com/inukshuk/jekyll-scholar">Jekyll Scholar</a></td>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">pub_style.csl</span>, <span class="text-monospace">springer-lncs.csl</span></td>
@@ -637,7 +637,7 @@ git pull origin <span class="nb">source</span>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">publications.md</span></td>
-        <td style="text-align: left">Liệt kê các ấn phẩm (publications) và tiền ấn phẩm (preprints) của tôi thông qua <a href="https://github.com/inukshuk/jekyll-scholar">Jekyll Scholar</a> (lấy thông tin từ các tệp trong thư mục <code class="highlighter-rouge">_bibliography/publications</code>)</td>
+        <td style="text-align: left">Liệt kê các ấn phẩm (publications) và tiền ấn phẩm (preprints) của tôi thông qua <a href="https://github.com/inukshuk/jekyll-scholar">Jekyll Scholar</a> (lấy thông tin từ các tệp trong thư mục <code class="language-plaintext highlighter-rouge">_bibliography/publications</code>)</td>
       </tr>
       <tr>
         <td style="text-align: center"><span class="text-monospace">events.md</span></td>
@@ -696,7 +696,7 @@ git pull origin <span class="nb">source</span>
 
 <p>Trang cá nhân của tôi được xây dựng dựa trên nền tảng các thư viện HTML, CSS, và JS của <a href="https://getbootstrap.com/">Bootstrap</a>. Sử dụng các thư viện này giúp tôi tiết kiệm khá nhiều thời gian khi không phải tự tạo các thành phần và các hiệu ứng tôi cần. Tôi cũng sử dụng <a href="https://fontawesome.com/">Font Awesome</a> và <a href="https://jpswalsh.github.io/academicons/">Academicons</a> cho các icon trong trang cá nhân của mình, và sử dụng <a href="https://gist.github.com/nicolashery/5765395">Solarized Dark CSS Style</a> (với một số chỉnh sửa nhỏ) để đánh dấu các đoạn mã.</p>
 
-<h2>Tệp <code class="highlighter-rouge">_config.yml</code></h2>
+<h2>Tệp <code class="language-plaintext highlighter-rouge">_config.yml</code></h2>
 
 <ul>
   <li>Định nghĩa vai trò của một số thư mục</li>
@@ -750,7 +750,7 @@ git pull origin <span class="nb">source</span>
     <p>Thông tin cá nhân (sẽ sử dụng ở các phần sau).</p>
   </li>
   <li>
-    <p>Thông thường, Jekyll sẽ bỏ qua các tệp và thư mục có tên bắt đầu bằng <code class="highlighter-rouge">_</code>. Đối với các thư mục khác, để Jekyll không sao chép các thư mục này khi xây dựng trang cá nhân, các bạn có thể thêm tên tệp/thư mục vào phần <code class="highlighter-rouge">exclude</code> trong tệp <code class="highlighter-rouge">_config.yml</code>, ví dụ như sau</p>
+    <p>Thông thường, Jekyll sẽ bỏ qua các tệp và thư mục có tên bắt đầu bằng <code class="language-plaintext highlighter-rouge">_</code>. Đối với các thư mục khác, để Jekyll không sao chép các thư mục này khi xây dựng trang cá nhân, các bạn có thể thêm tên tệp/thư mục vào phần <code class="language-plaintext highlighter-rouge">exclude</code> trong tệp <code class="language-plaintext highlighter-rouge">_config.yml</code>, ví dụ như sau</p>
   </li>
 </ul>
 
@@ -758,7 +758,7 @@ git pull origin <span class="nb">source</span>
 <span class="na">exclude</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">Gemfile*'</span><span class="pi">,</span><span class="s1">'</span><span class="s">Makefile'</span><span class="pi">,</span><span class="s1">'</span><span class="s">Curriculum</span><span class="nv"> </span><span class="s">Vitae'</span><span class="pi">,</span><span class="s1">'</span><span class="s">Business</span><span class="nv"> </span><span class="s">Card'</span><span class="pi">,</span><span class="s1">'</span><span class="s">*.bat'</span><span class="pi">,</span><span class="s1">'</span><span class="s">*.csl'</span><span class="pi">,</span><span class="s1">'</span><span class="s">exclude_copy*'</span><span class="pi">,</span><span class="s1">'</span><span class="s">gitlab-ci.yml'</span><span class="pi">,</span><span class="s1">'</span><span class="s">README*'</span><span class="pi">,</span><span class="s1">'</span><span class="s">LICENSE.txt'</span><span class="pi">,</span><span class="s1">'</span><span class="s">combinatorial-reconfiguration'</span><span class="pi">,</span><span class="s1">'</span><span class="s">Demo-LaTeXML'</span><span class="pi">,</span><span class="s1">'</span><span class="s">travis.yml'</span><span class="pi">,</span><span class="s1">'</span><span class="s">vendor'</span><span class="pi">,</span><span class="s1">'</span><span class="s">build.sh'</span><span class="pi">]</span>
 </code></pre></div></div>
 
-<p>Chú ý rằng việc thêm <code class="highlighter-rouge">vendor</code> vào mục <code class="highlighter-rouge">exclude</code> là cần thiết nếu bạn muốn làm việc với Travis CI.</p>
+<p>Chú ý rằng việc thêm <code class="language-plaintext highlighter-rouge">vendor</code> vào mục <code class="language-plaintext highlighter-rouge">exclude</code> là cần thiết nếu bạn muốn làm việc với Travis CI.</p>
 
 <ul>
   <li>Liệt kê các collection.</li>
@@ -809,13 +809,13 @@ git pull origin <span class="nb">source</span>
 
 </code></pre></div></div>
 
-<h2>Thư mục <code class="highlighter-rouge">_includes</code></h2>
+<h2>Thư mục <code class="language-plaintext highlighter-rouge">_includes</code></h2>
 
-<h3>Tệp <code class="highlighter-rouge">head.html</code></h3>
+<h3>Tệp <code class="language-plaintext highlighter-rouge">head.html</code></h3>
 
 <ul>
   <li>
-    <p>Tất cả các phần sau đây được đặt giữa <code class="highlighter-rouge">&lt;head&gt;</code> và <code class="highlighter-rouge">&lt;/head&gt;</code>.</p>
+    <p>Tất cả các phần sau đây được đặt giữa <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> và <code class="language-plaintext highlighter-rouge">&lt;/head&gt;</code>.</p>
   </li>
   <li>
     <p>Phần đầu tiên</p>
@@ -854,7 +854,7 @@ git pull origin <span class="nb">source</span>
 
 </code></pre></div></div>
 
-<p>Chú ý rằng các thông tin này sẽ được lấy từ phần nằm ngay đầu tiên của mỗi tệp nguồn (giữa hai dấu <code class="highlighter-rouge">---</code>) và có thể là cả từ tệp <code class="highlighter-rouge">_config.yml</code>. Một ví dụ từ tệp nguồn của bài viết này (<code class="highlighter-rouge">_posts/2018-11-24-xây-dựng-trang-cá-nhân-với-jekyll.md</code>) là:</p>
+<p>Chú ý rằng các thông tin này sẽ được lấy từ phần nằm ngay đầu tiên của mỗi tệp nguồn (giữa hai dấu <code class="language-plaintext highlighter-rouge">---</code>) và có thể là cả từ tệp <code class="language-plaintext highlighter-rouge">_config.yml</code>. Một ví dụ từ tệp nguồn của bài viết này (<code class="language-plaintext highlighter-rouge">_posts/2018-11-24-xây-dựng-trang-cá-nhân-với-jekyll.md</code>) là:</p>
 
 <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
 <span class="na">layout</span><span class="pi">:</span> <span class="s">blog-post</span>
@@ -871,7 +871,7 @@ git pull origin <span class="nb">source</span>
 <span class="nn">---</span>
 </code></pre></div></div>
 
-<p>Trong ví dụ trên, bài viết này sẽ được sinh với layout <code class="highlighter-rouge">blog-post</code> (nằm ở <code class="highlighter-rouge">_layouts/blog-post.html</code>). Các thông tin meta data về tiêu đề (title), tác giả (author), mô tả (description), từ khóa (keywords) đều có thể được truy cập lần lượt thông qua Liquid Tag tương ứng <code class="highlighter-rouge">{{ page.title }}</code>, <code class="highlighter-rouge">{{ page.author }}</code>, <code class="highlighter-rouge">{{ page.description }}</code>, <code class="highlighter-rouge">{{ page.keywords }}</code>. Thông tin về thể loại (categories) được sử dụng khi liệt kê các bài viết (xem tệp <code class="highlighter-rouge">misc.html</code>). Để hiển thị hộp thoại comment cuối trang/bài viết, đặt <code class="highlighter-rouge">comment: true</code> (ngược lại, đặt <code class="highlighter-rouge">comment: false</code>, hoặc đặt <code class="highlighter-rouge">comment: true</code> giữa hai dấu <code class="highlighter-rouge">&lt;!--</code> và <code class="highlighter-rouge">--&gt;</code>). Tương tự như thế, nếu bạn không muốn hiển thị trang/bài viết (chẳng hạn do bạn chưa hoàn thành quá trình xây dựng trang/bài viết đó), thì bạn có thể đặt <code class="highlighter-rouge">published: false</code>. Chú ý rằng việc hiển thị bài viết hay không được cài đặt mặc định trong Jekyll, và bạn có thể sử dụng <code class="highlighter-rouge">published: false</code> hoặc <code class="highlighter-rouge">published: true</code> (mặc định) trong tất cả các trang/bài viết, trong khi phần hộp thoại comment thì do tôi cài đặt trong các layout tôi tự xây dựng.</p>
+<p>Trong ví dụ trên, bài viết này sẽ được sinh với layout <code class="language-plaintext highlighter-rouge">blog-post</code> (nằm ở <code class="language-plaintext highlighter-rouge">_layouts/blog-post.html</code>). Các thông tin meta data về tiêu đề (title), tác giả (author), mô tả (description), từ khóa (keywords) đều có thể được truy cập lần lượt thông qua Liquid Tag tương ứng <code class="language-plaintext highlighter-rouge">{{ page.title }}</code>, <code class="language-plaintext highlighter-rouge">{{ page.author }}</code>, <code class="language-plaintext highlighter-rouge">{{ page.description }}</code>, <code class="language-plaintext highlighter-rouge">{{ page.keywords }}</code>. Thông tin về thể loại (categories) được sử dụng khi liệt kê các bài viết (xem tệp <code class="language-plaintext highlighter-rouge">misc.html</code>). Để hiển thị hộp thoại comment cuối trang/bài viết, đặt <code class="language-plaintext highlighter-rouge">comment: true</code> (ngược lại, đặt <code class="language-plaintext highlighter-rouge">comment: false</code>, hoặc đặt <code class="language-plaintext highlighter-rouge">comment: true</code> giữa hai dấu <code class="language-plaintext highlighter-rouge">&lt;!--</code> và <code class="language-plaintext highlighter-rouge">--&gt;</code>). Tương tự như thế, nếu bạn không muốn hiển thị trang/bài viết (chẳng hạn do bạn chưa hoàn thành quá trình xây dựng trang/bài viết đó), thì bạn có thể đặt <code class="language-plaintext highlighter-rouge">published: false</code>. Chú ý rằng việc hiển thị bài viết hay không được cài đặt mặc định trong Jekyll, và bạn có thể sử dụng <code class="language-plaintext highlighter-rouge">published: false</code> hoặc <code class="language-plaintext highlighter-rouge">published: true</code> (mặc định) trong tất cả các trang/bài viết, trong khi phần hộp thoại comment thì do tôi cài đặt trong các layout tôi tự xây dựng.</p>
 
 <ul>
   <li>Dòng tiếp theo</li>
@@ -924,7 +924,7 @@ git pull origin <span class="nb">source</span>
 <span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 
-<p>Chú ý rằng phần sử dụng Popover và Tooltip chỉ hoạt động nếu các bạn sử dụng các thư viện của <a href="https://getbootstrap.com/">Bootstrap</a>. Việc khai báo <code class="highlighter-rouge">jquery-3.3.1.slim.min.js</code> trước <code class="highlighter-rouge">bootstrap.min.js</code> cũng là cần thiết để tránh một số xung đột giữa hai thư viện. Tất cả các cấu hình liên quan đến CSS đều nằm trong tệp <code class="highlighter-rouge">static/css/custom.css</code>.</p>
+<p>Chú ý rằng phần sử dụng Popover và Tooltip chỉ hoạt động nếu các bạn sử dụng các thư viện của <a href="https://getbootstrap.com/">Bootstrap</a>. Việc khai báo <code class="language-plaintext highlighter-rouge">jquery-3.3.1.slim.min.js</code> trước <code class="language-plaintext highlighter-rouge">bootstrap.min.js</code> cũng là cần thiết để tránh một số xung đột giữa hai thư viện. Tất cả các cấu hình liên quan đến CSS đều nằm trong tệp <code class="language-plaintext highlighter-rouge">static/css/custom.css</code>.</p>
 
 <ul>
   <li>Phần</li>
@@ -941,7 +941,7 @@ git pull origin <span class="nb">source</span>
 &lt;![endif]--&gt;</span>
 </code></pre></div></div>
 
-<p>được sử dụng để hiện thị favicon (ở đây tôi sử dụng tệp <code class="highlighter-rouge">static/img/Duc.ico</code>) và cấu hình khi xem trang cá nhân với trình duyệt Internet Explorer.</p>
+<p>được sử dụng để hiện thị favicon (ở đây tôi sử dụng tệp <code class="language-plaintext highlighter-rouge">static/img/Duc.ico</code>) và cấu hình khi xem trang cá nhân với trình duyệt Internet Explorer.</p>
 
 <ul>
   <li>Phần cuối</li>
@@ -952,13 +952,13 @@ git pull origin <span class="nb">source</span>
 
 </code></pre></div></div>
 
-<p>được sử dụng bởi plugin <code class="highlighter-rouge">jekyll-feed</code> để sinh tệp RSS feed <code class="highlighter-rouge">feed.xml</code> cho các bài viết (blog posts).</p>
+<p>được sử dụng bởi plugin <code class="language-plaintext highlighter-rouge">jekyll-feed</code> để sinh tệp RSS feed <code class="language-plaintext highlighter-rouge">feed.xml</code> cho các bài viết (blog posts).</p>
 
-<h3>Tệp <code class="highlighter-rouge">header.html</code></h3>
+<h3>Tệp <code class="language-plaintext highlighter-rouge">header.html</code></h3>
 
 <ul>
   <li>
-    <p>Tất cả các phần sau đây được đặt giữa <code class="highlighter-rouge">&lt;header&gt;</code> và <code class="highlighter-rouge">&lt;/header&gt;</code>.</p>
+    <p>Tất cả các phần sau đây được đặt giữa <code class="language-plaintext highlighter-rouge">&lt;header&gt;</code> và <code class="language-plaintext highlighter-rouge">&lt;/header&gt;</code>.</p>
   </li>
   <li>
     <p>Phần</p>
@@ -1008,7 +1008,7 @@ git pull origin <span class="nb">source</span>
 
 </code></pre></div></div>
 
-<p>được sử dụng để xây dựng navigation bar với các thư viện của <a href="https://getbootstrap.com/">Bootstrap</a> và các icon từ <a href="https://fontawesome.com/">Font Awesome</a>. Các dữ liệu cần thiết được lấy từ <code class="highlighter-rouge">_data/navbar.yml</code> thông qua <code class="highlighter-rouge">site.data.navbar</code>. Ví dụ tệp <code class="highlighter-rouge">_data/navbar.yml</code> của tôi chứa các dữ liệu như sau</p>
+<p>được sử dụng để xây dựng navigation bar với các thư viện của <a href="https://getbootstrap.com/">Bootstrap</a> và các icon từ <a href="https://fontawesome.com/">Font Awesome</a>. Các dữ liệu cần thiết được lấy từ <code class="language-plaintext highlighter-rouge">_data/navbar.yml</code> thông qua <code class="language-plaintext highlighter-rouge">site.data.navbar</code>. Ví dụ tệp <code class="language-plaintext highlighter-rouge">_data/navbar.yml</code> của tôi chứa các dữ liệu như sau</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Home"</span>
   <span class="na">fa-icon</span><span class="pi">:</span> <span class="s2">"</span><span class="s">fa</span><span class="nv"> </span><span class="s">fa-home"</span>
@@ -1043,9 +1043,9 @@ git pull origin <span class="nb">source</span>
   <span class="na">href</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/misc/"</span>
 </code></pre></div></div>
 
-<h3>Tệp <code class="highlighter-rouge">author-info.html</code></h3>
+<h3>Tệp <code class="language-plaintext highlighter-rouge">author-info.html</code></h3>
 
-<p>Tệp này được sử dụng để cài đặt việc hiển thị các thông tin cơ bản được lấy từ trong tệp <code class="highlighter-rouge">_config.yml</code> của tôi.</p>
+<p>Tệp này được sử dụng để cài đặt việc hiển thị các thông tin cơ bản được lấy từ trong tệp <code class="language-plaintext highlighter-rouge">_config.yml</code> của tôi.</p>
 
 <p>(Một phần) tệp <code>_config.yml</code></p>
 
@@ -1065,7 +1065,7 @@ git pull origin <span class="nb">source</span>
 <span class="na">institute_address</span><span class="pi">:</span> <span class="s">Japan Advanced Institute of Science and Technology, 1-1 Asahidai, Nomi, Ishikawa, 923-1292 Japan</span>
 </code></pre></div></div>
 
-<p>Việc lấy từng thông tin tương ứng, ví dụ như <code class="highlighter-rouge">url</code>, được thực hiện thông qua Liquid Tag <code>{{ site.url }}</code>. Nội dung của tệp <code>_includes/author-info.html</code></p>
+<p>Việc lấy từng thông tin tương ứng, ví dụ như <code class="language-plaintext highlighter-rouge">url</code>, được thực hiện thông qua Liquid Tag <code>{{ site.url }}</code>. Nội dung của tệp <code>_includes/author-info.html</code></p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
@@ -1102,9 +1102,9 @@ git pull origin <span class="nb">source</span>
 
 <p>Chú ý rằng ở đây tôi sử dụng <a href="https://getbootstrap.com/docs/4.1/layout/grid/">Boostrap Grid System</a>. Nếu bạn không sử dụng Boostrap thì việc hiển thị trang cá nhân của bạn có thể không giống với trang cá nhân của tôi.</p>
 
-<h3>Tệp <code class="highlighter-rouge">news.html</code></h3>
+<h3>Tệp <code class="language-plaintext highlighter-rouge">news.html</code></h3>
 
-<p>Tệp này được sử dụng để hiển thị các tin tức tôi muốn. Ở đây tôi sử dụng <a href="https://getbootstrap.com/docs/4.1/components/list-group/">Bootstrap List Group</a> để hiển thị từng thông tin. Các thông tin cần thiết được lấy từ <code class="highlighter-rouge">_data/news.yml</code>. 
+<p>Tệp này được sử dụng để hiển thị các tin tức tôi muốn. Ở đây tôi sử dụng <a href="https://getbootstrap.com/docs/4.1/components/list-group/">Bootstrap List Group</a> để hiển thị từng thông tin. Các thông tin cần thiết được lấy từ <code class="language-plaintext highlighter-rouge">_data/news.yml</code>. 
 Nội dung của <code>_includes/news.html</code></p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
@@ -1161,7 +1161,7 @@ Nội dung của <code>_includes/news.html</code></p>
   <span class="na">pub-type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">conference"</span>  
 </code></pre></div></div>
 
-<h3>Tệp <code class="highlighter-rouge">disqus.html</code> và <code class="highlighter-rouge">intensedebate.html</code></h3>
+<h3>Tệp <code class="language-plaintext highlighter-rouge">disqus.html</code> và <code class="language-plaintext highlighter-rouge">intensedebate.html</code></h3>
 
 <p>Các tệp này sử dụng để cấu hình các hộp thoại comment từ <a href="https://disqus.com/">Disqus</a> và <a href="https://www.intensedebate.com/">IntenseDebate</a>. Tôi trước kia sử dụng Disqus nhưng sau đó chuyển sang IntenseDebate do IntenseDebate <a href="https://gist.github.com/christianp/6376614">có hỗ trợ comment và hiển thị các công thức toán học</a> (mặc dù vẫn có lỗi và bạn thường phải refresh trang/bài viết để hiển thị đúng). Việc sử dụng các công cụ này khá đơn giản. Bạn chỉ cần đăng ký tài khoản và chèn đoạn mã HTML họ cung cấp vào các trang/bài viết bạn muốn. Ở đây tôi chèn các đoạn mã này vào các tệp tương ứng, và chèn vào các trang/bài viết thông qua Liquid Tag, ví dụ như</p>
 
@@ -1172,14 +1172,14 @@ Nội dung của <code>_includes/news.html</code></p>
 
 </code></pre></div></div>
 
-<h3>Tệp <code class="highlighter-rouge">files.html</code> và <code class="highlighter-rouge">image.html</code></h3>
+<h3>Tệp <code class="language-plaintext highlighter-rouge">files.html</code> và <code class="language-plaintext highlighter-rouge">image.html</code></h3>
 
-<p>Tệp <code class="highlighter-rouge">files.html</code> được sử dụng để chèn các đường dẫn đến các tệp và thư mục con của thư mục <code class="highlighter-rouge">static/files/posts/name-of-blog-post</code>, với <code class="highlighter-rouge">name-of-blog-post</code> là một phần tên bài viết bạn đặt (chú ý là mỗi bài viết có mã nguồn với tên dạng <code class="highlighter-rouge">YYYY-MM-DD-name-of-blog-post.md</code>). Ví dụ nếu sử dụng đoạn mã <code>{% include files.html name="your-file.pdf" text="your file" %}</code> trong bài viết này thì nó sẽ chèn đường dẫn đến tệp <code class="highlighter-rouge">static/files/posts/xây-dựng-trang-cá-nhân-với-jekyll/your-file.pdf</code>, cụ thể như <a href="/static/posts/xây-dựng-trang-cá-nhân-với-jekyll/your-file.pdf">your-file</a>
+<p>Tệp <code class="language-plaintext highlighter-rouge">files.html</code> được sử dụng để chèn các đường dẫn đến các tệp và thư mục con của thư mục <code class="language-plaintext highlighter-rouge">static/files/posts/name-of-blog-post</code>, với <code class="language-plaintext highlighter-rouge">name-of-blog-post</code> là một phần tên bài viết bạn đặt (chú ý là mỗi bài viết có mã nguồn với tên dạng <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-blog-post.md</code>). Ví dụ nếu sử dụng đoạn mã <code>{% include files.html name="your-file.pdf" text="your file" %}</code> trong bài viết này thì nó sẽ chèn đường dẫn đến tệp <code class="language-plaintext highlighter-rouge">static/files/posts/xây-dựng-trang-cá-nhân-với-jekyll/your-file.pdf</code>, cụ thể như <a href="/static/posts/xây-dựng-trang-cá-nhân-với-jekyll/your-file.pdf">your-file</a>
 .</p>
 
-<p>Tương tự như <code class="highlighter-rouge">files.html</code>, tệp <code class="highlighter-rouge">image.html</code> được sử dụng để chèn các tệp hình ảnh của thư mục <code class="highlighter-rouge">static/img/posts/name-of-blog-post</code>, với <code class="highlighter-rouge">name-of-blog-post</code> là một phần tên bài viết bạn đặt. Một ví dụ về sử dụng <code class="highlighter-rouge">image.html</code> là <code> {% include image.html name=your-figure.png" caption="This is the caption for your figure" width="70%" %} </code>.</p>
+<p>Tương tự như <code class="language-plaintext highlighter-rouge">files.html</code>, tệp <code class="language-plaintext highlighter-rouge">image.html</code> được sử dụng để chèn các tệp hình ảnh của thư mục <code class="language-plaintext highlighter-rouge">static/img/posts/name-of-blog-post</code>, với <code class="language-plaintext highlighter-rouge">name-of-blog-post</code> là một phần tên bài viết bạn đặt. Một ví dụ về sử dụng <code class="language-plaintext highlighter-rouge">image.html</code> là <code> {% include image.html name=your-figure.png" caption="This is the caption for your figure" width="70%" %} </code>.</p>
 
-<h3>Tệp <code class="highlighter-rouge">footer.html</code></h3>
+<h3>Tệp <code class="language-plaintext highlighter-rouge">footer.html</code></h3>
 
 <p>Chứa các thông tin ở phần cuối của trang/bài viết. 
 Ví dụ, nội dung của <code>_includes/footer.html</code></p>
@@ -1197,7 +1197,7 @@ Ví dụ, nội dung của <code>_includes/footer.html</code></p>
 
 </code></pre></div></div>
 
-<h3>Tệp <code class="highlighter-rouge">search-form.html</code></h3>
+<h3>Tệp <code class="language-plaintext highlighter-rouge">search-form.html</code></h3>
 
 <p>Chứa search form để tìm kiếm trong nội dung của các bài viết.</p>
 
@@ -1219,11 +1219,11 @@ Ví dụ, nội dung của <code>_includes/footer.html</code></p>
 
 </code></pre></div></div>
 
-<h2>Thư mục <code class="highlighter-rouge">_layouts</code></h2>
+<h2>Thư mục <code class="language-plaintext highlighter-rouge">_layouts</code></h2>
 
 <p>Chứa các layout định sẵn cho từng trang/bài viết.</p>
 
-<h3>Tệp <code class="highlighter-rouge">blog-post.html</code>, <code class="highlighter-rouge">page.html</code>, <code class="highlighter-rouge">post.html</code>, <code class="highlighter-rouge">collection_main.html</code>, và <code class="highlighter-rouge">collection_item.html</code></h3>
+<h3>Tệp <code class="language-plaintext highlighter-rouge">blog-post.html</code>, <code class="language-plaintext highlighter-rouge">page.html</code>, <code class="language-plaintext highlighter-rouge">post.html</code>, <code class="language-plaintext highlighter-rouge">collection_main.html</code>, và <code class="language-plaintext highlighter-rouge">collection_item.html</code></h3>
 
 <p>Một ví dụ về việc xây dựng layout như trong tệp <code>_layouts/blog-post.html</code> của tôi như sau</p>
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
@@ -1269,11 +1269,11 @@ Ví dụ, nội dung của <code>_includes/footer.html</code></p>
 
 </code></pre></div></div>
 
-<p>Hoàn toàn tương tự, bạn có thể xây dựng các layout khác (<code class="highlighter-rouge">_layouts/page.html</code>, <code class="highlighter-rouge">_layouts/post.html</code>, <code class="highlighter-rouge">_layouts/collection_main.html</code>, <code class="highlighter-rouge">_layouts/collection_item.html</code>) bằng cách thêm hoặc bớt các phần không cần thiết, hoặc là tạo các tệp mới trong thư mục <code class="highlighter-rouge">_includes</code> và thêm vào layout, hoặc thêm trực tiếp các đoạn mã HTML vào layout.</p>
+<p>Hoàn toàn tương tự, bạn có thể xây dựng các layout khác (<code class="language-plaintext highlighter-rouge">_layouts/page.html</code>, <code class="language-plaintext highlighter-rouge">_layouts/post.html</code>, <code class="language-plaintext highlighter-rouge">_layouts/collection_main.html</code>, <code class="language-plaintext highlighter-rouge">_layouts/collection_item.html</code>) bằng cách thêm hoặc bớt các phần không cần thiết, hoặc là tạo các tệp mới trong thư mục <code class="language-plaintext highlighter-rouge">_includes</code> và thêm vào layout, hoặc thêm trực tiếp các đoạn mã HTML vào layout.</p>
 
-<h3>Tệp <code class="highlighter-rouge">pub_style.html</code> và <code class="highlighter-rouge">bib.html</code></h3>
+<h3>Tệp <code class="language-plaintext highlighter-rouge">pub_style.html</code> và <code class="language-plaintext highlighter-rouge">bib.html</code></h3>
 
-<p>Một dạng layout đặc biệt là layout sử dụng để liệt kê các ấn phẩm (publications) của tôi. Layout này được xây dựng trong tệp <code class="highlighter-rouge">_layouts/pub_style.html</code> như sau.</p>
+<p>Một dạng layout đặc biệt là layout sử dụng để liệt kê các ấn phẩm (publications) của tôi. Layout này được xây dựng trong tệp <code class="language-plaintext highlighter-rouge">_layouts/pub_style.html</code> như sau.</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 ---
@@ -1345,7 +1345,7 @@ PDF
 
 </code></pre></div></div>
 
-<h3>Tệp <code class="highlighter-rouge">search.html</code></h3>
+<h3>Tệp <code class="language-plaintext highlighter-rouge">search.html</code></h3>
 
 <p>Một layout khác là layout được sử dụng để hiển thị kết quả tìm kiếm nội dung các bài viết, ví dụ như ở tệp <code>_layouts/search.html</code></p>
 
@@ -1361,7 +1361,7 @@ layout: page
 
 </code></pre></div></div>
 
-<h2>Tệp <code class="highlighter-rouge">misc.html</code> – Liệt kê danh sách các bài viết</h2>
+<h2>Tệp <code class="language-plaintext highlighter-rouge">misc.html</code> – Liệt kê danh sách các bài viết</h2>
 
 <p>Một phần quan trọng trong tệp này là phần liệt kê các bài viết theo thể loại.</p>
 
@@ -1386,7 +1386,7 @@ layout: page
 
 </code></pre></div></div>
 
-<h2>Tệp <code class="highlighter-rouge">publications.md</code> – Liệt kê danh sách các ấn phẩm (publications)</h2>
+<h2>Tệp <code class="language-plaintext highlighter-rouge">publications.md</code> – Liệt kê danh sách các ấn phẩm (publications)</h2>
 
 <p>Ví dụ, để liệt kê danh sách các tiền ấn phẩm (preprints), tôi làm như sau:</p>
 
@@ -1401,13 +1401,13 @@ layout: page
 
 </code></pre></div></div>
 
-<p>Tên tệp <code class="highlighter-rouge">pub_style</code> sau <code class="highlighter-rouge">--template</code> là để chỉ tệp <code class="highlighter-rouge">_layouts/pub_style.html</code>, còn tên tệp <code class="highlighter-rouge">pub_style</code> sau <code class="highlighter-rouge">--style</code> là để chỉ tệp <code class="highlighter-rouge">pub_style.csl</code>.
-Tất cả các tiền ấn phẩm của tôi được liệt kê trong tệp <code class="highlighter-rouge">_bibliography/publications/preprints.bib</code>.
+<p>Tên tệp <code class="language-plaintext highlighter-rouge">pub_style</code> sau <code class="language-plaintext highlighter-rouge">--template</code> là để chỉ tệp <code class="language-plaintext highlighter-rouge">_layouts/pub_style.html</code>, còn tên tệp <code class="language-plaintext highlighter-rouge">pub_style</code> sau <code class="language-plaintext highlighter-rouge">--style</code> là để chỉ tệp <code class="language-plaintext highlighter-rouge">pub_style.csl</code>.
+Tất cả các tiền ấn phẩm của tôi được liệt kê trong tệp <code class="language-plaintext highlighter-rouge">_bibliography/publications/preprints.bib</code>.
 Bạn có thể làm hoàn toàn tương tự với các phần khác.</p>
 
-<h2>Tệp <code class="highlighter-rouge">latex-template.md</code> – Liệt kê các phần tử trong một collection</h2>
+<h2>Tệp <code class="language-plaintext highlighter-rouge">latex-template.md</code> – Liệt kê các phần tử trong một collection</h2>
 
-<p>Để liệt kê các LaTeX template tôi thường dùng, tôi làm như sau (trong tệp <code class="highlighter-rouge">latex-template.md</code>)</p>
+<p>Để liệt kê các LaTeX template tôi thường dùng, tôi làm như sau (trong tệp <code class="language-plaintext highlighter-rouge">latex-template.md</code>)</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 
@@ -1442,10 +1442,10 @@ Bạn có thể làm hoàn toàn tương tự với các phần khác.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll build <span class="nt">--config</span> _config.yml
 </code></pre></div></div>
 
-<p>Bạn cũng có thể sử dụng lệnh <code class="highlighter-rouge">bundle exec jekyll serve</code> và truy cập tới địa chỉ <a href="http://localhost:4000">http://localhost:4000</a> để kiểm tra nội dung trang cá nhân trước khi tiến hành các bước tiếp theo.</p>
+<p>Bạn cũng có thể sử dụng lệnh <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> và truy cập tới địa chỉ <a href="http://localhost:4000">http://localhost:4000</a> để kiểm tra nội dung trang cá nhân trước khi tiến hành các bước tiếp theo.</p>
 
 <ul>
-  <li>Đồng bộ mã nguồn với thư mục <code class="highlighter-rouge">$HOME/username.github.io/source</code> và commit nội dung lên branch <code class="highlighter-rouge">source</code> của GitHub repository <code class="highlighter-rouge">username.github.io</code>. Ở đây, tôi sử dụng <a href="https://wiki.archlinux.org/index.php/rsync">rsync</a>.</li>
+  <li>Đồng bộ mã nguồn với thư mục <code class="language-plaintext highlighter-rouge">$HOME/username.github.io/source</code> và commit nội dung lên branch <code class="language-plaintext highlighter-rouge">source</code> của GitHub repository <code class="language-plaintext highlighter-rouge">username.github.io</code>. Ở đây, tôi sử dụng <a href="https://wiki.archlinux.org/index.php/rsync">rsync</a>.</li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rsync <span class="nt">-arv</span> <span class="nt">--exclude-from</span> exclude_copy.txt <span class="nb">.</span> <span class="nv">$HOME</span>/username.github.io/source
@@ -1455,10 +1455,10 @@ git commit <span class="nt">-S</span> <span class="nt">-m</span> <span class="s2
 git push <span class="nt">-u</span> origin <span class="nb">source</span>
 </code></pre></div></div>
 
-<p>Ở đây, tệp <code class="highlighter-rouge">exclude_copy.txt</code> chứa các thư mục và tệp tôi không muốn commit lên branch <code class="highlighter-rouge">source</code> (bao gồm chính bản thân tệp đó, do đó bạn sẽ không tìm được tệp này trong mã nguồn của trang cá nhân của tôi).</p>
+<p>Ở đây, tệp <code class="language-plaintext highlighter-rouge">exclude_copy.txt</code> chứa các thư mục và tệp tôi không muốn commit lên branch <code class="language-plaintext highlighter-rouge">source</code> (bao gồm chính bản thân tệp đó, do đó bạn sẽ không tìm được tệp này trong mã nguồn của trang cá nhân của tôi).</p>
 
 <ul>
-  <li>Đồng bộ nội dung trang cá nhân với thư mục <code class="highlighter-rouge">$HOME/username.github.io/master</code> và commit nội dung lên branch <code class="highlighter-rouge">master</code> của GitHub repository <code class="highlighter-rouge">username.github.io</code>. Ở đây, tôi sử dụng <a href="https://wiki.archlinux.org/index.php/rsync">rsync</a> và <a href="https://www.archlinux.org/packages/extra/x86_64/tree/">tree</a>.</li>
+  <li>Đồng bộ nội dung trang cá nhân với thư mục <code class="language-plaintext highlighter-rouge">$HOME/username.github.io/master</code> và commit nội dung lên branch <code class="language-plaintext highlighter-rouge">master</code> của GitHub repository <code class="language-plaintext highlighter-rouge">username.github.io</code>. Ở đây, tôi sử dụng <a href="https://wiki.archlinux.org/index.php/rsync">rsync</a> và <a href="https://www.archlinux.org/packages/extra/x86_64/tree/">tree</a>.</li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rsync <span class="nt">-arv</span> <span class="nt">--exclude</span> <span class="s2">"README*"</span> <span class="nt">--exclude</span> <span class="s2">"LICENSE.txt"</span> ./_site/<span class="k">*</span> <span class="nv">$HOME</span>/username.github.io/master
@@ -1472,7 +1472,7 @@ git push <span class="nt">-u</span> origin master
 <h1>Cài đặt quá trình tự động với Travis CI</h1>
 
 <ul>
-  <li>Tạo tệp <code class="highlighter-rouge">.travis.yml</code> có nội dung như sau:</li>
+  <li>Tạo tệp <code class="language-plaintext highlighter-rouge">.travis.yml</code> có nội dung như sau:</li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dist: xenial
@@ -1497,7 +1497,7 @@ script:
 </code></pre></div></div>
 
 <ul>
-  <li>Tạo tệp <code class="highlighter-rouge">build.sh</code> có nội dung như sau.</li>
+  <li>Tạo tệp <code class="language-plaintext highlighter-rouge">build.sh</code> có nội dung như sau.</li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#! /bin/bash</span>
@@ -1538,21 +1538,21 @@ main <span class="o">()</span> <span class="o">{</span>
 main <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
 </code></pre></div></div>
 
-<p>trong đó <code class="highlighter-rouge">${DEPLOY_BLOG_TOKEN}</code> là một khóa bí mật được thêm vào Travis CI. Khóa này được tạo từ GitHub bằng cách đăng nhập, và sau đó truy cập tới địa chỉ <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> và chọn <code class="highlighter-rouge">Generate new token</code>. Trong phần <code class="highlighter-rouge">Select scopes</code>, đánh dấu chọn mục <code class="highlighter-rouge">repo</code> và tất cả các mục con của nó. Sao chép lại token được sinh ra và thêm vào Travis CI bằng cách đăng nhập Travis CI với GitHub, truy cập tới địa chỉ <a href="https://travis-ci.org/username/username.github.io/settings">https://travis-ci.org/username/username.github.io/settings</a>, và thêm vào mục <code class="highlighter-rouge">Environment Variables</code> một khóa với tên (Name) là <code class="highlighter-rouge">DEPLOY_BLOG_TOKEN</code> và giá trị (Value) là token đã sao chép từ GitHub. Chú ý rằng để Travis CI tự động sinh trang cá nhân mỗi khi có commit từ branch <code class="highlighter-rouge">source</code>, trước hết bạn cần khởi động repository bằng cách truy cập tới địa chỉ <a href="https://travis-ci.org/username/username.github.io/settings">https://travis-ci.org/username/username.github.io/settings</a>, chọn mục <code class="highlighter-rouge">Current</code>, và nhấn vào nút <code class="highlighter-rouge">Activate repository</code> ở cuối dòng thông báo <code class="highlighter-rouge">This is not an active repository</code>.</p>
+<p>trong đó <code class="language-plaintext highlighter-rouge">${DEPLOY_BLOG_TOKEN}</code> là một khóa bí mật được thêm vào Travis CI. Khóa này được tạo từ GitHub bằng cách đăng nhập, và sau đó truy cập tới địa chỉ <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> và chọn <code class="language-plaintext highlighter-rouge">Generate new token</code>. Trong phần <code class="language-plaintext highlighter-rouge">Select scopes</code>, đánh dấu chọn mục <code class="language-plaintext highlighter-rouge">repo</code> và tất cả các mục con của nó. Sao chép lại token được sinh ra và thêm vào Travis CI bằng cách đăng nhập Travis CI với GitHub, truy cập tới địa chỉ <a href="https://travis-ci.org/username/username.github.io/settings">https://travis-ci.org/username/username.github.io/settings</a>, và thêm vào mục <code class="language-plaintext highlighter-rouge">Environment Variables</code> một khóa với tên (Name) là <code class="language-plaintext highlighter-rouge">DEPLOY_BLOG_TOKEN</code> và giá trị (Value) là token đã sao chép từ GitHub. Chú ý rằng để Travis CI tự động sinh trang cá nhân mỗi khi có commit từ branch <code class="language-plaintext highlighter-rouge">source</code>, trước hết bạn cần khởi động repository bằng cách truy cập tới địa chỉ <a href="https://travis-ci.org/username/username.github.io/settings">https://travis-ci.org/username/username.github.io/settings</a>, chọn mục <code class="language-plaintext highlighter-rouge">Current</code>, và nhấn vào nút <code class="language-plaintext highlighter-rouge">Activate repository</code> ở cuối dòng thông báo <code class="language-plaintext highlighter-rouge">This is not an active repository</code>.</p>
 
 <h1>Sign commit với PGP secret key trong Travis CI</h1>
 
 <p>Tôi muốn sign mỗi commit từ Travis CI với <a href="https://keybase.io/hoanganhduc">PGP public key của tôi</a>. Để thực hiện điều này, tôi làm các bước sau:</p>
 
 <ul>
-  <li>Bỏ passphrase từ  secret key sử dụng gói <a href="https://aur.archlinux.org/packages/gnupg1/">gnupg1</a> trong Arch Linux. Xem chi tiết hướng dẫn <a href="/blog/2018/05/26/some-notes-on-installing-arch-linux/#gnupg">ở đây</a>. Giả sử kết quả của quá trình này là một tệp tên <code class="highlighter-rouge">PGP-key.asc</code>.</li>
-  <li><a href="https://docs.travis-ci.com/user/encrypting-files">Mã hóa</a> <code class="highlighter-rouge">PGP-key.asc</code> với <a href="https://github.com/travis-ci/travis.rb#readme">Travis CI CLI</a>.</li>
+  <li>Bỏ passphrase từ  secret key sử dụng gói <a href="https://aur.archlinux.org/packages/gnupg1/">gnupg1</a> trong Arch Linux. Xem chi tiết hướng dẫn <a href="/blog/2018/05/26/some-notes-on-installing-arch-linux/#gnupg">ở đây</a>. Giả sử kết quả của quá trình này là một tệp tên <code class="language-plaintext highlighter-rouge">PGP-key.asc</code>.</li>
+  <li><a href="https://docs.travis-ci.com/user/encrypting-files">Mã hóa</a> <code class="language-plaintext highlighter-rouge">PGP-key.asc</code> với <a href="https://github.com/travis-ci/travis.rb#readme">Travis CI CLI</a>.</li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>travis encrypt-file PGP-key.asc <span class="nt">-r</span> username/username.github.io
 </code></pre></div></div>
 
-<p>trong đó <code class="highlighter-rouge">username</code> là tên đăng nhập tài khoản GitHub của bạn. Kết quả thu được có dạng như sau:</p>
+<p>trong đó <code class="language-plaintext highlighter-rouge">username</code> là tên đăng nhập tài khoản GitHub của bạn. Kết quả thu được có dạng như sau:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>encrypting PGP-key.asc <span class="k">for </span>username/username.github.io
 storing result as PGP-key.asc.enc
@@ -1570,12 +1570,12 @@ Commit all changes to your .travis.yml.
 
 </code></pre></div></div>
 
-<p>Sau khi thu được tệp đã mã hóa <code class="highlighter-rouge">PGP-key.asc.enc</code>, bạn có thể sao chép tệp này vào GitHub repository. Chú ý rằng <strong>không sao chép tệp <code class="highlighter-rouge">PGP-key.asc</code> vào GitHub repository</strong>. Trong quá trình mã hóa, bạn cũng sẽ thu được một thông báo yêu cầu bạn thêm dòng có dạng</p>
+<p>Sau khi thu được tệp đã mã hóa <code class="language-plaintext highlighter-rouge">PGP-key.asc.enc</code>, bạn có thể sao chép tệp này vào GitHub repository. Chú ý rằng <strong>không sao chép tệp <code class="language-plaintext highlighter-rouge">PGP-key.asc</code> vào GitHub repository</strong>. Trong quá trình mã hóa, bạn cũng sẽ thu được một thông báo yêu cầu bạn thêm dòng có dạng</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl aes-256-cbc <span class="nt">-K</span> <span class="nv">$encrypted_0a6446eb3ae3_key</span> <span class="nt">-iv</span> <span class="nv">$encrypted_0a6446eb3ae3_iv</span> <span class="nt">-in</span> PGP-key.asc.enc <span class="nt">-out</span> PGP-key.asc <span class="nt">-d</span>
 </code></pre></div></div>
 
-<p>vào <code class="highlighter-rouge">before_install</code> stage của <code class="highlighter-rouge">.travis.yml</code> để giải mã <code class="highlighter-rouge">PGP-key.asc.enc</code>. Tóm lại, tệp <code class="highlighter-rouge">.travis.yml</code> mới sẽ có dạng như sau</p>
+<p>vào <code class="language-plaintext highlighter-rouge">before_install</code> stage của <code class="language-plaintext highlighter-rouge">.travis.yml</code> để giải mã <code class="language-plaintext highlighter-rouge">PGP-key.asc.enc</code>. Tóm lại, tệp <code class="language-plaintext highlighter-rouge">.travis.yml</code> mới sẽ có dạng như sau</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dist: xenial
 language: ruby
@@ -1607,7 +1607,7 @@ script:
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"

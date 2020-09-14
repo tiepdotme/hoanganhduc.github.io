@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
 </head>
 
 
@@ -127,7 +127,7 @@ Here, I describe how I install Arch Linux to my <a href="https://www.asus.com/La
 <h2>Create live USB of Arch Linux</h2>
 
 <p>I download the latest ISO from <a href="https://www.archlinux.org/download/">https://www.archlinux.org/download/</a> and create a live USB with that iso file.
-In a Linux system, you can use the <code class="highlighter-rouge">dd</code> command</p>
+In a Linux system, you can use the <code class="language-plaintext highlighter-rouge">dd</code> command</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dd </span><span class="nv">bs</span><span class="o">=</span>4M <span class="k">if</span><span class="o">=</span>/path/to/archlinux.iso <span class="nv">of</span><span class="o">=</span>/dev/sdx <span class="nv">status</span><span class="o">=</span>progress <span class="o">&amp;&amp;</span> <span class="nb">sync</span>
 </code></pre></div></div>
 <p>In a Windows system, my recommendation is <a href="https://rufus.akeo.ie/">Rufus</a> or <a href="https://www.ventoy.net/">Ventoy</a>.
@@ -139,7 +139,7 @@ You can also <a href="https://wiki.archlinux.org/index.php/Remastering_the_Insta
 To list all available layouts, use</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> /usr/share/kbd/keymaps/<span class="k">**</span>/<span class="k">*</span>.map.gz
 </code></pre></div></div>
-<p>To set a layout, use <code class="highlighter-rouge">loadkeys</code> command.</p>
+<p>To set a layout, use <code class="language-plaintext highlighter-rouge">loadkeys</code> command.</p>
 
 <h2>Boot mode</h2>
 
@@ -151,7 +151,7 @@ In fact, my computer supports both <a href="https://wiki.archlinux.org/index.php
 
 <h2>Internet connection</h2>
 
-<p>If you connect to the internet using wired network devices (as I do) then you can verify the connection (which is enabled on boot by the installation image) using <code class="highlighter-rouge">ping</code> command. 
+<p>If you connect to the internet using wired network devices (as I do) then you can verify the connection (which is enabled on boot by the installation image) using <code class="language-plaintext highlighter-rouge">ping</code> command. 
 See <a href="https://wiki.archlinux.org/index.php/Network_configuration">this page</a> for more details on how to configure a network connection.</p>
 
 <h2>Time settings</h2>
@@ -161,25 +161,25 @@ See <a href="https://wiki.archlinux.org/index.php/Network_configuration">this pa
 </code></pre></div></div>
 <p>to ensure the system clock is accurate.</p>
 
-<p><strong>Update (2019-12-31):</strong> I use the package <code class="highlighter-rouge">tz-data 2016j-1</code> (downloaded from <a href="https://archive.org/download/archlinux_pkg_tzdata/tzdata-2016j-1-any.pkg.tar.xz">here</a>) in order to get an old representation of time zones (e.g., <code class="highlighter-rouge">date +%Z</code> will output <code class="highlighter-rouge">ICT</code> for the <code class="highlighter-rouge">Asia/Ho_Chi_Minh</code> timezone, and the latter version of <code class="highlighter-rouge">tz-data</code> will output <code class="highlighter-rouge">+07</code>).</p>
+<p><strong>Update (2019-12-31):</strong> I use the package <code class="language-plaintext highlighter-rouge">tz-data 2016j-1</code> (downloaded from <a href="https://archive.org/download/archlinux_pkg_tzdata/tzdata-2016j-1-any.pkg.tar.xz">here</a>) in order to get an old representation of time zones (e.g., <code class="language-plaintext highlighter-rouge">date +%Z</code> will output <code class="language-plaintext highlighter-rouge">ICT</code> for the <code class="language-plaintext highlighter-rouge">Asia/Ho_Chi_Minh</code> timezone, and the latter version of <code class="language-plaintext highlighter-rouge">tz-data</code> will output <code class="language-plaintext highlighter-rouge">+07</code>).</p>
 
 <h2>Disk partitions</h2>
 
-<p>The command <code class="highlighter-rouge">fdisk -l</code> lists all available storage devices and its partitions.
-Suppose that I install the system in <code class="highlighter-rouge">/dev/sda</code>.
+<p>The command <code class="language-plaintext highlighter-rouge">fdisk -l</code> lists all available storage devices and its partitions.
+Suppose that I install the system in <code class="language-plaintext highlighter-rouge">/dev/sda</code>.
 To create/delete/re-size a partition in a storage device, I use <a href="https://jlk.fjfi.cvut.cz/arch/manpages/man/cfdisk.8">cfdisk</a> (DOS partition tables). 
-I created three partitions for <code class="highlighter-rouge">/</code>, <code class="highlighter-rouge">/home</code>, and swap. 
+I created three partitions for <code class="language-plaintext highlighter-rouge">/</code>, <code class="language-plaintext highlighter-rouge">/home</code>, and swap. 
 It is recommended that if you have less than 1GB RAM then you should spend 1GB for swap, if you have 2-4GB RAM then you should spend half of the size of RAM for swap, and otherwise you should spend 2GB for swap.
-To format a partition, use the command <code class="highlighter-rouge">mkfs.filsystem_type /dev/sdax</code>, here <code class="highlighter-rouge">filesystem_type</code> can be <code class="highlighter-rouge">ext2</code>, <code class="highlighter-rouge">ext4</code>, <code class="highlighter-rouge">jfs</code>, etc., and <code class="highlighter-rouge">/dev/sdax</code> is the partiton number.
-You should also format and enable the swap partition with the <code class="highlighter-rouge">mkswap</code> and <code class="highlighter-rouge">swapon</code> commands.</p>
+To format a partition, use the command <code class="language-plaintext highlighter-rouge">mkfs.filsystem_type /dev/sdax</code>, here <code class="language-plaintext highlighter-rouge">filesystem_type</code> can be <code class="language-plaintext highlighter-rouge">ext2</code>, <code class="language-plaintext highlighter-rouge">ext4</code>, <code class="language-plaintext highlighter-rouge">jfs</code>, etc., and <code class="language-plaintext highlighter-rouge">/dev/sdax</code> is the partiton number.
+You should also format and enable the swap partition with the <code class="language-plaintext highlighter-rouge">mkswap</code> and <code class="language-plaintext highlighter-rouge">swapon</code> commands.</p>
 
 <h2>Mount the system</h2>
 
 <p>For example,</p>
 <ul>
-  <li>Mount the root partition (mount point <code class="highlighter-rouge">/</code>) at <code class="highlighter-rouge">/mnt</code>.</li>
-  <li>Create <code class="highlighter-rouge">/mnt/home</code> for mounting the home partition (mount point <code class="highlighter-rouge">/home</code>).</li>
-  <li>I have Windows OS installed in a partition, so I create <code class="highlighter-rouge">/mnt/windows</code> directory for mounting the partition.</li>
+  <li>Mount the root partition (mount point <code class="language-plaintext highlighter-rouge">/</code>) at <code class="language-plaintext highlighter-rouge">/mnt</code>.</li>
+  <li>Create <code class="language-plaintext highlighter-rouge">/mnt/home</code> for mounting the home partition (mount point <code class="language-plaintext highlighter-rouge">/home</code>).</li>
+  <li>I have Windows OS installed in a partition, so I create <code class="language-plaintext highlighter-rouge">/mnt/windows</code> directory for mounting the partition.</li>
 </ul>
 
 <h2>Basic packages</h2>
@@ -188,20 +188,20 @@ You should also format and enable the swap partition with the <code class="highl
 </code></pre></div></div>
 <p>It might be safer to use the <a href="https://www.archlinux.org/packages/core/x86_64/linux-lts/">Linux LTS kernel</a> instead of the latest one.</p>
 
-<p><strong>Update (2020-03-13):</strong> When using LTS kernel versions <code class="highlighter-rouge">&gt;= 5.4.17-1</code>, the webcam of my ASUS X44H laptop only shows a black screen. Downgrading to version <code class="highlighter-rouge">4.19.101-2</code> resovles this issue.</p>
+<p><strong>Update (2020-03-13):</strong> When using LTS kernel versions <code class="language-plaintext highlighter-rouge">&gt;= 5.4.17-1</code>, the webcam of my ASUS X44H laptop only shows a black screen. Downgrading to version <code class="language-plaintext highlighter-rouge">4.19.101-2</code> resovles this issue.</p>
 
-<p>I also want to use <code class="highlighter-rouge">wifi-menu</code> (a part of the <a href="https://wiki.archlinux.org/index.php/Netctl">netctl</a> package) in my newly installed system, so I also use:</p>
+<p>I also want to use <code class="language-plaintext highlighter-rouge">wifi-menu</code> (a part of the <a href="https://wiki.archlinux.org/index.php/Netctl">netctl</a> package) in my newly installed system, so I also use:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacstrap /mnt netctl iw dialog wpa_supplicant
 </code></pre></div></div>
 
-<h2>Generate a <code class="highlighter-rouge">fstab</code> file</h2>
+<h2>Generate a <code class="language-plaintext highlighter-rouge">fstab</code> file</h2>
 
-<p>A <code class="highlighter-rouge">fstab</code> file defines how disk partitions, block devices or remote file systems are mounted into the filesystem.</p>
+<p>A <code class="language-plaintext highlighter-rouge">fstab</code> file defines how disk partitions, block devices or remote file systems are mounted into the filesystem.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>genfstab <span class="nt">-U</span> /mnt <span class="o">&gt;&gt;</span> /mnt/etc/fstab
 </code></pre></div></div>
-<p>The option <code class="highlighter-rouge">-U</code> indicates defining by <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a>.
-To define by labels, use option <code class="highlighter-rouge">-L</code>.</p>
+<p>The option <code class="language-plaintext highlighter-rouge">-U</code> indicates defining by <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a>.
+To define by labels, use option <code class="language-plaintext highlighter-rouge">-L</code>.</p>
 
 <h2>Configure new system</h2>
 
@@ -215,21 +215,21 @@ To define by labels, use option <code class="highlighter-rouge">-L</code>.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ln</span> <span class="nt">-sf</span> /usr/share/zoneinfo/Region/City /etc/localtime
 hwclock <span class="nt">--systohc</span> <span class="c"># generate /etc/adjtime</span>
 </code></pre></div></div>
-<p>For Vietnamese, the Region is <code class="highlighter-rouge">Asia</code>, and the City is <code class="highlighter-rouge">Ho_Chi_Minh</code>.</p>
+<p>For Vietnamese, the Region is <code class="language-plaintext highlighter-rouge">Asia</code>, and the City is <code class="language-plaintext highlighter-rouge">Ho_Chi_Minh</code>.</p>
 
 <h3>Locale</h3>
 
-<p>Uncomment <code class="highlighter-rouge">en_US.UTF-8 UTF-8</code> and other needed localizations in <code class="highlighter-rouge">/etc/locale.gen</code>, and generate them with:</p>
+<p>Uncomment <code class="language-plaintext highlighter-rouge">en_US.UTF-8 UTF-8</code> and other needed localizations in <code class="language-plaintext highlighter-rouge">/etc/locale.gen</code>, and generate them with:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>locale-gen
 </code></pre></div></div>
-<p>Set the <code class="highlighter-rouge">LANG</code> variable in <code class="highlighter-rouge">/etc/locale.conf</code> accordingly, for example <code class="highlighter-rouge">LANG=en_US.UTF-8</code>.</p>
+<p>Set the <code class="language-plaintext highlighter-rouge">LANG</code> variable in <code class="language-plaintext highlighter-rouge">/etc/locale.conf</code> accordingly, for example <code class="language-plaintext highlighter-rouge">LANG=en_US.UTF-8</code>.</p>
 
 <h3>Hostname</h3>
 
-<p>Create <code class="highlighter-rouge">/etc/hostname</code></p>
+<p>Create <code class="language-plaintext highlighter-rouge">/etc/hostname</code></p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo </span>my_hostname <span class="o">&gt;</span> /etc/hostname
 </code></pre></div></div>
-<p>and matching entries to <code class="highlighter-rouge">/etc/hosts</code></p>
+<p>and matching entries to <code class="language-plaintext highlighter-rouge">/etc/hosts</code></p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>127.0.0.1 localhost
 ::1 localhost
 127.0.1.1 my_hostname.localdomain my_hostname
@@ -237,8 +237,8 @@ hwclock <span class="nt">--systohc</span> <span class="c"># generate /etc/adjtim
 
 <h3>Users</h3>
 
-<p>To change root password, use <code class="highlighter-rouge">passwd</code> command. 
-To create a new user, use <code class="highlighter-rouge">useradd</code> command.
+<p>To change root password, use <code class="language-plaintext highlighter-rouge">passwd</code> command. 
+To create a new user, use <code class="language-plaintext highlighter-rouge">useradd</code> command.
 For example,</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>useradd <span class="nt">-m</span> <span class="nt">-g</span> <span class="nb">users</span> <span class="nt">-G</span> audio,lp,optical,storage,video,wheel,games,power,scanner <span class="nt">-k</span> /etc/skel/ <span class="nt">-s</span> /bin/bash user
 </code></pre></div></div>
@@ -246,17 +246,17 @@ For example,</p>
 
 <h3>Boot loader</h3>
 
-<p>My ASUS laptop has <em>Intel(R) Pentium(R) CPU B950 @ 2.10GHz</em> (use <code class="highlighter-rouge">cat /proc/cpuinfo</code> to show CPU info), so I need to first install <code class="highlighter-rouge">intel-ucode</code> package using</p>
+<p>My ASUS laptop has <em>Intel(R) Pentium(R) CPU B950 @ 2.10GHz</em> (use <code class="language-plaintext highlighter-rouge">cat /proc/cpuinfo</code> to show CPU info), so I need to first install <code class="language-plaintext highlighter-rouge">intel-ucode</code> package using</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman <span class="nt">-S</span> intel-ucode
 </code></pre></div></div>
 
-<p>I also have Windows partition, so I need <code class="highlighter-rouge">os-prober</code> package.</p>
+<p>I also have Windows partition, so I need <code class="language-plaintext highlighter-rouge">os-prober</code> package.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman <span class="nt">-S</span> os-prober
 </code></pre></div></div>
 
-<p>I also edit <code class="highlighter-rouge">/etc/default/grub</code> by changing</p>
+<p>I also edit <code class="language-plaintext highlighter-rouge">/etc/default/grub</code> by changing</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">GRUB_CMDLINE_LINUX_DEFAULT</span><span class="o">=</span><span class="s2">"quiet"</span>
 </code></pre></div></div>
@@ -277,7 +277,7 @@ For example,</p>
 
 <h3>Initramfs</h3>
 
-<p>I modify <code class="highlighter-rouge">/etc/mkinitcpio.conf</code> by changing</p>
+<p>I modify <code class="language-plaintext highlighter-rouge">/etc/mkinitcpio.conf</code> by changing</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">HOOKS</span><span class="o">=(</span>base udev autodetect modconf block filesystems keyboard fsck<span class="o">)</span>
 </code></pre></div></div>
@@ -294,9 +294,9 @@ For example,</p>
 
 <h2>Reboot</h2>
 
-<p>Exit the chroot environment by typing <code class="highlighter-rouge">exit</code> or press <kbd>Ctrl</kbd> + <kbd>D</kbd>.
-Unmount all the partitions with <code class="highlighter-rouge">umount -R /mnt</code>.
-Type <code class="highlighter-rouge">reboot</code> to restart the system.
+<p>Exit the chroot environment by typing <code class="language-plaintext highlighter-rouge">exit</code> or press <kbd>Ctrl</kbd> + <kbd>D</kbd>.
+Unmount all the partitions with <code class="language-plaintext highlighter-rouge">umount -R /mnt</code>.
+Type <code class="language-plaintext highlighter-rouge">reboot</code> to restart the system.
 Remove the installation media and then login into the new system with the root account.</p>
 
 <h1>Packages and Configuration</h1>
@@ -315,7 +315,7 @@ Remove the installation media and then login into the new system with the root a
 
 <h2>Enable Printing Service</h2>
 
-<p>You must install <code class="highlighter-rouge">cups</code> before doing this.</p>
+<p>You must install <code class="language-plaintext highlighter-rouge">cups</code> before doing this.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl start org.cups.cupsd.service
 <span class="nb">sudo </span>systemctl <span class="nb">enable </span>org.cups.cupsd.service
@@ -328,7 +328,7 @@ Remove the installation media and then login into the new system with the root a
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>timedatectl set-local-rtc 1 <span class="nt">--adjust-system-clock</span>
 </code></pre></div></div>
 
-<p><strong>Note:</strong> If you log in as a normal user, run <code class="highlighter-rouge">timedatectl set-local-rtc 1 --adjust-system-clock</code> (without <code class="highlighter-rouge">sudo</code>).</p>
+<p><strong>Note:</strong> If you log in as a normal user, run <code class="language-plaintext highlighter-rouge">timedatectl set-local-rtc 1 --adjust-system-clock</code> (without <code class="language-plaintext highlighter-rouge">sudo</code>).</p>
 
 <h2>Archive Formats</h2>
 
@@ -340,7 +340,7 @@ Remove the installation media and then login into the new system with the root a
 <p>In Arch Linux, users can add and install their favorite packages from <a href="https://aur.archlinux.org/">AUR</a>, aka Arch User Repository via the <a href="https://www.archlinux.org/pacman/">pacman package manager</a>. 
 Since AUR contains about 44,000 packages, for most of them, one need to manually download, check, and install. 
 This is where <a href="https://aur.archlinux.org/packages/packer/">packer</a> or <a href="https://aur.archlinux.org/packages/yaourt/">yaourt</a> come in handy. 
-Here is how I install <code class="highlighter-rouge">yaourt</code>. 
+Here is how I install <code class="language-plaintext highlighter-rouge">yaourt</code>. 
 (The original guide is <a href="https://www.ostechnix.com/install-yaourt-arch-linux/">here</a>).</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pacman <span class="nt">-S</span> <span class="nt">--needed</span> <span class="nt">--noconfirm</span> base-devel git wget yajl
@@ -357,7 +357,7 @@ makepkg <span class="nt">-si</span>
 
 <p>If you need a GUI, install <a href="https://aur.archlinux.org/packages/pamac-aur/">pamac-aur</a>.</p>
 
-<p><strong>Update (2018-11-14)</strong>: Both <code class="highlighter-rouge">packer</code> and <code class="highlighter-rouge">yaourt</code> are outdated and discontinued. Use <a href="https://aur.archlinux.org/packages/yay/">yay</a> (<strong>y</strong>et <strong>a</strong>nother <strong>y</strong>ogurt) instead.</p>
+<p><strong>Update (2018-11-14)</strong>: Both <code class="language-plaintext highlighter-rouge">packer</code> and <code class="language-plaintext highlighter-rouge">yaourt</code> are outdated and discontinued. Use <a href="https://aur.archlinux.org/packages/yay/">yay</a> (<strong>y</strong>et <strong>a</strong>nother <strong>y</strong>ogurt) instead.</p>
 
 <h2>Theme</h2>
 
@@ -389,34 +389,34 @@ makepkg <span class="nt">-si</span>
 <span class="nb">sudo </span>pacman <span class="nt">-S</span> <span class="nt">--needed</span> <span class="nt">--noconfirm</span> eclipse-java
 </code></pre></div></div>
 
-<p>As <code class="highlighter-rouge">eclipse-java</code> and <code class="highlighter-rouge">eclipse-cpp</code> are in conflict, to use C/C++ Development Tools, I install <a href="https://www.eclipse.org/cdt/downloads.php">CDT 9.5.5 for Eclipse Photon and 2018-09</a> in <code class="highlighter-rouge">eclipse-java</code> by choosing <code class="highlighter-rouge">Help &gt; Install New Software...</code>, add the CDT repository <a href="http://download.eclipse.org/tools/cdt/releases/9.5">http://download.eclipse.org/tools/cdt/releases/9.5</a>, and install the <code class="highlighter-rouge">CDT Main Features</code> and <code class="highlighter-rouge">CDT Optional Features</code>.</p>
+<p>As <code class="language-plaintext highlighter-rouge">eclipse-java</code> and <code class="language-plaintext highlighter-rouge">eclipse-cpp</code> are in conflict, to use C/C++ Development Tools, I install <a href="https://www.eclipse.org/cdt/downloads.php">CDT 9.5.5 for Eclipse Photon and 2018-09</a> in <code class="language-plaintext highlighter-rouge">eclipse-java</code> by choosing <code class="language-plaintext highlighter-rouge">Help &gt; Install New Software...</code>, add the CDT repository <a href="http://download.eclipse.org/tools/cdt/releases/9.5">http://download.eclipse.org/tools/cdt/releases/9.5</a>, and install the <code class="language-plaintext highlighter-rouge">CDT Main Features</code> and <code class="language-plaintext highlighter-rouge">CDT Optional Features</code>.</p>
 
 <h2>SoftMaker FreeOffice 2018</h2>
 
 <p>Download from <a href="http://www.freeoffice.com/en/download">http://www.freeoffice.com/en/download</a>.
 You need to <em>register</em> to get a product key (free of charge).
-Let say you download <code class="highlighter-rouge">softmaker-freeoffice-2018-931-amd64.tgz</code>, then the installation steps are</p>
+Let say you download <code class="language-plaintext highlighter-rouge">softmaker-freeoffice-2018-931-amd64.tgz</code>, then the installation steps are</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar</span> <span class="nt">-xvzf</span> softmaker-freeoffice-2018-931-amd64.tgz
 <span class="nb">sudo</span> ./installfreeoffice
 </code></pre></div></div>
-<p>If you want to uninstall FreeOffice 2018, you can just simply run <code class="highlighter-rouge">/usr/bin/uninstall_smfreeoffice2018</code>.
+<p>If you want to uninstall FreeOffice 2018, you can just simply run <code class="language-plaintext highlighter-rouge">/usr/bin/uninstall_smfreeoffice2018</code>.
 For more information, see <a href="https://www.freeoffice.com/en/tips-and-tricks-linux">this page</a>.</p>
 
 <h2>Missing Firmware</h2>
 
-<p>When running <code class="highlighter-rouge">mkinitcpio -p linux-lts</code>, if you get the warning</p>
+<p>When running <code class="language-plaintext highlighter-rouge">mkinitcpio -p linux-lts</code>, if you get the warning</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">==&gt;</span> WARNING: Possibly missing firmware <span class="k">for </span>module: wd719x
 <span class="o">==&gt;</span> WARNING: Possibly missing firmware <span class="k">for </span>module: aic94xx
 </code></pre></div></div>
 
-<p>then simply install the <code class="highlighter-rouge">wd719x-firmware</code> and <code class="highlighter-rouge">aic94xx-firmware</code> packages using <code class="highlighter-rouge">yay</code> and run <code class="highlighter-rouge">mkinitcpio -p linux-lts</code> again.</p>
+<p>then simply install the <code class="language-plaintext highlighter-rouge">wd719x-firmware</code> and <code class="language-plaintext highlighter-rouge">aic94xx-firmware</code> packages using <code class="language-plaintext highlighter-rouge">yay</code> and run <code class="language-plaintext highlighter-rouge">mkinitcpio -p linux-lts</code> again.</p>
 
 <h2>Downgrade</h2>
 
-<p>Install the <a href="https://aur.archlinux.org/packages/downgrade/">downgrade</a> package using <code class="highlighter-rouge">yay</code>. 
+<p>Install the <a href="https://aur.archlinux.org/packages/downgrade/">downgrade</a> package using <code class="language-plaintext highlighter-rouge">yay</code>. 
 This package helps you install some previous version of a current package, which is very useful in case of conflicted dependencies. 
-If you want a specific version of a package, say <code class="highlighter-rouge">netpbm-10.73-1-x86_64.pkg.tar.xz</code> (a dependency for <code class="highlighter-rouge">latex2html</code>), you can go to <a href="https://archive.archlinux.org/packages/">https://archive.archlinux.org/packages/</a> to look for the package at <a href="https://archive.archlinux.org/packages/n/netpbm">https://archive.archlinux.org/packages/n/netpbm</a> and install using</p>
+If you want a specific version of a package, say <code class="language-plaintext highlighter-rouge">netpbm-10.73-1-x86_64.pkg.tar.xz</code> (a dependency for <code class="language-plaintext highlighter-rouge">latex2html</code>), you can go to <a href="https://archive.archlinux.org/packages/">https://archive.archlinux.org/packages/</a> to look for the package at <a href="https://archive.archlinux.org/packages/n/netpbm">https://archive.archlinux.org/packages/n/netpbm</a> and install using</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pacman <span class="nt">-U</span> https://archive.archlinux.org/packages/n/netpbm/netpbm-10.73-1-x86_64.pkg.tar.xz
 </code></pre></div></div>
@@ -425,7 +425,7 @@ If you want a specific version of a package, say <code class="highlighter-rouge"
 
 <h2>(Vanilla) TeXLive 2017</h2>
 
-<p>There is no trouble installing Vanilla TeXLive, but I want to add some note: Install <a href="https://aur.archlinux.org/packages/texlive-dummy/">texlive-dummy</a> via <code class="highlighter-rouge">yaourt</code> in order to tell <code class="highlighter-rouge">pacman</code> that you’ve already installed TeXLive. 
+<p>There is no trouble installing Vanilla TeXLive, but I want to add some note: Install <a href="https://aur.archlinux.org/packages/texlive-dummy/">texlive-dummy</a> via <code class="language-plaintext highlighter-rouge">yaourt</code> in order to tell <code class="language-plaintext highlighter-rouge">pacman</code> that you’ve already installed TeXLive. 
 You can also install TeXLive with</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>pacman <span class="nt">-S</span> <span class="nt">--needed</span> <span class="nt">--noconfirm</span> texlive-most texlive-lang texmaker biber
@@ -433,12 +433,12 @@ You can also install TeXLive with</p>
 
 <h2>LaTeX2HTML</h2>
 
-<p>If you use <code class="highlighter-rouge">perl &gt;= 5.26.0</code>, you need a workaround: add <code class="highlighter-rouge">PERL5LIB=$PERL5LIB:.; export PERL5LIB</code> to <code class="highlighter-rouge">/etc/bash.bashrc</code>. 
-The reason is that LaTeX2HTML uses module <code class="highlighter-rouge">cfgcache.pm</code> from the installation directory, but since version <code class="highlighter-rouge">5.26.0</code>, <code class="highlighter-rouge">perl</code> no longer includes the current directory in <code class="highlighter-rouge">@INC</code> path (see <a href="http://search.cpan.org/dist/perl-5.26.0/pod/perldelta.pod\#Removal_of_the_current_directory_(\%22.\%22)_from_@INC">this page</a>).</p>
+<p>If you use <code class="language-plaintext highlighter-rouge">perl &gt;= 5.26.0</code>, you need a workaround: add <code class="language-plaintext highlighter-rouge">PERL5LIB=$PERL5LIB:.; export PERL5LIB</code> to <code class="language-plaintext highlighter-rouge">/etc/bash.bashrc</code>. 
+The reason is that LaTeX2HTML uses module <code class="language-plaintext highlighter-rouge">cfgcache.pm</code> from the installation directory, but since version <code class="language-plaintext highlighter-rouge">5.26.0</code>, <code class="language-plaintext highlighter-rouge">perl</code> no longer includes the current directory in <code class="language-plaintext highlighter-rouge">@INC</code> path (see <a href="http://search.cpan.org/dist/perl-5.26.0/pod/perldelta.pod\#Removal_of_the_current_directory_(\%22.\%22)_from_@INC">this page</a>).</p>
 
 <h2>pdf2htmlEX (Update: 2019-12-31)</h2>
 
-<p>To compile and install pdf2htmlEX (in Arch Linux 64-bit version), I use <code class="highlighter-rouge">poppler</code> and <code class="highlighter-rouge">poppler-glib</code> version <code class="highlighter-rouge">0.59.0-1</code>, <code class="highlighter-rouge">fontforge</code> version <code class="highlighter-rouge">20141126-3</code>, together with the <a href="https://aur.archlinux.org/packages/pdf2htmlex-git/">pdf2htmlex-git</a> package.</p>
+<p>To compile and install pdf2htmlEX (in Arch Linux 64-bit version), I use <code class="language-plaintext highlighter-rouge">poppler</code> and <code class="language-plaintext highlighter-rouge">poppler-glib</code> version <code class="language-plaintext highlighter-rouge">0.59.0-1</code>, <code class="language-plaintext highlighter-rouge">fontforge</code> version <code class="language-plaintext highlighter-rouge">20141126-3</code>, together with the <a href="https://aur.archlinux.org/packages/pdf2htmlex-git/">pdf2htmlex-git</a> package.</p>
 
 <p>First, install some necessary packages</p>
 
@@ -448,7 +448,7 @@ wget https://archive.org/download/archlinux_pkg_poppler-glib/poppler-glib-0.59.0
 <span class="nb">sudo </span>pacman <span class="nt">-S</span> <span class="nt">--needed</span> <span class="nt">--noconfirm</span> libxi pango giflib libtool desktop-file-utils gtk-update-icon-cache libunicodenames gc python shared-mime-info openjpeg2 qt5-base poppler-qt5
 </code></pre></div></div>
 
-<p>Then, install <code class="highlighter-rouge">poppler 0.59.0-1</code> from source</p>
+<p>Then, install <code class="language-plaintext highlighter-rouge">poppler 0.59.0-1</code> from source</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://poppler.freedesktop.org/poppler-0.59.0.tar.xz
 <span class="nb">tar</span> <span class="nt">-xvf</span> poppler-0.59.0.tar.xz
@@ -458,7 +458,7 @@ make
 <span class="nb">sudo </span>make <span class="nb">install</span>
 </code></pre></div></div>
 
-<p>Next, install <code class="highlighter-rouge">fontforge 20141126-3</code> along with its dependencies</p>
+<p>Next, install <code class="language-plaintext highlighter-rouge">fontforge 20141126-3</code> along with its dependencies</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yay <span class="nt">-S</span> readline6 <span class="c"># for `libreadline.so.6`</span>
 wget https://archive.org/download/archlinux_pkg_libsodium/libsodium-0.7.1-1-x86_64.pkg.tar.xz <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>pacman <span class="nt">-U</span> libsodium-0.7.1-1-x86_64.pkg.tar.xz
@@ -468,11 +468,11 @@ wget https://archive.org/download/archlinux_pkg_libspiro/libspiro-1%3A0.5.201507
 wget https://archive.org/download/archlinux_pkg_fontforge/fontforge-20141126-3-x86_64.pkg.tar.xz <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>pacman <span class="nt">-U</span> fontforge-20141126-3-x86_64.pkg.tar.xz
 </code></pre></div></div>
 
-<p>Finally, install <code class="highlighter-rouge">pdf2htmlex-git</code> with the command <code class="highlighter-rouge">yay -S pdf2htmlex-git</code> and install the latest <code class="highlighter-rouge">poppler</code> package using <code class="highlighter-rouge">sudo pacman -S poppler poppler-glib</code> (otherwise, you may get an error when using the latest <code class="highlighter-rouge">pdflatex</code>).</p>
+<p>Finally, install <code class="language-plaintext highlighter-rouge">pdf2htmlex-git</code> with the command <code class="language-plaintext highlighter-rouge">yay -S pdf2htmlex-git</code> and install the latest <code class="language-plaintext highlighter-rouge">poppler</code> package using <code class="language-plaintext highlighter-rouge">sudo pacman -S poppler poppler-glib</code> (otherwise, you may get an error when using the latest <code class="language-plaintext highlighter-rouge">pdflatex</code>).</p>
 
 <h2>Tor Browser</h2>
 
-<p>When I installed <a href="https://aur.archlinux.org/packages/tor-browser-en/">tor-browser</a> (via <code class="highlighter-rouge">yay</code>), the following error occurred</p>
+<p>When I installed <a href="https://aur.archlinux.org/packages/tor-browser-en/">tor-browser</a> (via <code class="language-plaintext highlighter-rouge">yay</code>), the following error occurred</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tor-browser-linux64-7.0.8_en-US.tar.xz ... FAILED <span class="o">(</span>unknown public key D1483FA6C3C07136<span class="o">)</span>
 </code></pre></div></div>
@@ -499,18 +499,18 @@ makepkg <span class="nt">-si</span>
 <span class="nb">rm</span> <span class="nt">-r</span> gstreamer0.10 gstreamer0.10-base foxitreader
 </code></pre></div></div>
 
-<p><strong>Update (2020-02-14):</strong> Some errors occurred when I compiled <code class="highlighter-rouge">gstreamer0.10-base</code> in my recent updated Arch Linux, and I cannot figure out the reason. This installation may also not work for you.</p>
+<p><strong>Update (2020-02-14):</strong> Some errors occurred when I compiled <code class="language-plaintext highlighter-rouge">gstreamer0.10-base</code> in my recent updated Arch Linux, and I cannot figure out the reason. This installation may also not work for you.</p>
 
 <h2>VMWare Horizon Client</h2>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yay <span class="nt">-S</span> <span class="nt">--needed</span> <span class="nt">--noconfirm</span> openssl098 gstreamer0.10-base vmware-horizon-client
 </code></pre></div></div>
 
-<p><strong>Update (2020-02-14):</strong> <code class="highlighter-rouge">gstreamer0.10-base</code> may not be compiled, as mentioned above.</p>
+<p><strong>Update (2020-02-14):</strong> <code class="language-plaintext highlighter-rouge">gstreamer0.10-base</code> may not be compiled, as mentioned above.</p>
 
 <h2>IPE extensible drawing editor</h2>
 
-<p>I often use <a href="http://ipe.otfried.org/">IPE</a> for drawing graphs in my papers. To install IPE in Arch Linux, you can just simply use <code class="highlighter-rouge">yay -S --needed --noconfirm ipe</code> (assuming you’ve already installed <code class="highlighter-rouge">yay</code>). Several useful tools (<code class="highlighter-rouge">pdftoipe</code>, <code class="highlighter-rouge">figtoipe</code>, <code class="highlighter-rouge">ipe5toxml</code>, <code class="highlighter-rouge">svgtoipe</code>) for IPE can be found in the <code class="highlighter-rouge">ipe-tools-git</code> package. I also use the ipelet <a href="https://github.com/QBobWatson/ipe2tikz">ipe2tikz</a> to export IPE pictures to <a href="https://sourceforge.net/projects/pgf/">TikZ</a> code. One thing you may want to remember when using the generated TikZ pictures is <a href="https://tex.stackexchange.com/a/11536">how to scale your TikZ picture to fit the paper size</a>. Several other useful ipelets are also <a href="https://github.com/otfried/ipe-wiki/wiki/Ipelets">available</a>. Finally, for convenience, I also create the file <code class="highlighter-rouge">/usr/share/applications/ipe.desktop</code> and make it executable.</p>
+<p>I often use <a href="http://ipe.otfried.org/">IPE</a> for drawing graphs in my papers. To install IPE in Arch Linux, you can just simply use <code class="language-plaintext highlighter-rouge">yay -S --needed --noconfirm ipe</code> (assuming you’ve already installed <code class="language-plaintext highlighter-rouge">yay</code>). Several useful tools (<code class="language-plaintext highlighter-rouge">pdftoipe</code>, <code class="language-plaintext highlighter-rouge">figtoipe</code>, <code class="language-plaintext highlighter-rouge">ipe5toxml</code>, <code class="language-plaintext highlighter-rouge">svgtoipe</code>) for IPE can be found in the <code class="language-plaintext highlighter-rouge">ipe-tools-git</code> package. I also use the ipelet <a href="https://github.com/QBobWatson/ipe2tikz">ipe2tikz</a> to export IPE pictures to <a href="https://sourceforge.net/projects/pgf/">TikZ</a> code. One thing you may want to remember when using the generated TikZ pictures is <a href="https://tex.stackexchange.com/a/11536">how to scale your TikZ picture to fit the paper size</a>. Several other useful ipelets are also <a href="https://github.com/otfried/ipe-wiki/wiki/Ipelets">available</a>. Finally, for convenience, I also create the file <code class="language-plaintext highlighter-rouge">/usr/share/applications/ipe.desktop</code> and make it executable.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>Desktop Entry]
 <span class="nv">Type</span><span class="o">=</span>Application
@@ -523,7 +523,7 @@ makepkg <span class="nt">-si</span>
 </span><span class="nv">Categories</span><span class="o">=</span>Graphics
 </code></pre></div></div>
 
-<p><strong>Update (2020-02-14):</strong> I failed to build and install <code class="highlighter-rouge">ipe-tools-git</code> in my recent updated Arch Linux.</p>
+<p><strong>Update (2020-02-14):</strong> I failed to build and install <code class="language-plaintext highlighter-rouge">ipe-tools-git</code> in my recent updated Arch Linux.</p>
 
 <h2>ClamAV</h2>
 
@@ -541,7 +541,7 @@ makepkg <span class="nt">-si</span>
 <span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker <span class="nv">$USER</span> <span class="c"># if the group `docker` does not exist then create it using `sudo groupadd docker`</span>
 </code></pre></div></div>
 
-<h2><code class="highlighter-rouge">pass</code> password manager</h2>
+<h2><code class="language-plaintext highlighter-rouge">pass</code> password manager</h2>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yay <span class="nt">-S</span> <span class="nt">--noconfirm</span> tree pass pass-import dmenu
 </code></pre></div></div>
@@ -556,18 +556,18 @@ makepkg <span class="nt">-si</span>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--recv-keys</span> C5469996F0DF68EC
 </code></pre></div></div>
 
-<p>One can also install the latest <code class="highlighter-rouge">pass-import</code> from its GitHub repository as follows</p>
+<p>One can also install the latest <code class="language-plaintext highlighter-rouge">pass-import</code> from its GitHub repository as follows</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/roddhjav/pass-import/
 <span class="nb">cd </span>pass-import 
 <span class="nb">sudo </span>make <span class="nb">install</span>
 </code></pre></div></div>
 
-<p>See <a href="https://github.com/docker/docker-credential-helpers">this page</a> for a guide on how to use <code class="highlighter-rouge">pass</code> with <code class="highlighter-rouge">docker</code>.</p>
+<p>See <a href="https://github.com/docker/docker-credential-helpers">this page</a> for a guide on how to use <code class="language-plaintext highlighter-rouge">pass</code> with <code class="language-plaintext highlighter-rouge">docker</code>.</p>
 
 <h2>Some other packages</h2>
 
-<p>A non-exhaustive list of some packages I installed (using <code class="highlighter-rouge">yay</code>) are:</p>
+<p>A non-exhaustive list of some packages I installed (using <code class="language-plaintext highlighter-rouge">yay</code>) are:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tlp lsb-release smartmontools ethtool
 guake firefox thunderbird google-chrome gedit-plugins
@@ -613,9 +613,9 @@ See <a href="https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks">pacman
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo rm</span> /var/lib/pacman/db.lck
 </code></pre></div></div>
 
-<h2>Accessing <code class="highlighter-rouge">JAIST</code> or <code class="highlighter-rouge">eduroam</code> wifi in JAIST</h2>
+<h2>Accessing <code class="language-plaintext highlighter-rouge">JAIST</code> or <code class="language-plaintext highlighter-rouge">eduroam</code> wifi in JAIST</h2>
 
-<p><a href="https://www.jaist.ac.jp/">JAIST</a> provides two wireless network services with SSIDs <code class="highlighter-rouge">JAIST</code> and <code class="highlighter-rouge">eduroam</code>. 
+<p><a href="https://www.jaist.ac.jp/">JAIST</a> provides two wireless network services with SSIDs <code class="language-plaintext highlighter-rouge">JAIST</code> and <code class="language-plaintext highlighter-rouge">eduroam</code>. 
 The <a href="https://www.jaist.ac.jp/iscenter/en/network/wireless/">instruction</a> is for Windows, MacOS X, and Android. 
 I figure that it can also be used for Arch Linux (and maybe some other Linux distribution). 
 Basically, the wifi security information for accessing these wifi SSIDs (I use <a href="https://wiki.archlinux.org/index.php/NetworkManager">NetworkManager</a> for managing network connection) is as follows.</p>
@@ -625,7 +625,7 @@ Basically, the wifi security information for accessing these wifi SSIDs (I use <
   <li>Authentication : TLS</li>
   <li>Identity : [Your JAIST account]@jaist.ac.jp (for students, sXXXXXXX@jaist.ac.jp)</li>
   <li>Domain : [Leave it empty]</li>
-  <li>CA certificate : Use the file <code class="highlighter-rouge">/etc/ssl/ca-certificates.crt</code> (make sure that the package <a href="https://www.archlinux.org/packages/core/any/ca-certificates-utils/">ca-certificates-utils</a> is installed)</li>
+  <li>CA certificate : Use the file <code class="language-plaintext highlighter-rouge">/etc/ssl/ca-certificates.crt</code> (make sure that the package <a href="https://www.archlinux.org/packages/core/any/ca-certificates-utils/">ca-certificates-utils</a> is installed)</li>
   <li>User certificate : Use the <a href="https://www.jaist.ac.jp/iscenter/en/digital-certificate/">digital certificate</a> provided from JAIST</li>
   <li>User private key : Use the <a href="https://www.jaist.ac.jp/iscenter/en/digital-certificate/">digital certificate</a> provided from JAIST</li>
   <li>User key password : [Your password for reading the provided digital certificate]</li>
@@ -637,7 +637,7 @@ Basically, the wifi security information for accessing these wifi SSIDs (I use <
 
 <p><a href="https://www.jaist.ac.jp/">JAIST</a> also provides <a href="https://www.jaist.ac.jp/iscenter/en/remote-access/ssl-vpn/">an SSL-VPN gateway system</a>.
 In Arch Linux, I download <a href="/static/posts/some-notes-on-installing-arch-linux/linuxsslvpn.gz">F5 Linux CLI (command line interface) Edge Client Installer</a>
- (file <code class="highlighter-rouge">linuxsslvpn.gz</code>) and install as follows.</p>
+ (file <code class="language-plaintext highlighter-rouge">linuxsslvpn.gz</code>) and install as follows.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar</span> <span class="nt">-xvf</span> linuxsslvpn.tgz 
 <span class="nb">sudo</span> ./Install.sh <span class="c"># Answer `yes` for both questions</span>
@@ -649,21 +649,21 @@ In Arch Linux, I download <a href="/static/posts/some-notes-on-installing-arch-l
 </code></pre></div></div>
 
 <p>You will have to input your password for reading your digital certificate (provided from JAIST), your username (for student, sXXXXXXX), and the password of your JAIST’s account.
-After you successfully start the connection, you can use <code class="highlighter-rouge">f5fpc --info</code> to check the connection status.
-At the time of writing this post, JAIST provides two VPN networks <code class="highlighter-rouge">/Common/jaist-vpn1-na</code> and <code class="highlighter-rouge">/Common/jaist-vpn2-na</code> (as shown when using <code class="highlighter-rouge">f5fpc --info</code>).
-The <code class="highlighter-rouge">vpn1</code> only passes accesses to JAIST through VPN, while <code class="highlighter-rouge">vpn2</code> passes all accesses through VPN.</p>
+After you successfully start the connection, you can use <code class="language-plaintext highlighter-rouge">f5fpc --info</code> to check the connection status.
+At the time of writing this post, JAIST provides two VPN networks <code class="language-plaintext highlighter-rouge">/Common/jaist-vpn1-na</code> and <code class="language-plaintext highlighter-rouge">/Common/jaist-vpn2-na</code> (as shown when using <code class="language-plaintext highlighter-rouge">f5fpc --info</code>).
+The <code class="language-plaintext highlighter-rouge">vpn1</code> only passes accesses to JAIST through VPN, while <code class="language-plaintext highlighter-rouge">vpn2</code> passes all accesses through VPN.</p>
 
 <!-- <div class="text-center">
 
 <figure class="figure">
-    <img src="/static/posts/some-notes-on-installing-arch-linux/fp_jaistvpn1and2.png" class="figure-img img-fluid rounded"   width="40%">
+    <img src="/static/posts/some-notes-on-installing-arch-linux/fp_jaistvpn1and2.png" class="figure-img img-fluid rounded"   width="40%" >
     <figcaption class="figure-caption">The difference between JAIST <code>vpn1</code> and <code>vpn2</code> (&copy; JAIST RCACI)</figcaption>
 </figure>
 
 </div> -->
-<div class="figure"><img src="/static/posts/some-notes-on-installing-arch-linux/fp_jaistvpn1and2.png" alt="fp_jaistvpn1and2.png" width="40%"><br>The difference between JAIST <code>vpn1</code> and <code>vpn2</code> (&copy; JAIST RCACI)</div>
+<div class="figure"><img src="/static/posts/some-notes-on-installing-arch-linux/fp_jaistvpn1and2.png" alt="fp_jaistvpn1and2.png" width="40%" ><br >The difference between JAIST <code>vpn1</code> and <code>vpn2</code> (&copy; JAIST RCACI)</div>
 
-<p>To use, say <code class="highlighter-rouge">vpn2</code>, you can use the command</p>
+<p>To use, say <code class="language-plaintext highlighter-rouge">vpn2</code>, you can use the command</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f5fpc <span class="nt">--start</span> <span class="nt">--host</span> vpn.jaist.ac.jp <span class="nt">--cert</span> /path/to/your/jaist/digital/certificate <span class="nt">--fname</span> <span class="s2">"/Common/jaist-vpn2-na"</span>
 </code></pre></div></div>
@@ -675,12 +675,12 @@ The <code class="highlighter-rouge">vpn1</code> only passes accesses to JAIST th
 
 <h2>Using Kyutech VPN</h2>
 
-<p>To use <a href="https://onlineguide.isc.kyutech.ac.jp/guide2017/index.php/home/2017-02-24-00-51-59/vpn.html">Kyutech VPN</a> <span style="color:red;">[Username and Password Required]</span>, I installed <code class="highlighter-rouge">networkmanager-l2tp</code>, <code class="highlighter-rouge">xl2tpd</code>, <code class="highlighter-rouge">strongswan</code> and <code class="highlighter-rouge">networkmanager-strongswan</code> as follows (assuming that <code class="highlighter-rouge">yay</code> was installed).</p>
+<p>To use <a href="https://onlineguide.isc.kyutech.ac.jp/guide2017/index.php/home/2017-02-24-00-51-59/vpn.html">Kyutech VPN</a> <span style="color:red;">[Username and Password Required]</span>, I installed <code class="language-plaintext highlighter-rouge">networkmanager-l2tp</code>, <code class="language-plaintext highlighter-rouge">xl2tpd</code>, <code class="language-plaintext highlighter-rouge">strongswan</code> and <code class="language-plaintext highlighter-rouge">networkmanager-strongswan</code> as follows (assuming that <code class="language-plaintext highlighter-rouge">yay</code> was installed).</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yay <span class="nt">-S</span> networkmanager-l2tp xl2tpd strongswan networkmanager-strongswan
 </code></pre></div></div>
 
-<p>Then, enable and start <code class="highlighter-rouge">strongswan</code> and <code class="highlighter-rouge">xl2tpd</code></p>
+<p>Then, enable and start <code class="language-plaintext highlighter-rouge">strongswan</code> and <code class="language-plaintext highlighter-rouge">xl2tpd</code></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl <span class="nb">enable </span>strongswan
 <span class="nb">sudo </span>systemctl start strongswan
@@ -691,14 +691,14 @@ The <code class="highlighter-rouge">vpn1</code> only passes accesses to JAIST th
 <p>The information for setting up VPN are as follows</p>
 
 <ul>
-  <li>Name: Any name you want, for instance, <code class="highlighter-rouge">KIT VPN</code>.</li>
+  <li>Name: Any name you want, for instance, <code class="language-plaintext highlighter-rouge">KIT VPN</code>.</li>
   <li>Gateway: Enter the server name as instructed by Kyutech <a href="https://onlineguide.isc.kyutech.ac.jp/guide2017/index.php/home/2017-02-24-00-51-59/vpn.html">here</a>.</li>
   <li>Username: Your username provided by Kyutech.</li>
   <li>Password: The password of your Kyutech account.</li>
-  <li>IPsec Settings: Choose <code class="highlighter-rouge">Enable IPsec Tunnel to L2TP host</code> and enter the pre-shared key as instructed by Kyutech <a href="https://onlineguide.isc.kyutech.ac.jp/guide2017/index.php/home/2017-02-24-00-51-59/vpn.html">here</a>. In the <code class="highlighter-rouge">Advanced</code> section, click <code class="highlighter-rouge">Legacy Proposals</code>.</li>
+  <li>IPsec Settings: Choose <code class="language-plaintext highlighter-rouge">Enable IPsec Tunnel to L2TP host</code> and enter the pre-shared key as instructed by Kyutech <a href="https://onlineguide.isc.kyutech.ac.jp/guide2017/index.php/home/2017-02-24-00-51-59/vpn.html">here</a>. In the <code class="language-plaintext highlighter-rouge">Advanced</code> section, click <code class="language-plaintext highlighter-rouge">Legacy Proposals</code>.</li>
 </ul>
 
-<p><strong>Update (2020-02-14):</strong> In my recent system, clicking <code class="highlighter-rouge">Legacy Proposals</code> is not required.</p>
+<p><strong>Update (2020-02-14):</strong> In my recent system, clicking <code class="language-plaintext highlighter-rouge">Legacy Proposals</code> is not required.</p>
 
 <h2>Anjuta opens my folders</h2>
 
@@ -709,22 +709,22 @@ The <code class="highlighter-rouge">vpn1</code> only passes accesses to JAIST th
 
 <h2>Visual Studio Code (VS Code) opens my folders</h2>
 
-<p>After installing VS Code (<code class="highlighter-rouge">visual-studio-code-bin</code>), anything opened using the “Places” extension in GNOME opens VS Code instead of the default folder/path (as described <a href="https://github.com/Microsoft/vscode/issues/41037">here</a>). To resolve this issue, I simply add the lines</p>
+<p>After installing VS Code (<code class="language-plaintext highlighter-rouge">visual-studio-code-bin</code>), anything opened using the “Places” extension in GNOME opens VS Code instead of the default folder/path (as described <a href="https://github.com/Microsoft/vscode/issues/41037">here</a>). To resolve this issue, I simply add the lines</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>Default Applications]
 inode/directory<span class="o">=</span>org.gnome.Nautilus.desktop
 </code></pre></div></div>
 
-<p>to <code class="highlighter-rouge">~/.config/mimeapps.list</code> (or just the second line if <code class="highlighter-rouge">[Default Applications]</code> already exists).</p>
+<p>to <code class="language-plaintext highlighter-rouge">~/.config/mimeapps.list</code> (or just the second line if <code class="language-plaintext highlighter-rouge">[Default Applications]</code> already exists).</p>
 
 <h2>Auto reconnect Bluetooth devices at boot</h2>
 
 <p>The original instruction is available <a href="https://bbs.archlinux.org/viewtopic.php?id=223949">here</a>.</p>
 
 <ul>
-  <li>Enable <code class="highlighter-rouge">bluetooth</code> service: <code class="highlighter-rouge">sudo systemctl enable bluetooth.service</code>.</li>
-  <li>Set bluetooth adapter to automatically power on: edit <code class="highlighter-rouge">/etc/bluetooth/main.conf</code> and set <code class="highlighter-rouge">AutoEnable=true</code>.</li>
-  <li>Set paired devices as trusted: Type <code class="highlighter-rouge">bluetoothctl</code>, it will open a new console. In that console, type <code class="highlighter-rouge">trust XX:XX:XX:XX:XX:XX</code> for each paired device (replace <code class="highlighter-rouge">XX...</code> with mac address).</li>
+  <li>Enable <code class="language-plaintext highlighter-rouge">bluetooth</code> service: <code class="language-plaintext highlighter-rouge">sudo systemctl enable bluetooth.service</code>.</li>
+  <li>Set bluetooth adapter to automatically power on: edit <code class="language-plaintext highlighter-rouge">/etc/bluetooth/main.conf</code> and set <code class="language-plaintext highlighter-rouge">AutoEnable=true</code>.</li>
+  <li>Set paired devices as trusted: Type <code class="language-plaintext highlighter-rouge">bluetoothctl</code>, it will open a new console. In that console, type <code class="language-plaintext highlighter-rouge">trust XX:XX:XX:XX:XX:XX</code> for each paired device (replace <code class="language-plaintext highlighter-rouge">XX...</code> with mac address).</li>
 </ul>
 
 <h2>Pairing bluetooth devices on dual boot of Windows and Linux</h2>
@@ -736,11 +736,11 @@ inode/directory<span class="o">=</span>org.gnome.Nautilus.desktop
   <li>Pair all Bluetooth devices with Windows 10.</li>
   <li>Copy the Windows pairing keys
     <ul>
-      <li>Install <code class="highlighter-rouge">chntpw</code> using <code class="highlighter-rouge">sudo pacman -S --needed --noconfirm chntpw</code>.</li>
+      <li>Install <code class="language-plaintext highlighter-rouge">chntpw</code> using <code class="language-plaintext highlighter-rouge">sudo pacman -S --needed --noconfirm chntpw</code>.</li>
       <li>Mount Windows system drive.</li>
-      <li><code class="highlighter-rouge">cd /[windowsSystemDrive]/Windows/System32/config</code>.</li>
+      <li><code class="language-plaintext highlighter-rouge">cd /[windowsSystemDrive]/Windows/System32/config</code>.</li>
       <li>
-        <p><code class="highlighter-rouge">chntpw -e SYSTEM</code> opens up a console. Run the following commands in that console.</p>
+        <p><code class="language-plaintext highlighter-rouge">chntpw -e SYSTEM</code> opens up a console. Run the following commands in that console.</p>
 
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>ControlSet001<span class="se">\S</span>ervices<span class="se">\B</span>THPORT<span class="se">\P</span>arameters<span class="se">\K</span>eys
 <span class="nb">ls</span> 
@@ -761,19 +761,19 @@ hex 001f20eb4c9a
 <span class="c"># the XXs are the pairing key</span>
 </code></pre></div>        </div>
       </li>
-      <li>Make a note of which Bluetooth device MAC address matches which paring key. In Arch Linux, we won’t need the spaces in-between. Ignore the <code class="highlighter-rouge">:00000</code>.</li>
+      <li>Make a note of which Bluetooth device MAC address matches which paring key. In Arch Linux, we won’t need the spaces in-between. Ignore the <code class="language-plaintext highlighter-rouge">:00000</code>.</li>
       <li>Add the windows key to Linux config entries.
         <ul>
-          <li>Switch to root <code class="highlighter-rouge">su -</code>.</li>
-          <li><code class="highlighter-rouge">cd</code> to your bluetooth config location <code class="highlighter-rouge">/var/lib/bluetooth/[bth port  mac addresses)]</code>.</li>
-          <li>Here you’ll find folders for each device you’ve paired with. The folder names being the Bluetooth devices mac address and contain a single file <code class="highlighter-rouge">info</code>. In these files, you’ll see the link key you need to replace with your windows ones like so.</li>
+          <li>Switch to root <code class="language-plaintext highlighter-rouge">su -</code>.</li>
+          <li><code class="language-plaintext highlighter-rouge">cd</code> to your bluetooth config location <code class="language-plaintext highlighter-rouge">/var/lib/bluetooth/[bth port  mac addresses)]</code>.</li>
+          <li>Here you’ll find folders for each device you’ve paired with. The folder names being the Bluetooth devices mac address and contain a single file <code class="language-plaintext highlighter-rouge">info</code>. In these files, you’ll see the link key you need to replace with your windows ones like so.</li>
         </ul>
 
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>LinkKey]
 <span class="nv">Key</span><span class="o">=</span>B99999999FFFFFFFFF999999999FFFFF
 </code></pre></div>        </div>
       </li>
-      <li>Once updated, restart the bluetooth service <code class="highlighter-rouge">sudo systemctl restart bluetooth</code>.</li>
+      <li>Once updated, restart the bluetooth service <code class="language-plaintext highlighter-rouge">sudo systemctl restart bluetooth</code>.</li>
     </ul>
   </li>
   <li><strong>Note:</strong> If you Pair all Bluetooth devices with Windows 10 first, and then with Arch Linux, then the key for all systems should be the key of the last system the devices were paired, which is Arch Linux in this case.</li>
@@ -781,7 +781,7 @@ hex 001f20eb4c9a
 
 <h2>GnuPG</h2>
 
-<h3>Missing PGP keys when installing <code class="highlighter-rouge">gnupg1</code></h3>
+<h3>Missing PGP keys when installing <code class="language-plaintext highlighter-rouge">gnupg1</code></h3>
 
 <p>If you get the error</p>
 
@@ -792,55 +792,55 @@ hex 001f20eb4c9a
  -&gt; D238EA65D64C67ED4C3073F28A861B1C7EFD60D9, required by: gnupg1
 </code></pre></div></div>
 
-<p>when installing <code class="highlighter-rouge">gnupg1</code> then you can import the missing keys with the command</p>
+<p>when installing <code class="language-plaintext highlighter-rouge">gnupg1</code> then you can import the missing keys with the command</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--keyserver</span> pgp.mit.edu <span class="nt">--recv-keys</span> D8692123C4065DEA5E0F3AB5249B39D24F25E3B6 46CC730865BB5C78EBABADCF04376F3EE0856959 031EC2536E580D8EA286A9F22071B08A33BD3F06 D238EA65D64C67ED4C3073F28A861B1C7EFD60D9 
 </code></pre></div></div>
 
 <h3>Remove passphrase of a secret key</h3>
 
-<p>Let say you want to remove the passphrase of a secret key named <code class="highlighter-rouge">PGP-key.asc</code>.</p>
+<p>Let say you want to remove the passphrase of a secret key named <code class="language-plaintext highlighter-rouge">PGP-key.asc</code>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg1 <span class="nt">--import</span> PGP-key.asc
 gpg1 <span class="nt">--edit-key</span> <span class="o">[</span>imported PGP key fingerprint]
 </code></pre></div></div>
 
-<p>Then, type <code class="highlighter-rouge">passwd</code> in the <code class="highlighter-rouge">gpg&gt;</code> command prompt, enter the old passhrase of the imported PGP key, and press <kbd>Enter</kbd> for the new passhrase. Answer <code class="highlighter-rouge">y</code> when you were asked <code class="highlighter-rouge">You don't want a passphrase - this is probably a *bad* idea! Do you really want to do this? (y/N)</code>. Finally, type <code class="highlighter-rouge">save</code> to save the result and exit the command prompt.</p>
+<p>Then, type <code class="language-plaintext highlighter-rouge">passwd</code> in the <code class="language-plaintext highlighter-rouge">gpg&gt;</code> command prompt, enter the old passhrase of the imported PGP key, and press <kbd>Enter</kbd> for the new passhrase. Answer <code class="language-plaintext highlighter-rouge">y</code> when you were asked <code class="language-plaintext highlighter-rouge">You don't want a passphrase - this is probably a *bad* idea! Do you really want to do this? (y/N)</code>. Finally, type <code class="language-plaintext highlighter-rouge">save</code> to save the result and exit the command prompt.</p>
 
-<h2>Backup <code class="highlighter-rouge">$HOME</code> folder with <code class="highlighter-rouge">rsync</code></h2>
+<h2>Backup <code class="language-plaintext highlighter-rouge">$HOME</code> folder with <code class="language-plaintext highlighter-rouge">rsync</code></h2>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /path/to/backup/directory
 rsync <span class="nt">-arvz</span> <span class="nt">-H</span> <span class="nt">--progress</span> <span class="nt">--numeric-ids</span> <span class="nv">$HOME</span>/ <span class="nb">.</span>
 </code></pre></div></div>
 
-<h2>Error “Failed to start User Manager for UID 120. See <code class="highlighter-rouge">systemctl status user@120.service</code> for details”</h2>
+<h2>Error “Failed to start User Manager for UID 120. See <code class="language-plaintext highlighter-rouge">systemctl status user@120.service</code> for details”</h2>
 
-<p>To resolve this error, simply press <kbd>Alt</kbd> + <kbd>F2</kbd>, login to the TTY shell as <code class="highlighter-rouge">root</code>, and run <code class="highlighter-rouge">systemctl restart gdm</code>. See <a href="https://bbs.archlinux.org/viewtopic.php?id=225817">this page</a> for more information.</p>
+<p>To resolve this error, simply press <kbd>Alt</kbd> + <kbd>F2</kbd>, login to the TTY shell as <code class="language-plaintext highlighter-rouge">root</code>, and run <code class="language-plaintext highlighter-rouge">systemctl restart gdm</code>. See <a href="https://bbs.archlinux.org/viewtopic.php?id=225817">this page</a> for more information.</p>
 
 <h2>[Laptop] Cannot enable “Tap to click” function of a touchpad</h2>
 
-<p>One way is to try to remove <code class="highlighter-rouge">xf86-input-synaptics</code> and install <code class="highlighter-rouge">xf86-input-libinput</code>. Also, in GNOME, enable “Tap to click” using <code class="highlighter-rouge">gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true</code> and <code class="highlighter-rouge">gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false</code>. To ensure the touchpad events are being sent to the GNOME desktop, use <code class="highlighter-rouge">gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled</code>.</p>
+<p>One way is to try to remove <code class="language-plaintext highlighter-rouge">xf86-input-synaptics</code> and install <code class="language-plaintext highlighter-rouge">xf86-input-libinput</code>. Also, in GNOME, enable “Tap to click” using <code class="language-plaintext highlighter-rouge">gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true</code> and <code class="language-plaintext highlighter-rouge">gsettings set org.gnome.desktop.peripherals.touchpad natural-scroll false</code>. To ensure the touchpad events are being sent to the GNOME desktop, use <code class="language-plaintext highlighter-rouge">gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled</code>.</p>
 
-<h2>Change the directory where <code class="highlighter-rouge">cups-pdf</code> outputs printed files</h2>
+<h2>Change the directory where <code class="language-plaintext highlighter-rouge">cups-pdf</code> outputs printed files</h2>
 
-<p>Edit <code class="highlighter-rouge">/etc/cups/cups-pdf.conf</code> by adding <code class="highlighter-rouge">Out ${HOME}/Documents/cups-pdf</code>. The output will be in your <code class="highlighter-rouge">$HOME/Documents/cups-pdf</code> directory.</p>
+<p>Edit <code class="language-plaintext highlighter-rouge">/etc/cups/cups-pdf.conf</code> by adding <code class="language-plaintext highlighter-rouge">Out ${HOME}/Documents/cups-pdf</code>. The output will be in your <code class="language-plaintext highlighter-rouge">$HOME/Documents/cups-pdf</code> directory.</p>
 
 <h2>Backup and restore wired/wireless/vpn/hotspot connections with NetworkManager</h2>
 
-<p>By default, <a href="https://wiki.archlinux.org/index.php/NetworkManager">NetworkManager</a> stores all connection files at <code class="highlighter-rouge">/etc/NetworkManager/system-connections/</code>, and I just simply backup all of them to, say, the <code class="highlighter-rouge">/home/[username]/NetworkConnections/</code> folder (where <code class="highlighter-rouge">[username]</code> is my username, using</p>
+<p>By default, <a href="https://wiki.archlinux.org/index.php/NetworkManager">NetworkManager</a> stores all connection files at <code class="language-plaintext highlighter-rouge">/etc/NetworkManager/system-connections/</code>, and I just simply backup all of them to, say, the <code class="language-plaintext highlighter-rouge">/home/[username]/NetworkConnections/</code> folder (where <code class="language-plaintext highlighter-rouge">[username]</code> is my username, using</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> <span class="nt">-s</span> <span class="c"># switch to `root` user</span>
 rsync <span class="nt">-arv</span> /etc/NetworkManager/system-connections/<span class="k">*</span> /home/[username]/NetworkConnections
 </code></pre></div></div>
 
-<p>To restore the connection files, simply copy (as <code class="highlighter-rouge">root</code> user) all the backup files to <code class="highlighter-rouge">/etc/NetworkManager/system-connections/</code>, and restart NetworkManager with <code class="highlighter-rouge">systemctl restart NetworkManager</code>. Note that if you want to restore these files in <em>a different computer</em>, you also need to change the corresponding MAC addresses of the devices using the commands <code class="highlighter-rouge">cd /etc/NetworkManager/system-connections &amp;&amp; sed -i -e 's/[old mac]/[new mac]/ *</code>, as described <a href="https://unix.stackexchange.com/a/442633">here</a>. To list all network connnections, use <code class="highlighter-rouge">nmcli connection show</code>.</p>
+<p>To restore the connection files, simply copy (as <code class="language-plaintext highlighter-rouge">root</code> user) all the backup files to <code class="language-plaintext highlighter-rouge">/etc/NetworkManager/system-connections/</code>, and restart NetworkManager with <code class="language-plaintext highlighter-rouge">systemctl restart NetworkManager</code>. Note that if you want to restore these files in <em>a different computer</em>, you also need to change the corresponding MAC addresses of the devices using the commands <code class="language-plaintext highlighter-rouge">cd /etc/NetworkManager/system-connections &amp;&amp; sed -i -e 's/[old mac]/[new mac]/ *</code>, as described <a href="https://unix.stackexchange.com/a/442633">here</a>. To list all network connnections, use <code class="language-plaintext highlighter-rouge">nmcli connection show</code>.</p>
 
-<h2>Rollback/Restore a <code class="highlighter-rouge">pacman -Su</code> sytem update/upgrade with <code class="highlighter-rouge">aura</code></h2>
+<h2>Rollback/Restore a <code class="language-plaintext highlighter-rouge">pacman -Su</code> sytem update/upgrade with <code class="language-plaintext highlighter-rouge">aura</code></h2>
 
-<p>Install the <code class="highlighter-rouge">aura</code> or <code class="highlighter-rouge">aura-bin</code> or <code class="highlighter-rouge">aura-git</code> package using <code class="highlighter-rouge">yay</code>.
-To save the list of installed packages and versions, run <code class="highlighter-rouge">sudo aura -B</code>.
-To select a previous restore point from date-stamped list, run <code class="highlighter-rouge">sudo aura -B --restore</code>.
-To remove all but the last 3 restore points, run <code class="highlighter-rouge">sudo aura -Bc 3</code>.
+<p>Install the <code class="language-plaintext highlighter-rouge">aura</code> or <code class="language-plaintext highlighter-rouge">aura-bin</code> or <code class="language-plaintext highlighter-rouge">aura-git</code> package using <code class="language-plaintext highlighter-rouge">yay</code>.
+To save the list of installed packages and versions, run <code class="language-plaintext highlighter-rouge">sudo aura -B</code>.
+To select a previous restore point from date-stamped list, run <code class="language-plaintext highlighter-rouge">sudo aura -B --restore</code>.
+To remove all but the last 3 restore points, run <code class="language-plaintext highlighter-rouge">sudo aura -Bc 3</code>.
 For more details, see <a href="https://fosskers.github.io/aura/">The Aura User Guide</a>.</p>
 
 <h2>WebDAV</h2>
@@ -855,9 +855,9 @@ For more details, see <a href="https://fosskers.github.io/aura/">The Aura User G
 <span class="nb">chown</span> <span class="nt">-R</span> http:http /home/httpd/html/dav
 </code></pre></div></div>
 
-<p>Now, to setup authentication, run <code class="highlighter-rouge">sudo htpasswd -c /etc/httpd/conf/passwd username</code>.</p>
+<p>Now, to setup authentication, run <code class="language-plaintext highlighter-rouge">sudo htpasswd -c /etc/httpd/conf/passwd username</code>.</p>
 
-<p>Then, I created <code class="highlighter-rouge">/etc/httpd/conf/http-dav.conf</code> with the following contents.</p>
+<p>Then, I created <code class="language-plaintext highlighter-rouge">/etc/httpd/conf/http-dav.conf</code> with the following contents.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LoadModule dav_module modules/mod_dav.so
 LoadModule dav_fs_module modules/mod_dav_fs.so
@@ -879,14 +879,14 @@ Alias /dav <span class="s2">"/home/httpd/html/dav"</span>
 &lt;/Directory&gt;
 </code></pre></div></div>
 
-<p>then added <code class="highlighter-rouge">Include conf/httpd-dav.conf</code> to <code class="highlighter-rouge">/etc/httpd/conf/httpd.conf</code> and finally <code class="highlighter-rouge">sudo systemctl restart httpd</code>. To test if these settings work, go to <a href="http://localhost/dav">http://localhost/dav</a>.</p>
+<p>then added <code class="language-plaintext highlighter-rouge">Include conf/httpd-dav.conf</code> to <code class="language-plaintext highlighter-rouge">/etc/httpd/conf/httpd.conf</code> and finally <code class="language-plaintext highlighter-rouge">sudo systemctl restart httpd</code>. To test if these settings work, go to <a href="http://localhost/dav">http://localhost/dav</a>.</p>
 
 
 <hr>
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"

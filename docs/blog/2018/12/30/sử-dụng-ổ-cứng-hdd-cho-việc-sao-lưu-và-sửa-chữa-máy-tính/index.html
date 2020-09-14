@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
 </head>
 
 
@@ -127,7 +127,7 @@
 <h1>Các công cụ cần thiết</h1>
 
 <ul>
-  <li><a href="http://www.easy2boot.com/">Easy2Boot</a>: Công cụ hỗ trợ tạo USB hoặc ổ cứng có chức năng multi-boot. Tải <a href="http://www.easy2boot.com/download/">Easy2Boot v1.A7</a> (tệp <code class="highlighter-rouge">Easy2Boot_v1.A7.zip</code>), <a href="http://www.easy2boot.com/download/mpi-pack/">MPI Toolkit</a> (tệp <code class="highlighter-rouge">MPI_Tool_Pack_Plus_CloverLite_089.zip</code>), và <a href="http://files.easy2boot.com/200003276-bb22cbc1de/Install_RMPrepUSB_Full_v2.1.741a.exe.zip">RMPrepUSB</a> (tệp <code class="highlighter-rouge">Install_RMPrepUSB_Full_v2.1.741a.exe.zip</code>). Xem thêm các hướng dẫn khác liên quan đến Easy2Boot tại <a href="http://rmprepusb.blogspot.com/p/easy2boot-useful-blogs.html">đây</a>.
+  <li><a href="http://www.easy2boot.com/">Easy2Boot</a>: Công cụ hỗ trợ tạo USB hoặc ổ cứng có chức năng multi-boot. Tải <a href="http://www.easy2boot.com/download/">Easy2Boot v1.A7</a> (tệp <code class="language-plaintext highlighter-rouge">Easy2Boot_v1.A7.zip</code>), <a href="http://www.easy2boot.com/download/mpi-pack/">MPI Toolkit</a> (tệp <code class="language-plaintext highlighter-rouge">MPI_Tool_Pack_Plus_CloverLite_089.zip</code>), và <a href="http://files.easy2boot.com/200003276-bb22cbc1de/Install_RMPrepUSB_Full_v2.1.741a.exe.zip">RMPrepUSB</a> (tệp <code class="language-plaintext highlighter-rouge">Install_RMPrepUSB_Full_v2.1.741a.exe.zip</code>). Xem thêm các hướng dẫn khác liên quan đến Easy2Boot tại <a href="http://rmprepusb.blogspot.com/p/easy2boot-useful-blogs.html">đây</a>.
     <ul>
       <li>
         <dl>
@@ -162,7 +162,7 @@
 
 <h1>Cài đặt Easy2Boot lên HDD bằng RMPrepUSB</h1>
 
-<p>Trước tiên, giải nén tệp <code class="highlighter-rouge">Easy2Boot_v1.A7.zip</code> để thu được thư mục <code class="highlighter-rouge">Easy2Boot_v1.A7</code> với nội dung như sau:</p>
+<p>Trước tiên, giải nén tệp <code class="language-plaintext highlighter-rouge">Easy2Boot_v1.A7.zip</code> để thu được thư mục <code class="language-plaintext highlighter-rouge">Easy2Boot_v1.A7</code> với nội dung như sau:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:<span class="se">\U</span>SERS<span class="se">\[</span>USERNAME]<span class="se">\D</span>OWNLOADS<span class="se">\E</span>ASY2BOOT_V1.A7
 └───_ISO
@@ -349,50 +349,50 @@
     └───WINPE
 </code></pre></div></div>
 
-<p>Cài đặt <code class="highlighter-rouge">RMPrepUSB</code> và chạy với quyền Administrator.</p>
+<p>Cài đặt <code class="language-plaintext highlighter-rouge">RMPrepUSB</code> và chạy với quyền Administrator.</p>
 
 <!-- <div class="text-center">
 
 <figure class="figure">
-    <img src="/static/posts/sử-dụng-ổ-cứng-hdd-cho-việc-sao-lưu-và-sửa-chữa-máy-tính/RMPrepUSB-0.png" class="figure-img img-fluid rounded"   width="50%">
+    <img src="/static/posts/sử-dụng-ổ-cứng-hdd-cho-việc-sao-lưu-và-sửa-chữa-máy-tính/RMPrepUSB-0.png" class="figure-img img-fluid rounded"   width="50%" >
     <figcaption class="figure-caption">Cửa sổ <code>RMPrepUSB</code></figcaption>
 </figure>
 
 </div> -->
-<div class="figure"><img src="/static/posts/sử-dụng-ổ-cứng-hdd-cho-việc-sao-lưu-và-sửa-chữa-máy-tính/RMPrepUSB-0.png" alt="RMPrepUSB-0.png" width="50%"><br>Cửa sổ <code>RMPrepUSB</code></div>
+<div class="figure"><img src="/static/posts/sử-dụng-ổ-cứng-hdd-cho-việc-sao-lưu-và-sửa-chữa-máy-tính/RMPrepUSB-0.png" alt="RMPrepUSB-0.png" width="50%" ><br >Cửa sổ <code>RMPrepUSB</code></div>
 
 <p>Các bước lựa chọn (xem thêm ở <a href="http://www.easy2boot.com/make-an-easy2boot-usb-drive/make-and-e2b-usb-drive-using-rmprepusb/">trang này</a>) như sau:</p>
 
 <ul>
-  <li>Chọn menu <code class="highlighter-rouge">Settings &gt; List Large Drives &gt; 128GiB</code>, hoặc bấm <kbd>Ctrl</kbd> + <kbd>Z</kbd>, để làm việc với ổ HDD.</li>
-  <li>Tick <code class="highlighter-rouge">No User Prompts</code> check box.</li>
-  <li>Mục <code class="highlighter-rouge">1. Partition Size (MiB)</code>: Tôi muốn sử dụng khoảng 30GB để lưu và boot các ISO images, do đó tôi chọn kích thước phân vùng là khoảng 30720 MiB. Kích thước tối đa mà <code class="highlighter-rouge">Easy2Boot</code> đề nghị là 131072 MiB (xem <a href="http://www.easy2boot.com/faq-/a137gb-bios-bug/">trang này</a>).</li>
-  <li>Mục <code class="highlighter-rouge">2. Volume Name</code>: <code class="highlighter-rouge">EASY2BOOT</code> (hoặc bất kỳ tên nào bạn thích).</li>
-  <li>Mục <code class="highlighter-rouge">3. Bootloader Options</code>: Chọn <code class="highlighter-rouge">WinPEv2/WinPEv3/Vista/Win 7 bootable [BOOTMGR] (CC4)</code> (thực ra bất kỳ lựa chọn nào ngoài <code class="highlighter-rouge">SYSLINUX</code> đều được).</li>
-  <li>Mục <code class="highlighter-rouge">4. Filesystem and Overrides</code>: Chọn <code class="highlighter-rouge">NTFS</code>.</li>
-  <li>Mục <code class="highlighter-rouge">5. Copy OS Files</code>: Bấm <code class="highlighter-rouge">Choose Source</code>, trả lời <code class="highlighter-rouge">Copy Files='YES'</code>, và chọn đường dẫn tới thư mục <code class="highlighter-rouge">Easy2Boot_v1.A7</code> (trong trường hợp của tôi là <code class="highlighter-rouge">C:\Users\[username]\Downloads\Easy2Boot_v1.A7</code>, với <code class="highlighter-rouge">[username]</code> là username sử dụng trong Windows).</li>
-  <li>Bấm <code class="highlighter-rouge">6. Prepare drive</code>. Bước này sẽ định dạng ổ HDD, tạo phân vùng mới với nhãn bạn đã chọn (<code class="highlighter-rouge">EASY2BOOT</code>), và sao chép các tệp cần thiết từ thư mục <code class="highlighter-rouge">Easy2Boot_v1.A7</code> vào phân vùng này.</li>
-  <li>Sau khi hoàn thành bước trên, bấm <code class="highlighter-rouge">Install grub4dos</code>, chọn <code class="highlighter-rouge">Yes</code> để cài <code class="highlighter-rouge">Grub4dos</code> vào MBR (<strong>M</strong>aster <strong>B</strong>oot <strong>R</strong>ecord) của HDD. Chọn <code class="highlighter-rouge">Cancel</code> khi được hỏi <code class="highlighter-rouge">Overwrite existing grldr file on E:</code> (với <code class="highlighter-rouge">E:</code> là tên Windows gán cho phân vùng <code class="highlighter-rouge">EASY2BOOT</code>) để <strong>tránh việc ghi đè tệp <code class="highlighter-rouge">grldr</code> của Easy2Boot</strong>.</li>
-  <li>Bấm <code class="highlighter-rouge">Install grub4dos</code>, chọn <code class="highlighter-rouge">No</code> để cài <code class="highlighter-rouge">Grub4dos</code> vào PBR (<strong>P</strong>artition <strong>B</strong>oot <strong>R</strong>ecord) của phân vùng <code class="highlighter-rouge">EASY2BOOT</code>. Chọn <code class="highlighter-rouge">Cancel</code> khi được hỏi <code class="highlighter-rouge">Overwrite existing grldr file on E:</code> (với <code class="highlighter-rouge">E:</code> là tên Windows gán cho phân vùng <code class="highlighter-rouge">EASY2BOOT</code>) để <strong>tránh việc ghi đè tệp <code class="highlighter-rouge">grldr</code> của Easy2Boot</strong>.</li>
+  <li>Chọn menu <code class="language-plaintext highlighter-rouge">Settings &gt; List Large Drives &gt; 128GiB</code>, hoặc bấm <kbd>Ctrl</kbd> + <kbd>Z</kbd>, để làm việc với ổ HDD.</li>
+  <li>Tick <code class="language-plaintext highlighter-rouge">No User Prompts</code> check box.</li>
+  <li>Mục <code class="language-plaintext highlighter-rouge">1. Partition Size (MiB)</code>: Tôi muốn sử dụng khoảng 30GB để lưu và boot các ISO images, do đó tôi chọn kích thước phân vùng là khoảng 30720 MiB. Kích thước tối đa mà <code class="language-plaintext highlighter-rouge">Easy2Boot</code> đề nghị là 131072 MiB (xem <a href="http://www.easy2boot.com/faq-/a137gb-bios-bug/">trang này</a>).</li>
+  <li>Mục <code class="language-plaintext highlighter-rouge">2. Volume Name</code>: <code class="language-plaintext highlighter-rouge">EASY2BOOT</code> (hoặc bất kỳ tên nào bạn thích).</li>
+  <li>Mục <code class="language-plaintext highlighter-rouge">3. Bootloader Options</code>: Chọn <code class="language-plaintext highlighter-rouge">WinPEv2/WinPEv3/Vista/Win 7 bootable [BOOTMGR] (CC4)</code> (thực ra bất kỳ lựa chọn nào ngoài <code class="language-plaintext highlighter-rouge">SYSLINUX</code> đều được).</li>
+  <li>Mục <code class="language-plaintext highlighter-rouge">4. Filesystem and Overrides</code>: Chọn <code class="language-plaintext highlighter-rouge">NTFS</code>.</li>
+  <li>Mục <code class="language-plaintext highlighter-rouge">5. Copy OS Files</code>: Bấm <code class="language-plaintext highlighter-rouge">Choose Source</code>, trả lời <code class="language-plaintext highlighter-rouge">Copy Files='YES'</code>, và chọn đường dẫn tới thư mục <code class="language-plaintext highlighter-rouge">Easy2Boot_v1.A7</code> (trong trường hợp của tôi là <code class="language-plaintext highlighter-rouge">C:\Users\[username]\Downloads\Easy2Boot_v1.A7</code>, với <code class="language-plaintext highlighter-rouge">[username]</code> là username sử dụng trong Windows).</li>
+  <li>Bấm <code class="language-plaintext highlighter-rouge">6. Prepare drive</code>. Bước này sẽ định dạng ổ HDD, tạo phân vùng mới với nhãn bạn đã chọn (<code class="language-plaintext highlighter-rouge">EASY2BOOT</code>), và sao chép các tệp cần thiết từ thư mục <code class="language-plaintext highlighter-rouge">Easy2Boot_v1.A7</code> vào phân vùng này.</li>
+  <li>Sau khi hoàn thành bước trên, bấm <code class="language-plaintext highlighter-rouge">Install grub4dos</code>, chọn <code class="language-plaintext highlighter-rouge">Yes</code> để cài <code class="language-plaintext highlighter-rouge">Grub4dos</code> vào MBR (<strong>M</strong>aster <strong>B</strong>oot <strong>R</strong>ecord) của HDD. Chọn <code class="language-plaintext highlighter-rouge">Cancel</code> khi được hỏi <code class="language-plaintext highlighter-rouge">Overwrite existing grldr file on E:</code> (với <code class="language-plaintext highlighter-rouge">E:</code> là tên Windows gán cho phân vùng <code class="language-plaintext highlighter-rouge">EASY2BOOT</code>) để <strong>tránh việc ghi đè tệp <code class="language-plaintext highlighter-rouge">grldr</code> của Easy2Boot</strong>.</li>
+  <li>Bấm <code class="language-plaintext highlighter-rouge">Install grub4dos</code>, chọn <code class="language-plaintext highlighter-rouge">No</code> để cài <code class="language-plaintext highlighter-rouge">Grub4dos</code> vào PBR (<strong>P</strong>artition <strong>B</strong>oot <strong>R</strong>ecord) của phân vùng <code class="language-plaintext highlighter-rouge">EASY2BOOT</code>. Chọn <code class="language-plaintext highlighter-rouge">Cancel</code> khi được hỏi <code class="language-plaintext highlighter-rouge">Overwrite existing grldr file on E:</code> (với <code class="language-plaintext highlighter-rouge">E:</code> là tên Windows gán cho phân vùng <code class="language-plaintext highlighter-rouge">EASY2BOOT</code>) để <strong>tránh việc ghi đè tệp <code class="language-plaintext highlighter-rouge">grldr</code> của Easy2Boot</strong>.</li>
 </ul>
 
 <h1>Tạo các phân vùng khác trên HDD</h1>
 
-<p>Như đã nói ở trên, tôi muốn cài đặt <a href="https://manjaro.org/">Manjaro</a> trên HDD để phục vụ quá trình làm việc của mình. Tôi sử dụng <code class="highlighter-rouge">EaseUS Partition Master Free</code> để tạo các <strong>phân vùng Logical</strong> trên HDD như sau:</p>
+<p>Như đã nói ở trên, tôi muốn cài đặt <a href="https://manjaro.org/">Manjaro</a> trên HDD để phục vụ quá trình làm việc của mình. Tôi sử dụng <code class="language-plaintext highlighter-rouge">EaseUS Partition Master Free</code> để tạo các <strong>phân vùng Logical</strong> trên HDD như sau:</p>
 
 <ul>
-  <li>Phân vùng có nhãn <code class="highlighter-rouge">E2B_PTN2</code>, định dạng FAT32 để cài đặt và sử dụng GRUB2 với Easy2Boot (phiên bản Beta, xem ở <a href="http://www.easy2boot.com/uefi-grub2-ptn2/">đây</a>).</li>
-  <li>Phân vùng có nhãn <code class="highlighter-rouge">DATA</code>, định dạng NTFS, để chứa các dữ liệu và bản sao cần thiết.</li>
-  <li>Phân vùng có nhãn <code class="highlighter-rouge">EFI_BOOT</code>, kích thước khoảng 300MiB, định dạng FAT32 để chứa các thông tin liên quan đến việc boot với UEFI mode. (Tôi muốn cài đặt cả UEFI và (Legacy) BIOS boot mode).</li>
-  <li>Phân vùng có nhãn <code class="highlighter-rouge">LINUX_SWAP</code>, kích thước khoảng 2GB, định dạng EXT3.</li>
-  <li>Phân vùng có nhãn <code class="highlighter-rouge">MANJARO_ROOT</code>, định dạng EXT3, để cài hệ điều hành Manjaro.</li>
+  <li>Phân vùng có nhãn <code class="language-plaintext highlighter-rouge">E2B_PTN2</code>, định dạng FAT32 để cài đặt và sử dụng GRUB2 với Easy2Boot (phiên bản Beta, xem ở <a href="http://www.easy2boot.com/uefi-grub2-ptn2/">đây</a>).</li>
+  <li>Phân vùng có nhãn <code class="language-plaintext highlighter-rouge">DATA</code>, định dạng NTFS, để chứa các dữ liệu và bản sao cần thiết.</li>
+  <li>Phân vùng có nhãn <code class="language-plaintext highlighter-rouge">EFI_BOOT</code>, kích thước khoảng 300MiB, định dạng FAT32 để chứa các thông tin liên quan đến việc boot với UEFI mode. (Tôi muốn cài đặt cả UEFI và (Legacy) BIOS boot mode).</li>
+  <li>Phân vùng có nhãn <code class="language-plaintext highlighter-rouge">LINUX_SWAP</code>, kích thước khoảng 2GB, định dạng EXT3.</li>
+  <li>Phân vùng có nhãn <code class="language-plaintext highlighter-rouge">MANJARO_ROOT</code>, định dạng EXT3, để cài hệ điều hành Manjaro.</li>
 </ul>
 
-<p>Chú ý rằng việc khởi tạo các phân vùng logical như trên chỉ nhằm mục đích tạo ra cấu trúc có sẵn để cài hệ điều hành. Khi cài Manjaro, tất cả các phân vùng trên (trừ <code class="highlighter-rouge">E2B_PTN2</code> và <code class="highlighter-rouge">DATA</code>) sẽ được định dạng lại.</p>
+<p>Chú ý rằng việc khởi tạo các phân vùng logical như trên chỉ nhằm mục đích tạo ra cấu trúc có sẵn để cài hệ điều hành. Khi cài Manjaro, tất cả các phân vùng trên (trừ <code class="language-plaintext highlighter-rouge">E2B_PTN2</code> và <code class="language-plaintext highlighter-rouge">DATA</code>) sẽ được định dạng lại.</p>
 
 <h1>Cài đặt Easy2Boot</h1>
 
-<p>Cách đơn giản nhất là bạn chỉ cần sao chép ISO image vào một trong các thư mục con của thư mục <code class="highlighter-rouge">_ISO</code> trong phân vùng <code class="highlighter-rouge">EASY2BOOT</code>. Bạn cũng có thể chuyển đổi tệp có đuôi <code class="highlighter-rouge">.iso</code> sang tệp có đuôi <code class="highlighter-rouge">.imgPTN</code> để boot từ <code class="highlighter-rouge">Easy2Boot</code> menu (xem <a href="http://www.easy2boot.com/add-payload-files/makepartimage">trang này</a>). <a href="http://www.easy2boot.com/">Trang chủ của Easy2Boot</a> có chứa các hướng dẫn chi tiết về việc cài đặt và sử dụng Easy2Boot. Chú ý rằng bạn có thể đổi đuôi <code class="highlighter-rouge">.imgPTN</code> sang <code class="highlighter-rouge">.imgPTN23</code> nếu muốn hiện các phân vùng còn lại của ổ HDD khi bạn boot với tệp đuôi <code class="highlighter-rouge">.imgPTN</code>. Để cài đặt GRUB2 với Easy2Boot, xem hướng dẫn ở <a href="http://www.easy2boot.com/uefi-grub2-ptn2/">đây</a>.</p>
+<p>Cách đơn giản nhất là bạn chỉ cần sao chép ISO image vào một trong các thư mục con của thư mục <code class="language-plaintext highlighter-rouge">_ISO</code> trong phân vùng <code class="language-plaintext highlighter-rouge">EASY2BOOT</code>. Bạn cũng có thể chuyển đổi tệp có đuôi <code class="language-plaintext highlighter-rouge">.iso</code> sang tệp có đuôi <code class="language-plaintext highlighter-rouge">.imgPTN</code> để boot từ <code class="language-plaintext highlighter-rouge">Easy2Boot</code> menu (xem <a href="http://www.easy2boot.com/add-payload-files/makepartimage">trang này</a>). <a href="http://www.easy2boot.com/">Trang chủ của Easy2Boot</a> có chứa các hướng dẫn chi tiết về việc cài đặt và sử dụng Easy2Boot. Chú ý rằng bạn có thể đổi đuôi <code class="language-plaintext highlighter-rouge">.imgPTN</code> sang <code class="language-plaintext highlighter-rouge">.imgPTN23</code> nếu muốn hiện các phân vùng còn lại của ổ HDD khi bạn boot với tệp đuôi <code class="language-plaintext highlighter-rouge">.imgPTN</code>. Để cài đặt GRUB2 với Easy2Boot, xem hướng dẫn ở <a href="http://www.easy2boot.com/uefi-grub2-ptn2/">đây</a>.</p>
 
 <h1>Cài đặt Manjaro</h1>
 
@@ -499,7 +499,7 @@
     └── Chroot into Installation
 </code></pre></div></div>
 
-<p>Cấu trúc HDD của tôi nhìn từ  Manjaro sau khi hoàn tất cài đặt có dạng như sau (kết quả từ <code class="highlighter-rouge">sudo fdisk -l</code>):</p>
+<p>Cấu trúc HDD của tôi nhìn từ  Manjaro sau khi hoàn tất cài đặt có dạng như sau (kết quả từ <code class="language-plaintext highlighter-rouge">sudo fdisk -l</code>):</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Disk /dev/sdb: 298.1 GiB, 320072933376 bytes, 625142448 sectors
 Disk model: 5AS             
@@ -534,50 +534,50 @@ Device     Boot     Start       End   Sectors   Size Id Type
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="highlighter-rouge">EASY2BOOT</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">EASY2BOOT</code></td>
       <td style="text-align: center">NTFS</td>
-      <td style="text-align: center"><code class="highlighter-rouge">/dev/sdb1</code></td>
-      <td style="text-align: center">HPFS/NTFS/exFAT <br> <strong>[Không thay đổi]</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">/dev/sdb1</code></td>
+      <td style="text-align: center">HPFS/NTFS/exFAT <br > <strong>[Không thay đổi]</strong></td>
       <td style="text-align: center">Primary</td>
       <td>Phân vùng Multi-boot sử dụng bởi Easy2Boot</td>
     </tr>
     <tr>
-      <td style="text-align: center"><code class="highlighter-rouge">E2B_PTN2</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">E2B_PTN2</code></td>
       <td style="text-align: center">FAT32</td>
-      <td style="text-align: center"><code class="highlighter-rouge">/dev/sdb2</code></td>
-      <td style="text-align: center">W95 FAT32 (LBA) <br> <strong>[Không thay đổi]</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">/dev/sdb2</code></td>
+      <td style="text-align: center">W95 FAT32 (LBA) <br > <strong>[Không thay đổi]</strong></td>
       <td style="text-align: center">Primary</td>
       <td>Phân vùng 2 sử dụng bởi Easy2Boot với GRUB2</td>
     </tr>
     <tr>
-      <td style="text-align: center"><code class="highlighter-rouge">DATA</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">DATA</code></td>
       <td style="text-align: center">NTFS</td>
-      <td style="text-align: center"><code class="highlighter-rouge">/dev/sdb5</code></td>
-      <td style="text-align: center">HPFS/NTFS/exFAT <br> <strong>[Không thay đổi]</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">/dev/sdb5</code></td>
+      <td style="text-align: center">HPFS/NTFS/exFAT <br > <strong>[Không thay đổi]</strong></td>
       <td style="text-align: center">Logical</td>
       <td>Lưu trữ dữ liệu</td>
     </tr>
     <tr>
-      <td style="text-align: center"><code class="highlighter-rouge">EFI_BOOT</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">EFI_BOOT</code></td>
       <td style="text-align: center">FAT32</td>
-      <td style="text-align: center"><code class="highlighter-rouge">/dev/sdb6</code></td>
-      <td style="text-align: center">EFI (FAT-12/16/32) <br> <strong>[Định dạng lại]</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">/dev/sdb6</code></td>
+      <td style="text-align: center">EFI (FAT-12/16/32) <br > <strong>[Định dạng lại]</strong></td>
       <td style="text-align: center">Logical</td>
       <td>Phân vùng cài đặt EFI boot</td>
     </tr>
     <tr>
-      <td style="text-align: center"><code class="highlighter-rouge">LINUX_SWAP</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">LINUX_SWAP</code></td>
       <td style="text-align: center">EXT3</td>
-      <td style="text-align: center"><code class="highlighter-rouge">/dev/sdb7</code></td>
-      <td style="text-align: center">Linux swap / Solaris <br> <strong>[Định dạng lại]</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">/dev/sdb7</code></td>
+      <td style="text-align: center">Linux swap / Solaris <br > <strong>[Định dạng lại]</strong></td>
       <td style="text-align: center">Logical</td>
       <td>Phân vùng swap cho Manjaro</td>
     </tr>
     <tr>
-      <td style="text-align: center"><code class="highlighter-rouge">MANJARO_ROOT</code></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">MANJARO_ROOT</code></td>
       <td style="text-align: center">EXT 3</td>
-      <td style="text-align: center"><code class="highlighter-rouge">/dev/sdb8</code></td>
-      <td style="text-align: center">Linux (EXT4) <br> <strong>[Định dạng lại]</strong></td>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">/dev/sdb8</code></td>
+      <td style="text-align: center">Linux (EXT4) <br > <strong>[Định dạng lại]</strong></td>
       <td style="text-align: center">Logical</td>
       <td>Phân vùng cài đặt Manjaro</td>
     </tr>
@@ -587,8 +587,8 @@ Device     Boot     Start       End   Sectors   Size Id Type
 <p>Một số chú ý khi cài đặt:</p>
 
 <ul>
-  <li>Ở bước <code class="highlighter-rouge">Mount Partitions</code>, chọn <code class="highlighter-rouge">/dev/sdb6</code> khi được hỏi về “EFI boot partition”. Chọn mount phân vùng này vào thư mục <code class="highlighter-rouge">/boot/efi</code>, và chọn <code class="highlighter-rouge">grub</code> ở mục <code class="highlighter-rouge">Install Bootloader</code> sau này.</li>
-  <li>Ở bước <code class="highlighter-rouge">Chroot into Installation</code>, cài đặt lại GRUB2 bootloader để boot với UEFI mode như sau (xem thêm ở <a href="https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks">đây</a>):</li>
+  <li>Ở bước <code class="language-plaintext highlighter-rouge">Mount Partitions</code>, chọn <code class="language-plaintext highlighter-rouge">/dev/sdb6</code> khi được hỏi về “EFI boot partition”. Chọn mount phân vùng này vào thư mục <code class="language-plaintext highlighter-rouge">/boot/efi</code>, và chọn <code class="language-plaintext highlighter-rouge">grub</code> ở mục <code class="language-plaintext highlighter-rouge">Install Bootloader</code> sau này.</li>
+  <li>Ở bước <code class="language-plaintext highlighter-rouge">Chroot into Installation</code>, cài đặt lại GRUB2 bootloader để boot với UEFI mode như sau (xem thêm ở <a href="https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks">đây</a>):</li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grub-install <span class="nt">--target</span><span class="o">=</span>x86_64-efi <span class="nt">--efi-directory</span><span class="o">=</span>/boot/efi <span class="nt">--bootloader-id</span><span class="o">=</span>Manjaro <span class="nt">--boot-directory</span><span class="o">=</span>/boot/efi <span class="nt">--debug</span>
@@ -609,8 +609,8 @@ grub-mkconfig <span class="nt">-o</span> /boot/grub/grub.cfg
 <h2>Windows To Go</h2>
 
 <p>Thay vì Manjaro, có thể sử dụng <a href="https://www.easyuefi.com/wintousb/">WinToUSB</a> để cài đặt <a href="https://docs.microsoft.com/en-us/windows/deployment/planning/windows-to-go-overview">Windows To Go</a>.
-Có thể thực hiện điều này bằng cách tạo phân vùng <code class="highlighter-rouge">EASY2BOOT</code> định dạng NTFS để cài Windows lên ổ HDD thông qua <code class="highlighter-rouge">WinToUSB</code>, và phân vùng <code class="highlighter-rouge">WIN_BOOT</code> định dạng FAT32 tầm 300MiB để chứa thông tin liên quan đến việc boot vào Windows với cả BIOS và UEFI mode. Tôi sử dụng ISO image của phiên bản Windows 10 Enterprise LTSC 2019 tải trực tiếp từ <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise">Microsoft Evaluation Center</a> với WinToUSB.
-Khi sử dụng <code class="highlighter-rouge">WinToUSB</code>, chọn <code class="highlighter-rouge">WIN_BOOT</code> là <code class="highlighter-rouge">system partition</code> và <code class="highlighter-rouge">EASY2BOOT</code> là <code class="highlighter-rouge">boot partition</code>. Chú ý rằng <code class="highlighter-rouge">EASY2BOOT</code> phải là phân vùng thứ nhất. Điều này nhằm thuận lợi cho việc cài đặt Easy2Boot lên phân vùng này với <code class="highlighter-rouge">RMPrepUSB</code> (chỉ sao chép các tệp của Easy2Boot vào phân vùng <code class="highlighter-rouge">EASY2BOOT</code> và thực hiện cài <code class="highlighter-rouge">Grub4dos</code>, <strong>không định dạng lại phân vùng <code class="highlighter-rouge">EASY2BOOT</code></strong>) sau khi hoàn thành các bước cài đặt với <code class="highlighter-rouge">WinToUSB</code>. Nếu gặp lỗi <code class="highlighter-rouge">PROBLEM: Sector at LBA30 appears to contain code - please reformat using RMPrepUSB</code> khi boot với tệp đuôi <code class="highlighter-rouge">.imgPTN</code> thì xử lý như sau: Chọn ổ HDD với phân vùng <code class="highlighter-rouge">EASY2BOOT</code> từ <code class="highlighter-rouge">RMPrepUSB</code>. Sau đó bấm nút <code class="highlighter-rouge">Drive-&gt;File</code>, lưu tệp với tên <code class="highlighter-rouge">MBR.bin</code> và điền các tham số như sau: <strong>Start</strong> = 0, <strong>Length</strong>=1SEC, <strong>FileStart</strong>=0. Tiếp theo, bấm nút <code class="highlighter-rouge">File-&gt;Drive</code>, chọn tệp <code class="highlighter-rouge">MBR.bin</code> vừa lưu và điền các tham số như sau: <strong>Start</strong>=0, <strong>USBStart</strong>=30, <strong>Length</strong>=0. (Xem thêm ở <a href="http://www.easy2boot.com/faq-/">đây</a> để biết thêm chi tiết.) Để cài đặt phần mềm trên Windows, có thể sử dụng <a href="https://chocolatey.org">Chocolatey</a> với lệnh <code class="highlighter-rouge">choco install packages.config -y</code>, với tệp <code class="highlighter-rouge">packages.config</code> có dạng như sau (cho Windows 64-bit). Chú ý là một số phần mềm như <code class="highlighter-rouge">texmaker</code> phiên bản <code class="highlighter-rouge">5.0.3</code> hay <code class="highlighter-rouge">jdk11</code> chỉ chạy trên nền hệ điều hành 64-bit.</p>
+Có thể thực hiện điều này bằng cách tạo phân vùng <code class="language-plaintext highlighter-rouge">EASY2BOOT</code> định dạng NTFS để cài Windows lên ổ HDD thông qua <code class="language-plaintext highlighter-rouge">WinToUSB</code>, và phân vùng <code class="language-plaintext highlighter-rouge">WIN_BOOT</code> định dạng FAT32 tầm 300MiB để chứa thông tin liên quan đến việc boot vào Windows với cả BIOS và UEFI mode. Tôi sử dụng ISO image của phiên bản Windows 10 Enterprise LTSC 2019 tải trực tiếp từ <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise">Microsoft Evaluation Center</a> với WinToUSB.
+Khi sử dụng <code class="language-plaintext highlighter-rouge">WinToUSB</code>, chọn <code class="language-plaintext highlighter-rouge">WIN_BOOT</code> là <code class="language-plaintext highlighter-rouge">system partition</code> và <code class="language-plaintext highlighter-rouge">EASY2BOOT</code> là <code class="language-plaintext highlighter-rouge">boot partition</code>. Chú ý rằng <code class="language-plaintext highlighter-rouge">EASY2BOOT</code> phải là phân vùng thứ nhất. Điều này nhằm thuận lợi cho việc cài đặt Easy2Boot lên phân vùng này với <code class="language-plaintext highlighter-rouge">RMPrepUSB</code> (chỉ sao chép các tệp của Easy2Boot vào phân vùng <code class="language-plaintext highlighter-rouge">EASY2BOOT</code> và thực hiện cài <code class="language-plaintext highlighter-rouge">Grub4dos</code>, <strong>không định dạng lại phân vùng <code class="language-plaintext highlighter-rouge">EASY2BOOT</code></strong>) sau khi hoàn thành các bước cài đặt với <code class="language-plaintext highlighter-rouge">WinToUSB</code>. Nếu gặp lỗi <code class="language-plaintext highlighter-rouge">PROBLEM: Sector at LBA30 appears to contain code - please reformat using RMPrepUSB</code> khi boot với tệp đuôi <code class="language-plaintext highlighter-rouge">.imgPTN</code> thì xử lý như sau: Chọn ổ HDD với phân vùng <code class="language-plaintext highlighter-rouge">EASY2BOOT</code> từ <code class="language-plaintext highlighter-rouge">RMPrepUSB</code>. Sau đó bấm nút <code class="language-plaintext highlighter-rouge">Drive-&gt;File</code>, lưu tệp với tên <code class="language-plaintext highlighter-rouge">MBR.bin</code> và điền các tham số như sau: <strong>Start</strong> = 0, <strong>Length</strong>=1SEC, <strong>FileStart</strong>=0. Tiếp theo, bấm nút <code class="language-plaintext highlighter-rouge">File-&gt;Drive</code>, chọn tệp <code class="language-plaintext highlighter-rouge">MBR.bin</code> vừa lưu và điền các tham số như sau: <strong>Start</strong>=0, <strong>USBStart</strong>=30, <strong>Length</strong>=0. (Xem thêm ở <a href="http://www.easy2boot.com/faq-/">đây</a> để biết thêm chi tiết.) Để cài đặt phần mềm trên Windows, có thể sử dụng <a href="https://chocolatey.org">Chocolatey</a> với lệnh <code class="language-plaintext highlighter-rouge">choco install packages.config -y</code>, với tệp <code class="language-plaintext highlighter-rouge">packages.config</code> có dạng như sau (cho Windows 64-bit). Chú ý là một số phần mềm như <code class="language-plaintext highlighter-rouge">texmaker</code> phiên bản <code class="language-plaintext highlighter-rouge">5.0.3</code> hay <code class="language-plaintext highlighter-rouge">jdk11</code> chỉ chạy trên nền hệ điều hành 64-bit.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml <span class="nv">version</span><span class="o">=</span><span class="s2">"1.0"</span> <span class="nv">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span>?&gt;
 &lt;packages&gt;
@@ -661,7 +661,7 @@ Khi sử dụng <code class="highlighter-rouge">WinToUSB</code>, chọn <code cl
 &lt;/packages&gt;
 </code></pre></div></div>
 
-<p>Phiên bản Windows 10 Enterprise LTSC 2019 cho phép sử dụng thử trong 90 ngày, và có thể sử dụng lệnh <code class="highlighter-rouge">slmgr /rearm</code> 3 lần để gia hạn. Một cách thường dùng với các phiên bản Windows Enterprise và Windows Server cũ để gia hạn thời gian sử dụng mỗi khi hết 90 ngày là như sau: tìm đến <code class="highlighter-rouge">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform</code> trong Windows Registry và thay giá trị của <code class="highlighter-rouge">SkipRearm</code> từ <code class="highlighter-rouge">0</code> thành <code class="highlighter-rouge">1</code>, sau đó dùng lệnh <code class="highlighter-rouge">slmgr /rearm</code> để gia hạn thời gian sử dụng thử. Có thể đọc thêm về <code class="highlighter-rouge">SkipRearm</code> ở <a href="https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-security-spp-skiprearm">đây</a>.</p>
+<p>Phiên bản Windows 10 Enterprise LTSC 2019 cho phép sử dụng thử trong 90 ngày, và có thể sử dụng lệnh <code class="language-plaintext highlighter-rouge">slmgr /rearm</code> 3 lần để gia hạn. Một cách thường dùng với các phiên bản Windows Enterprise và Windows Server cũ để gia hạn thời gian sử dụng mỗi khi hết 90 ngày là như sau: tìm đến <code class="language-plaintext highlighter-rouge">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform</code> trong Windows Registry và thay giá trị của <code class="language-plaintext highlighter-rouge">SkipRearm</code> từ <code class="language-plaintext highlighter-rouge">0</code> thành <code class="language-plaintext highlighter-rouge">1</code>, sau đó dùng lệnh <code class="language-plaintext highlighter-rouge">slmgr /rearm</code> để gia hạn thời gian sử dụng thử. Có thể đọc thêm về <code class="language-plaintext highlighter-rouge">SkipRearm</code> ở <a href="https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-security-spp-skiprearm">đây</a>.</p>
 
 <h2>Tạo bộ cài đặt Windows 10 với các phần mềm cài sẵn</h2>
 
@@ -670,9 +670,9 @@ Khi sử dụng <code class="highlighter-rouge">WinToUSB</code>, chọn <code cl
 <ul>
   <li>Cài đặt Windows 10.</li>
   <li>Khi đến màn hình đầu tiên sau khi Windows 10 khởi động lại máy tính và bắt đầu hỏi các thông tin về Region, Keyboard, v.v…, thay vì trả lời các thông tin này, bấm <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F3</kbd> để khởi động lại vào Audit Mode.</li>
-  <li>Sau khi khởi động vào Audit Mode, bạn sẽ thấy một cửa sổ <code class="highlighter-rouge">System Preparation Tool</code> đang mở. Để cửa sổ đó và tiến hành cài đặt các phần mềm bạn muốn (chú ý luôn cài phần mềm cho <strong>all users</strong>).</li>
-  <li>Sau khi cài xong, gõ lệnh <code class="highlighter-rouge">cmd.exe /c Cleanmgr /sageset:65535 &amp; Cleamngr /sagerun:65535</code> trong cửa sổ CMD với quyền Administrator để dọn dẹp hệ thống. Nếu bạn dùng <a href="https://chocolatey.org">Chocolatey</a> để cài phần mềm như tôi đã nói ở trên thì có thể cài thêm <code class="highlighter-rouge">choco-cleaner</code> và chạy tệp <code class="highlighter-rouge">C:\ProgramData\chocolatey\lib\choco-cleaner\tools\Choco-Cleaner-manual.bat</code> để dọn dẹp các tệp không cần thiết sinh ra trong quá trình cài đặt với <code class="highlighter-rouge">Chocolatey</code>.</li>
-  <li>Tạo tệp <code class="highlighter-rouge">C:\Windows\System32\Sysprep\unattend.xml</code> với nội dung sau:</li>
+  <li>Sau khi khởi động vào Audit Mode, bạn sẽ thấy một cửa sổ <code class="language-plaintext highlighter-rouge">System Preparation Tool</code> đang mở. Để cửa sổ đó và tiến hành cài đặt các phần mềm bạn muốn (chú ý luôn cài phần mềm cho <strong>all users</strong>).</li>
+  <li>Sau khi cài xong, gõ lệnh <code class="language-plaintext highlighter-rouge">cmd.exe /c Cleanmgr /sageset:65535 &amp; Cleamngr /sagerun:65535</code> trong cửa sổ CMD với quyền Administrator để dọn dẹp hệ thống. Nếu bạn dùng <a href="https://chocolatey.org">Chocolatey</a> để cài phần mềm như tôi đã nói ở trên thì có thể cài thêm <code class="language-plaintext highlighter-rouge">choco-cleaner</code> và chạy tệp <code class="language-plaintext highlighter-rouge">C:\ProgramData\chocolatey\lib\choco-cleaner\tools\Choco-Cleaner-manual.bat</code> để dọn dẹp các tệp không cần thiết sinh ra trong quá trình cài đặt với <code class="language-plaintext highlighter-rouge">Chocolatey</code>.</li>
+  <li>Tạo tệp <code class="language-plaintext highlighter-rouge">C:\Windows\System32\Sysprep\unattend.xml</code> với nội dung sau:</li>
 </ul>
 
 <p>Cho Windows 64-bit</p>
@@ -699,24 +699,24 @@ Khi sử dụng <code class="highlighter-rouge">WinToUSB</code>, chọn <code cl
 &lt;/unattend&gt;
 </code></pre></div></div>
 
-<p>Khi chạy <code class="highlighter-rouge">Sysprep</code>, tệp này sẽ sao chép tất cả các cài đặt trong profile bạn đang dùng cho tất cả các user khác.</p>
+<p>Khi chạy <code class="language-plaintext highlighter-rouge">Sysprep</code>, tệp này sẽ sao chép tất cả các cài đặt trong profile bạn đang dùng cho tất cả các user khác.</p>
 
 <ul>
-  <li>Tạo tệp <code class="highlighter-rouge">%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\RunOnce.bat</code> với nội dung sau.</li>
+  <li>Tạo tệp <code class="language-plaintext highlighter-rouge">%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\RunOnce.bat</code> với nội dung sau.</li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo </span>Y|del %appdata%<span class="se">\m</span>icrosoft<span class="se">\w</span>indows<span class="se">\r</span>ecent<span class="se">\a</span>utomaticdestinations<span class="se">\*</span>
 del %0
 </code></pre></div></div>
 
-<p>Tệp này sẽ reset <code class="highlighter-rouge">Quick Access</code> về cài đặt mặc định, và tự xóa chính nó (bằng lệnh <code class="highlighter-rouge">del %0</code>) sau khi hoàn thành việc này.</p>
+<p>Tệp này sẽ reset <code class="language-plaintext highlighter-rouge">Quick Access</code> về cài đặt mặc định, và tự xóa chính nó (bằng lệnh <code class="language-plaintext highlighter-rouge">del %0</code>) sau khi hoàn thành việc này.</p>
 
 <ul>
   <li>
-    <p>Quay lại cửa sổ <code class="highlighter-rouge">System Preparation Tool</code>, chọn <code class="highlighter-rouge">Enter System Out-of-Box Experience (OOBE)</code> trong menu <code class="highlighter-rouge">System Cleanup Action</code>, tích chọn hộp vuông bên cạnh <code class="highlighter-rouge">Generalize</code>, và chọn <code class="highlighter-rouge">Shutdown</code> trong menu <code class="highlighter-rouge">Shutdown Options</code>.</p>
+    <p>Quay lại cửa sổ <code class="language-plaintext highlighter-rouge">System Preparation Tool</code>, chọn <code class="language-plaintext highlighter-rouge">Enter System Out-of-Box Experience (OOBE)</code> trong menu <code class="language-plaintext highlighter-rouge">System Cleanup Action</code>, tích chọn hộp vuông bên cạnh <code class="language-plaintext highlighter-rouge">Generalize</code>, và chọn <code class="language-plaintext highlighter-rouge">Shutdown</code> trong menu <code class="language-plaintext highlighter-rouge">Shutdown Options</code>.</p>
   </li>
   <li>
-    <p>Tiếp theo, ta tạo ảnh <code class="highlighter-rouge">install.wim</code> của phân vùng chứa Windows đã được dọn dẹp bởi <code class="highlighter-rouge">Sysprep</code>. Tệp <code class="highlighter-rouge">install.wim</code> là một phần của tệp ISO phục vụ cho việc cài Windows sau này. Sau khi quá trình trên kết thúc, khởi động máy tính với bộ cài Windows (mới nhất có thể) từ DVD hoặc USB. Ở màn hình đầu tiên, bấm <kbd>Shift</kbd>+<kbd>F10</kbd> để khởi động cửa sổ dòng lệnh của Windows. Sử dụng <code class="highlighter-rouge">diskpart</code> để liệt kê tất cả các phân vùng hiện có trên máy tính bằng lệnh <code class="highlighter-rouge">list vol</code>. Giả sử phân vùng cài Windows của bạn là ở ổ <code class="highlighter-rouge">D:\</code> và bạn muốn lưu <code class="highlighter-rouge">install.wim</code> ở ổ <code class="highlighter-rouge">E:\</code> (hoặc bất kỳ ổ đĩa hoặc phân vùng nào khác trừ <code class="highlighter-rouge">D:\</code>). Tạo thư mục <code class="highlighter-rouge">E:\Scratch</code> là thư mục tạm thời phục vụ cho quá trình tạo tệp ảnh <code class="highlighter-rouge">install.wim</code>.</p>
+    <p>Tiếp theo, ta tạo ảnh <code class="language-plaintext highlighter-rouge">install.wim</code> của phân vùng chứa Windows đã được dọn dẹp bởi <code class="language-plaintext highlighter-rouge">Sysprep</code>. Tệp <code class="language-plaintext highlighter-rouge">install.wim</code> là một phần của tệp ISO phục vụ cho việc cài Windows sau này. Sau khi quá trình trên kết thúc, khởi động máy tính với bộ cài Windows (mới nhất có thể) từ DVD hoặc USB. Ở màn hình đầu tiên, bấm <kbd>Shift</kbd>+<kbd>F10</kbd> để khởi động cửa sổ dòng lệnh của Windows. Sử dụng <code class="language-plaintext highlighter-rouge">diskpart</code> để liệt kê tất cả các phân vùng hiện có trên máy tính bằng lệnh <code class="language-plaintext highlighter-rouge">list vol</code>. Giả sử phân vùng cài Windows của bạn là ở ổ <code class="language-plaintext highlighter-rouge">D:\</code> và bạn muốn lưu <code class="language-plaintext highlighter-rouge">install.wim</code> ở ổ <code class="language-plaintext highlighter-rouge">E:\</code> (hoặc bất kỳ ổ đĩa hoặc phân vùng nào khác trừ <code class="language-plaintext highlighter-rouge">D:\</code>). Tạo thư mục <code class="language-plaintext highlighter-rouge">E:\Scratch</code> là thư mục tạm thời phục vụ cho quá trình tạo tệp ảnh <code class="language-plaintext highlighter-rouge">install.wim</code>.</p>
   </li>
 </ul>
 
@@ -727,13 +727,13 @@ del %0
 
 <ul>
   <li>
-    <p>Sau khi hoàn thành quá trình trên, khởi động lại máy tính vào Windows. Lấy tệp ISO dùng để cài đặt Windows mới nhât từ Microsoft, giải nén tệp này (dùng <code class="highlighter-rouge">WinRAR</code> hoặc <code class="highlighter-rouge">7-zip</code>) vào một thư mục, ví dụ như <code class="highlighter-rouge">D:\isofiles</code>. Xóa tệp <code class="highlighter-rouge">install.wim</code> ở <code class="highlighter-rouge">D:\isofiles\sources\install.wim</code> và thay bằng tệp <code class="highlighter-rouge">install.wim</code> đã được tạo từ quá trình trên.</p>
+    <p>Sau khi hoàn thành quá trình trên, khởi động lại máy tính vào Windows. Lấy tệp ISO dùng để cài đặt Windows mới nhât từ Microsoft, giải nén tệp này (dùng <code class="language-plaintext highlighter-rouge">WinRAR</code> hoặc <code class="language-plaintext highlighter-rouge">7-zip</code>) vào một thư mục, ví dụ như <code class="language-plaintext highlighter-rouge">D:\isofiles</code>. Xóa tệp <code class="language-plaintext highlighter-rouge">install.wim</code> ở <code class="language-plaintext highlighter-rouge">D:\isofiles\sources\install.wim</code> và thay bằng tệp <code class="language-plaintext highlighter-rouge">install.wim</code> đã được tạo từ quá trình trên.</p>
   </li>
   <li>
-    <p>Tải phiên bản mới nhất của <a href="https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit">Windows Assessment and Deployment Kit (ADK) for Windows 10</a>. Cài đặt toàn bộ gói này cần tải về khoảng 7.5GB, tuy nhiên ta chỉ cần <code class="highlighter-rouge">Deployment Tools</code>. Khi cài Windows ADK, ta bỏ hết tất cả các thành phần còn lại để giảm dung lượng tải về.</p>
+    <p>Tải phiên bản mới nhất của <a href="https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit">Windows Assessment and Deployment Kit (ADK) for Windows 10</a>. Cài đặt toàn bộ gói này cần tải về khoảng 7.5GB, tuy nhiên ta chỉ cần <code class="language-plaintext highlighter-rouge">Deployment Tools</code>. Khi cài Windows ADK, ta bỏ hết tất cả các thành phần còn lại để giảm dung lượng tải về.</p>
   </li>
   <li>
-    <p>Sau khi cài Windows ADK, mở cửa sổ dòng lệnh <code class="highlighter-rouge">Deployment and Imaging Tools</code> với quyền Administrator. Trong cửa sổ dòng lệnh mới mở ra, gõ lệnh sau để tạo tệp ISO cài đặt Windows với một số phần mềm cài sẵn.</p>
+    <p>Sau khi cài Windows ADK, mở cửa sổ dòng lệnh <code class="language-plaintext highlighter-rouge">Deployment and Imaging Tools</code> với quyền Administrator. Trong cửa sổ dòng lệnh mới mở ra, gõ lệnh sau để tạo tệp ISO cài đặt Windows với một số phần mềm cài sẵn.</p>
   </li>
 </ul>
 
@@ -744,26 +744,26 @@ del %0
 oscdimg.exe -m -lCCCOMA_X64FRE_EN-US_DV9_RECOVERY -o -u2 -udfver102 -bootdata:2#p0,e,be:\isofiles\boot\etfsboot.com#pEF,e,be:\isofiles\efi\microsoft\boot\efisys.bin e:\isofiles c:\Win10_Pro_x64_Backup_20190129.iso
 -->
 
-<p>Bạn có thể thay <code class="highlighter-rouge">CCCOMA_X64FRE_EN-US_DV9_CUSTOM</code> bằng bất kỳ nhãn nào bạn thích. Sau khi hoàn tất, tệp ISO mới sẽ được lưu ở ổ <code class="highlighter-rouge">D:\</code> với tên <code class="highlighter-rouge">Win10Prox64Custom.iso</code>. Tham khảo thêm từ <a href="https://www.tenforums.com/tutorials/72031-create-windows-10-iso-image-existing-installation.html">trang nguồn của hướng dẫn này</a> với hình ảnh minh họa đầy đủ và hướng dẫn cách làm với máy ảo.</p>
+<p>Bạn có thể thay <code class="language-plaintext highlighter-rouge">CCCOMA_X64FRE_EN-US_DV9_CUSTOM</code> bằng bất kỳ nhãn nào bạn thích. Sau khi hoàn tất, tệp ISO mới sẽ được lưu ở ổ <code class="language-plaintext highlighter-rouge">D:\</code> với tên <code class="language-plaintext highlighter-rouge">Win10Prox64Custom.iso</code>. Tham khảo thêm từ <a href="https://www.tenforums.com/tutorials/72031-create-windows-10-iso-image-existing-installation.html">trang nguồn của hướng dẫn này</a> với hình ảnh minh họa đầy đủ và hướng dẫn cách làm với máy ảo.</p>
 
 <h2>Sao lưu và khôi phục hệ thống</h2>
 
 <p>Hoàn toàn có thể sử dụng các công cụ ở phần trước để sao lưu và khôi phục hệ thống Windows. 
-Để sao lưu hệ thống Windows, tạo tệp ảnh <code class="highlighter-rouge">install.wim</code> như sau. 
-Khởi động máy tính và boot vào bộ cài đặt Windows (mới nhất có thể), bấm <kbd>Shift</kbd>+<kbd>F10</kbd> để khởi động cửa sổ dòng lệnh của Windows. Sử dụng <code class="highlighter-rouge">diskpart</code> để liệt kê tất cả các phân vùng hiện có trên máy tính bằng lệnh <code class="highlighter-rouge">list vol</code>. Giả sử phân vùng cài Windows của bạn là ở ổ <code class="highlighter-rouge">C:\</code> và bạn muốn lưu <code class="highlighter-rouge">install.wim</code> ở ổ <code class="highlighter-rouge">D:\</code> (hoặc bất kỳ ổ đĩa hoặc phân vùng nào khác trừ <code class="highlighter-rouge">C:\</code>).</p>
+Để sao lưu hệ thống Windows, tạo tệp ảnh <code class="language-plaintext highlighter-rouge">install.wim</code> như sau. 
+Khởi động máy tính và boot vào bộ cài đặt Windows (mới nhất có thể), bấm <kbd>Shift</kbd>+<kbd>F10</kbd> để khởi động cửa sổ dòng lệnh của Windows. Sử dụng <code class="language-plaintext highlighter-rouge">diskpart</code> để liệt kê tất cả các phân vùng hiện có trên máy tính bằng lệnh <code class="language-plaintext highlighter-rouge">list vol</code>. Giả sử phân vùng cài Windows của bạn là ở ổ <code class="language-plaintext highlighter-rouge">C:\</code> và bạn muốn lưu <code class="language-plaintext highlighter-rouge">install.wim</code> ở ổ <code class="language-plaintext highlighter-rouge">D:\</code> (hoặc bất kỳ ổ đĩa hoặc phân vùng nào khác trừ <code class="language-plaintext highlighter-rouge">C:\</code>).</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dism /capture-image /imagefile:D:<span class="se">\i</span>nstall.wim /capturedir:C:<span class="se">\ </span>/name:<span class="s2">"Recovery"</span> /compress:maximum
 </code></pre></div></div>
 
-<p>Sau khi quá trình này hoàn tất, bạn có thể tạo tệp ISO như hướng dẫn ở trên. Để khôi phục hệ thống, tiến hành tạo USB boot với nội dung của tệp ISO đã tạo như trên (hoặc bạn cũng có thể tiến hành tách <code class="highlighter-rouge">install.wim</code> thành nhiều tệp đuôi <code class="highlighter-rouge">.swm</code> và tiến hành ghi ra DVD để cài đặt, như hướng dẫn ở <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/split-a-windows-image--wim--file-to-span-across-multiple-dvds">đây</a>) và cài đặt bình thường như khi bạn cài Windows. 
-Tôi ghi lại ở đây câu lệnh sử dụng để tách <code class="highlighter-rouge">install.wim</code> thành các tệp đuôi <code class="highlighter-rouge">.swm</code> có kích thước nhỏ hơn (để ghi ra nhiều đĩa DVD).</p>
+<p>Sau khi quá trình này hoàn tất, bạn có thể tạo tệp ISO như hướng dẫn ở trên. Để khôi phục hệ thống, tiến hành tạo USB boot với nội dung của tệp ISO đã tạo như trên (hoặc bạn cũng có thể tiến hành tách <code class="language-plaintext highlighter-rouge">install.wim</code> thành nhiều tệp đuôi <code class="language-plaintext highlighter-rouge">.swm</code> và tiến hành ghi ra DVD để cài đặt, như hướng dẫn ở <a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/split-a-windows-image--wim--file-to-span-across-multiple-dvds">đây</a>) và cài đặt bình thường như khi bạn cài Windows. 
+Tôi ghi lại ở đây câu lệnh sử dụng để tách <code class="language-plaintext highlighter-rouge">install.wim</code> thành các tệp đuôi <code class="language-plaintext highlighter-rouge">.swm</code> có kích thước nhỏ hơn (để ghi ra nhiều đĩa DVD).</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dism /split-image /imagefile:install.wim /swmfile:install.swm /filesize:3800
 </code></pre></div></div>
 
 <h1>GRUB2 và Grub4dos menu</h1>
 
-<p>Từ  Windows 10, sử dụng <code class="highlighter-rouge">RMPrepUSB</code> để cài đặt lại Grub4dos như đã thực hiện ở trên. Sau đó, tạo một tệp <code class="highlighter-rouge">_ISO/MAINMENU/MNU/Manjaro.mnu</code> với nội dung sau</p>
+<p>Từ  Windows 10, sử dụng <code class="language-plaintext highlighter-rouge">RMPrepUSB</code> để cài đặt lại Grub4dos như đã thực hiện ở trên. Sau đó, tạo một tệp <code class="language-plaintext highlighter-rouge">_ISO/MAINMENU/MNU/Manjaro.mnu</code> với nội dung sau</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># --- Manjaro Linux Boot Menu -----</span>
 title Pre-Installed Manjaro Linux
@@ -772,9 +772,9 @@ kernel <span class="o">(</span>hd0,7<span class="o">)</span>/boot/grub/i386-pc/c
 
 <p>để boot Manjaro từ Grub4dos menu của Easy2Boot.</p>
 
-<p>Ở đây, <code class="highlighter-rouge">(hd0, 7)</code> ứng với phân vùng <code class="highlighter-rouge">/dev/sdb8</code> trên ổ HDD.</p>
+<p>Ở đây, <code class="language-plaintext highlighter-rouge">(hd0, 7)</code> ứng với phân vùng <code class="language-plaintext highlighter-rouge">/dev/sdb8</code> trên ổ HDD.</p>
 
-<p>Từ Manjaro, để boot vào Easy2Boot, thêm dòng sau vào <code class="highlighter-rouge">/etc/grub.d/40_custom</code></p>
+<p>Từ Manjaro, để boot vào Easy2Boot, thêm dòng sau vào <code class="language-plaintext highlighter-rouge">/etc/grub.d/40_custom</code></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="k">${</span><span class="nv">grub_platform</span><span class="k">}</span><span class="s2">"</span> <span class="o">==</span> <span class="s2">"pc"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
 	</span>menuentry <span class="s2">"EASY2BOOT"</span><span class="o">{</span>
@@ -786,12 +786,12 @@ kernel <span class="o">(</span>hd0,7<span class="o">)</span>/boot/grub/i386-pc/c
 <span class="k">fi</span>
 </code></pre></div></div>
 
-<p>trong đó <code class="highlighter-rouge">48B001F4B001E970</code> là UUID của phân vùng <code class="highlighter-rouge">/dev/sdb1</code> chứa Easy4Boot. Để lấy UUID của <code class="highlighter-rouge">/dev/sdb1</code>, dùng lệnh <code class="highlighter-rouge">sudo blkid /dev/sdb1</code>. Cập nhật lại GRUB2 bootloader menu như sau:</p>
+<p>trong đó <code class="language-plaintext highlighter-rouge">48B001F4B001E970</code> là UUID của phân vùng <code class="language-plaintext highlighter-rouge">/dev/sdb1</code> chứa Easy4Boot. Để lấy UUID của <code class="language-plaintext highlighter-rouge">/dev/sdb1</code>, dùng lệnh <code class="language-plaintext highlighter-rouge">sudo blkid /dev/sdb1</code>. Cập nhật lại GRUB2 bootloader menu như sau:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grub-mkconfig <span class="nt">-o</span> /boot/grub/grub.cfg
 </code></pre></div></div>
 
-<p>Để load từ GRUB2 menu của Easy2Boot, tôi tạo tệp <code class="highlighter-rouge">_ISO/MAINMENU/MNU/grub2/Manjaro.grub2</code> và <code class="highlighter-rouge">_ISO/MAINMENU/grub2/Manjaro.grub2</code> với nội dung như sau:</p>
+<p>Để load từ GRUB2 menu của Easy2Boot, tôi tạo tệp <code class="language-plaintext highlighter-rouge">_ISO/MAINMENU/MNU/grub2/Manjaro.grub2</code> và <code class="language-plaintext highlighter-rouge">_ISO/MAINMENU/grub2/Manjaro.grub2</code> với nội dung như sau:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="nv">$EFI</span><span class="p">;</span> <span class="k">then
 if</span> <span class="nv">$BIT64</span><span class="p">;</span> <span class="k">then
@@ -827,11 +827,11 @@ if</span> <span class="nv">$BIT64</span><span class="p">;</span> <span class="k"
 fi</span>
 </code></pre></div></div>
 
-<p>Chú ý rằng phân vùng <code class="highlighter-rouge">/dev/sdb6</code> là phân vùng lưu giữ các thông tin phục vụ việc boot với UEFI boot mode. Ở đây, khi bạn load GRUB2 menu từ Grub4dos của Easy2Boot bằng cách load tệp <code class="highlighter-rouge">UEFI_GRUB2_PTN2_xxxx.imgPTNLBAa23</code>, đuôi <code class="highlighter-rouge">.imgPTNLBAa23</code> cho thấy sau khi load tệp này thì ổ HDD (chứa Easy2Boot) của bạn sẽ được coi là ổ <code class="highlighter-rouge">hd0</code> khi boot, và các phân vùng khác trên ổ HDD này đều sẽ được nhận dạng (nếu bỏ đuôi <code class="highlighter-rouge">23</code> thì bạn sẽ không tìm thấy các phân vùng này khi chạy bất kỳ chương trình nào, ví dụ như Acronis True Image CD). Do đó, tôi đặt <code class="highlighter-rouge">set root='hd0,msdos6'</code>, với <code class="highlighter-rouge">msdos6</code> ở đây chỉ phân vùng <code class="highlighter-rouge">/dev/sdb6</code> chứa các thông tin để boot Manjaro Linux với UEFI mode. Để chắc chắn hơn, tôi đặt lệnh tìm kiếm UUID của phân vùng này (ở đây là <code class="highlighter-rouge">350E-515A</code>, thông tin này có thể được lấy bằng lệnh <code class="highlighter-rouge">sudo blkid /dev/sdb6</code> trong Manjaro Linux) và đặt lại root nếu phân vùng không phải <code class="highlighter-rouge">'hd0,msdos6'</code>. Chú ý rằng tôi có thể boot thành công là do <strong>tôi đã sao chép tất cả các tệp cần thiết cho việc boot với UEFI mode vào phân vùng <code class="highlighter-rouge">/dev/sdb6</code> khi cài đặt với <code class="highlighter-rouge">grub-install</code> và <code class="highlighter-rouge">grub-mkconfig</code></strong>.</p>
+<p>Chú ý rằng phân vùng <code class="language-plaintext highlighter-rouge">/dev/sdb6</code> là phân vùng lưu giữ các thông tin phục vụ việc boot với UEFI boot mode. Ở đây, khi bạn load GRUB2 menu từ Grub4dos của Easy2Boot bằng cách load tệp <code class="language-plaintext highlighter-rouge">UEFI_GRUB2_PTN2_xxxx.imgPTNLBAa23</code>, đuôi <code class="language-plaintext highlighter-rouge">.imgPTNLBAa23</code> cho thấy sau khi load tệp này thì ổ HDD (chứa Easy2Boot) của bạn sẽ được coi là ổ <code class="language-plaintext highlighter-rouge">hd0</code> khi boot, và các phân vùng khác trên ổ HDD này đều sẽ được nhận dạng (nếu bỏ đuôi <code class="language-plaintext highlighter-rouge">23</code> thì bạn sẽ không tìm thấy các phân vùng này khi chạy bất kỳ chương trình nào, ví dụ như Acronis True Image CD). Do đó, tôi đặt <code class="language-plaintext highlighter-rouge">set root='hd0,msdos6'</code>, với <code class="language-plaintext highlighter-rouge">msdos6</code> ở đây chỉ phân vùng <code class="language-plaintext highlighter-rouge">/dev/sdb6</code> chứa các thông tin để boot Manjaro Linux với UEFI mode. Để chắc chắn hơn, tôi đặt lệnh tìm kiếm UUID của phân vùng này (ở đây là <code class="language-plaintext highlighter-rouge">350E-515A</code>, thông tin này có thể được lấy bằng lệnh <code class="language-plaintext highlighter-rouge">sudo blkid /dev/sdb6</code> trong Manjaro Linux) và đặt lại root nếu phân vùng không phải <code class="language-plaintext highlighter-rouge">'hd0,msdos6'</code>. Chú ý rằng tôi có thể boot thành công là do <strong>tôi đã sao chép tất cả các tệp cần thiết cho việc boot với UEFI mode vào phân vùng <code class="language-plaintext highlighter-rouge">/dev/sdb6</code> khi cài đặt với <code class="language-plaintext highlighter-rouge">grub-install</code> và <code class="language-plaintext highlighter-rouge">grub-mkconfig</code></strong>.</p>
 
 <h1>GRUB2 menu entry cho một số tệp ISO để sử dụng với Easy2Boot</h1>
 
-<p>Các entry sau được thêm vào các tệp đuôi <code class="highlighter-rouge">.grub2</code> tương ứng. Chú ý rằng <strong>tên tệp ISO cần phải trùng với tên tệp trong entry, và tốt nhất là không chứa khoảng cách</strong>.</p>
+<p>Các entry sau được thêm vào các tệp đuôi <code class="language-plaintext highlighter-rouge">.grub2</code> tương ứng. Chú ý rằng <strong>tên tệp ISO cần phải trùng với tên tệp trong entry, và tốt nhất là không chứa khoảng cách</strong>.</p>
 
 <h2>manjaro-architect-18.0-stable-x86_64.iso</h2>
 
@@ -887,7 +887,7 @@ if</span> <span class="o">[</span> <span class="nt">-e</span> <span class="s2">"
 fi</span>
 </code></pre></div></div>
 
-<p>Chú ý rằng bạn cũng có thể đặt tệp ISO trên vào thư mục bất kỳ trên ổ cứng, ví dụ như <code class="highlighter-rouge">/iso</code>, và thêm một entry tương tự vào <code class="highlighter-rouge">/etc/grub.d/40_custom</code> để boot tệp ISO này từ ổ cứng của máy tính bạn đang sử dụng. Xem thêm ở <a href="http://reboot.pro/topic/20004-boot-a-acronis-true-image-2014-iso-image-with-grub2-at-uefi/page-3#entry195438">đây</a> để tìm hiểu về một số cách khác để boot Acronis True Image CD.</p>
+<p>Chú ý rằng bạn cũng có thể đặt tệp ISO trên vào thư mục bất kỳ trên ổ cứng, ví dụ như <code class="language-plaintext highlighter-rouge">/iso</code>, và thêm một entry tương tự vào <code class="language-plaintext highlighter-rouge">/etc/grub.d/40_custom</code> để boot tệp ISO này từ ổ cứng của máy tính bạn đang sử dụng. Xem thêm ở <a href="http://reboot.pro/topic/20004-boot-a-acronis-true-image-2014-iso-image-with-grub2-at-uefi/page-3#entry195438">đây</a> để tìm hiểu về một số cách khác để boot Acronis True Image CD.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>menuentry <span class="s2">"Acronis True Image Home 2019 (ISO)"</span> <span class="o">{</span>
     <span class="nb">set </span><span class="nv">quiet</span><span class="o">=</span>1
@@ -908,7 +908,7 @@ fi</span>
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"

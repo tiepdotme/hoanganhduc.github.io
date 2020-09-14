@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
 </head>
 
 
@@ -223,9 +223,9 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<h1>My Own Configuration of Some Boxes Using The <code class="highlighter-rouge">tcolorbox</code> Package</h1>
+<h1>My Own Configuration of Some Boxes Using The <code class="language-plaintext highlighter-rouge">tcolorbox</code> Package</h1>
 
-<p>A manual for the <code class="highlighter-rouge">tcolorbox</code> package can be found <a href="http://mirror.hmc.edu/ctan/macros/latex/contrib/tcolorbox/tcolorbox.pdf">here</a>.</p>
+<p>A manual for the <code class="language-plaintext highlighter-rouge">tcolorbox</code> package can be found <a href="http://mirror.hmc.edu/ctan/macros/latex/contrib/tcolorbox/tcolorbox.pdf">here</a>.</p>
 
 <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\usepackage</span><span class="na">[most]</span><span class="p">{</span>tcolorbox<span class="p">}</span>
 <span class="c">% Highlight Oval Box</span>
@@ -272,7 +272,7 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt<span class="p">}</span>
 <span class="c">%% If you don't want to use numbering: \begin{thrm*}{&lt;title&gt;}{&lt;label&gt;} &lt;some content&gt; \end{thrm*}</span>
 </code></pre></div></div>
 
-<h1>Creating Handout using <code class="highlighter-rouge">pgfpages</code></h1>
+<h1>Creating Handout using <code class="language-plaintext highlighter-rouge">pgfpages</code></h1>
 
 <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">% For Handout</span>
 <span class="k">\usepackage</span><span class="p">{</span>pgfpages<span class="p">}</span>
@@ -299,7 +299,7 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt<span class="p">}</span>
 
 <h1>Customize Beamer Titlepage</h1>
 
-<p>The original tutorial is at <a href="https://tex.stackexchange.com/a/25318">https://tex.stackexchange.com/a/25318</a>. The idea is to use <code class="highlighter-rouge">\defbeamertemplate</code>.</p>
+<p>The original tutorial is at <a href="https://tex.stackexchange.com/a/25318">https://tex.stackexchange.com/a/25318</a>. The idea is to use <code class="language-plaintext highlighter-rouge">\defbeamertemplate</code>.</p>
 
 <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="p">{</span>beamer<span class="p">}</span>
 <span class="k">\defbeamertemplate*</span><span class="p">{</span>title page<span class="p">}{</span>customized<span class="p">}</span>[1][]
@@ -347,13 +347,13 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt<span class="p">}</span>
 
 <h1>Insert PDF file</h1>
 
-<p>To insert a PDF file, in the preamble, add the <code class="highlighter-rouge">pdfpages</code> package.</p>
+<p>To insert a PDF file, in the preamble, add the <code class="language-plaintext highlighter-rouge">pdfpages</code> package.</p>
 
 <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">% Include PDF</span>
 <span class="k">\usepackage</span><span class="p">{</span>pdfpages<span class="p">}</span>
 </code></pre></div></div>
 
-<p>For instance, to insert <code class="highlighter-rouge">file.pdf</code>:</p>
+<p>For instance, to insert <code class="language-plaintext highlighter-rouge">file.pdf</code>:</p>
 
 <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\includepdf</span><span class="na">[pages=-]</span><span class="p">{</span>file.pdf<span class="p">}</span>
 </code></pre></div></div>
@@ -364,16 +364,16 @@ boxsep=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt<span class="p">}</span>
 
 <p>The original source is at <a href="https://tex.stackexchange.com/a/129165">https://tex.stackexchange.com/a/129165</a>.</p>
 
-<p>In specifying overlay options, you can add the <code class="highlighter-rouge">handout:&lt;number&gt;</code> option. For example, <code class="highlighter-rouge">\only&lt;1-3| handout:1&gt;{content-1}</code> will print <code class="highlighter-rouge">content-1</code> that appears in frames 1 to 3 as the first page of the handout; <code class="highlighter-rouge">\only&lt;4-5| handout:2&gt;{content-2}</code> prints <code class="highlighter-rouge">content-2</code> which appears in frames 4 and 5 as the second page of the handout; and <code class="highlighter-rouge">\only&lt;6-| handout:0&gt;{content-3}</code> will instruct beamer not to print <code class="highlighter-rouge">content-3</code> that appears on frame 6 onwards. Notice that a space is needed between <code class="highlighter-rouge">|</code> and <code class="highlighter-rouge">handout</code>.</p>
+<p>In specifying overlay options, you can add the <code class="language-plaintext highlighter-rouge">handout:&lt;number&gt;</code> option. For example, <code class="language-plaintext highlighter-rouge">\only&lt;1-3| handout:1&gt;{content-1}</code> will print <code class="language-plaintext highlighter-rouge">content-1</code> that appears in frames 1 to 3 as the first page of the handout; <code class="language-plaintext highlighter-rouge">\only&lt;4-5| handout:2&gt;{content-2}</code> prints <code class="language-plaintext highlighter-rouge">content-2</code> which appears in frames 4 and 5 as the second page of the handout; and <code class="language-plaintext highlighter-rouge">\only&lt;6-| handout:0&gt;{content-3}</code> will instruct beamer not to print <code class="language-plaintext highlighter-rouge">content-3</code> that appears on frame 6 onwards. Notice that a space is needed between <code class="language-plaintext highlighter-rouge">|</code> and <code class="language-plaintext highlighter-rouge">handout</code>.</p>
 
-<p>To not show an item/graphic in the handout, simply set <code class="highlighter-rouge">handout:0</code>.</p>
+<p>To not show an item/graphic in the handout, simply set <code class="language-plaintext highlighter-rouge">handout:0</code>.</p>
 
 
 <hr>
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"

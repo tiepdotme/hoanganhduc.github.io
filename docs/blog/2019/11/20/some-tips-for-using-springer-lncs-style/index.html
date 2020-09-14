@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
 </head>
 
 
@@ -120,47 +120,47 @@
 <ul>
   <li>Follow the <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines">instructions for LNCS authors</a>.</li>
   <li>Use the latest <a href="https://www.tug.org/texlive/">TeXLive system</a>, or maybe <a href="https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj#.WuA4JS5uZpi">Overleaf</a>.</li>
-  <li>Include your <a href="https://orcid.org/">ORCID identifier</a> using the <code class="highlighter-rouge">\orcidID{...}</code> command. In the published version, the ORCID identifier will be replaced by ORCID icon linked to the corresponding entry in the ORCID database.</li>
-  <li>When submitting the camera-ready version, pack your working files (<code class="highlighter-rouge">.tex</code> file(s), pictures, <code class="highlighter-rouge">splncs04.bst</code>, a bibliography (<code class="highlighter-rouge">.bib</code>) file) into a ZIP archive. Make minimal ZIP archives when submitting, do not add <code class="highlighter-rouge">llncs.cls</code>, the PDF version of the paper or the copyright form.</li>
+  <li>Include your <a href="https://orcid.org/">ORCID identifier</a> using the <code class="language-plaintext highlighter-rouge">\orcidID{...}</code> command. In the published version, the ORCID identifier will be replaced by ORCID icon linked to the corresponding entry in the ORCID database.</li>
+  <li>When submitting the camera-ready version, pack your working files (<code class="language-plaintext highlighter-rouge">.tex</code> file(s), pictures, <code class="language-plaintext highlighter-rouge">splncs04.bst</code>, a bibliography (<code class="language-plaintext highlighter-rouge">.bib</code>) file) into a ZIP archive. Make minimal ZIP archives when submitting, do not add <code class="language-plaintext highlighter-rouge">llncs.cls</code>, the PDF version of the paper or the copyright form.</li>
   <li>Pay a special attention to <strong>overfull boxes</strong>!</li>
   <li>Make sure that the figures included in your manuscript look good when printed in <strong>black and white</strong>.</li>
   <li>Do not change the default font of the document, or use too many variations on fonts.</li>
-  <li>Use <code class="highlighter-rouge"><span class="k">\documentclass</span><span class="na">[runningheads, envcountsame, a4paper]</span><span class="p">{</span>llncs<span class="p">}</span></code>; some packages modify the paper format to <code class="highlighter-rouge">letter</code> if <code class="highlighter-rouge">a4</code> is not specified.</li>
-  <li>Use as few <code class="highlighter-rouge">.tex</code> files as possible, a single file is best, name it <code class="highlighter-rouge">main.tex</code>, it helps the assembling task.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">\documentclass[runningheads, envcountsame, a4paper]{llncs}</code>; some packages modify the paper format to <code class="language-plaintext highlighter-rouge">letter</code> if <code class="language-plaintext highlighter-rouge">a4</code> is not specified.</li>
+  <li>Use as few <code class="language-plaintext highlighter-rouge">.tex</code> files as possible, a single file is best, name it <code class="language-plaintext highlighter-rouge">main.tex</code>, it helps the assembling task.</li>
   <li>In English, the first word and the last word of titles should be capitalized. In addition, all nouns, pronouns, adjectives, verbs, adverbs, and subordinate conjunctions should be capitalized. Articles and coordinating conjunctions are not capitalized. Traditionally, prepositions are not capitalized. Use the same conventions for all titles of sections, subsection, etc.</li>
-  <li>LNCS recommends keywords to be added after the abstract using the <code class="highlighter-rouge">\keywords{...}</code> command, each keyword must be separated by commas or <code class="highlighter-rouge">\and</code>. Do not use <code class="highlighter-rouge">\newcommand{\keywords}</code>.</li>
-  <li>In <code class="highlighter-rouge">\author{...}</code> use <code class="highlighter-rouge">\and</code> as separator between authors names.</li>
+  <li>LNCS recommends keywords to be added after the abstract using the <code class="language-plaintext highlighter-rouge">\keywords{...}</code> command, each keyword must be separated by commas or <code class="language-plaintext highlighter-rouge">\and</code>. Do not use <code class="language-plaintext highlighter-rouge">\newcommand{\keywords}</code>.</li>
+  <li>In <code class="language-plaintext highlighter-rouge">\author{...}</code> use <code class="language-plaintext highlighter-rouge">\and</code> as separator between authors names.</li>
   <li>Give all the affiliation (the entries in this order, one entry per line), department, university, street address (including country), e-mail. Do not use comma or dot at the end of each affiliation line.</li>
-  <li>Inside the <code class="highlighter-rouge">\authorrunning{}</code> field of your article, please use only the initial of your first name, followed by a dot. The word “and” between two authors is used without a comma. If there are three or more authors, there is a comma before “and”. If headings with author names are not fitting well in the page, then you should use “et al.” after the first author.</li>
-  <li>Use <code class="highlighter-rouge">\toctitle</code> and <code class="highlighter-rouge">\tocauthor</code>, they are important fields defining your paper in the proceedings “Table Of Contents”.</li>
-  <li>Use <code class="highlighter-rouge">~</code> between first name and name to avoid a break line inside author’s names.</li>
-  <li>After <code class="highlighter-rouge">\maketitle</code>, <code class="highlighter-rouge">\setcounter{footnote}{0}</code> to start footnotes from 1 after <code class="highlighter-rouge">\thanks</code>.</li>
+  <li>Inside the <code class="language-plaintext highlighter-rouge">\authorrunning{}</code> field of your article, please use only the initial of your first name, followed by a dot. The word “and” between two authors is used without a comma. If there are three or more authors, there is a comma before “and”. If headings with author names are not fitting well in the page, then you should use “et al.” after the first author.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">\toctitle</code> and <code class="language-plaintext highlighter-rouge">\tocauthor</code>, they are important fields defining your paper in the proceedings “Table Of Contents”.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">~</code> between first name and name to avoid a break line inside author’s names.</li>
+  <li>After <code class="language-plaintext highlighter-rouge">\maketitle</code>, <code class="language-plaintext highlighter-rouge">\setcounter{footnote}{0}</code> to start footnotes from 1 after <code class="language-plaintext highlighter-rouge">\thanks</code>.</li>
   <li>Normally, captions of tables, figures, should end without a dot. If you feel that dots are needed, please be consistent along the whole article. Table captions are above the tables, while figures have captions below.</li>
-  <li>For “Acknowledge” please use <code class="highlighter-rouge">\section*{Acknowledgments}</code>.</li>
-  <li>Please use <a href="http://www.bibtex.org/Using/">BibTeX</a>. LNCS recommends to include the <a href="https://www.doi.org/">DOI</a> of each reference if possible. Use <code class="highlighter-rouge">\_</code> instead of <code class="highlighter-rouge">_</code> in a DOI number.</li>
-  <li>To prevent line breaking in unwanted places, we can use <code class="highlighter-rouge">\mbox{...}</code>.</li>
-  <li>To break a long inline math formula manually, use <code class="highlighter-rouge">\allowbreak</code> between two <code class="highlighter-rouge">$</code>s. We can use <code class="highlighter-rouge">\usepackage{breqn}</code> to break line in equations.</li>
-  <li>Do not use <code class="highlighter-rouge">\usepackage[...]{babel}</code>.</li>
-  <li>Do not use whatever fancy signs as in <code class="highlighter-rouge">mathabx</code>.</li>
-  <li>Do not modify <code class="highlighter-rouge">\qed</code>. It is recommended to use <code class="highlighter-rouge">\begin{proof} &lt;some text&gt; \qed \end{proof}</code>.</li>
-  <li>Do not use <code class="highlighter-rouge">a4wide</code> or <code class="highlighter-rouge">geometrix</code>.</li>
-  <li>Avoid using <code class="highlighter-rouge">\vspace</code>, and in any case <code class="highlighter-rouge">\vspace</code> with a negative argument. If things are not going as we wish, instead of negative <code class="highlighter-rouge">\vspace</code> there should be another solution.</li>
-  <li>Do not use <code class="highlighter-rouge">\newpage</code> for formatting reasons, trying to fit floating figures or tables.</li>
-  <li>Do not <code class="highlighter-rouge">\usepackage{hyperref}</code>. If you want to use <code class="highlighter-rouge">hyperref</code>, use <code class="highlighter-rouge">\usepackage[hidelinks]{hyperref}</code>.</li>
-  <li>Do not <code class="highlighter-rouge">\usepackage{caption}</code>.</li>
-  <li>Do not use <code class="highlighter-rouge">\mainmatter</code>; this is a command only for the whole volume, for papers inside the volume this is rather undesirable.</li>
-  <li>Do not use <code class="highlighter-rouge">\sloppy</code>; a simple solution for overfull errors could be to rephrase the sentences causing problems; in many cases <code class="highlighter-rouge">\usepackage{microtype}</code> helps too.</li>
-  <li>Use <code class="highlighter-rouge">\email{...}</code> to include author’s email. If you want <code class="highlighter-rouge">{author1,author2,...}@...</code> in your manuscript, please use <code class="highlighter-rouge">\email{$\{$author1,... $\}$@...}</code>.</li>
-  <li>Use <code class="highlighter-rouge">\fnmsep</code> (i.e. footnote mark separator) to separate <code class="highlighter-rouge">\thanks</code> by <code class="highlighter-rouge">\inst</code>.</li>
-  <li>Use <code class="highlighter-rouge">algorithm2e</code> for listings of algorithms. I often use the options <code class="highlighter-rouge">linesnumbered,ruled,noend</code> for the <code class="highlighter-rouge">algorithm2e</code> package.</li>
-  <li>Use <code class="highlighter-rouge">\figurename~\ref{fig:a}</code> instead of <code class="highlighter-rouge">Fig.~\ref{fig:a}</code>.</li>
-  <li><code class="highlighter-rouge">pdflatex</code> processes a bit better than the sequence <code class="highlighter-rouge">latex</code>, <code class="highlighter-rouge">dvips</code>, <code class="highlighter-rouge">pspdf</code>. Thus, using together
+  <li>For “Acknowledge” please use <code class="language-plaintext highlighter-rouge">\section*{Acknowledgments}</code>.</li>
+  <li>Please use <a href="http://www.bibtex.org/Using/">BibTeX</a>. LNCS recommends to include the <a href="https://www.doi.org/">DOI</a> of each reference if possible. Use <code class="language-plaintext highlighter-rouge">\_</code> instead of <code class="language-plaintext highlighter-rouge">_</code> in a DOI number.</li>
+  <li>To prevent line breaking in unwanted places, we can use <code class="language-plaintext highlighter-rouge">\mbox{...}</code>.</li>
+  <li>To break a long inline math formula manually, use <code class="language-plaintext highlighter-rouge">\allowbreak</code> between two <code class="language-plaintext highlighter-rouge">$</code>s. We can use <code class="language-plaintext highlighter-rouge">\usepackage{breqn}</code> to break line in equations.</li>
+  <li>Do not use <code class="language-plaintext highlighter-rouge">\usepackage[...]{babel}</code>.</li>
+  <li>Do not use whatever fancy signs as in <code class="language-plaintext highlighter-rouge">mathabx</code>.</li>
+  <li>Do not modify <code class="language-plaintext highlighter-rouge">\qed</code>. It is recommended to use <code class="language-plaintext highlighter-rouge">\begin{proof} &lt;some text&gt; \qed \end{proof}</code>.</li>
+  <li>Do not use <code class="language-plaintext highlighter-rouge">a4wide</code> or <code class="language-plaintext highlighter-rouge">geometrix</code>.</li>
+  <li>Avoid using <code class="language-plaintext highlighter-rouge">\vspace</code>, and in any case <code class="language-plaintext highlighter-rouge">\vspace</code> with a negative argument. If things are not going as we wish, instead of negative <code class="language-plaintext highlighter-rouge">\vspace</code> there should be another solution.</li>
+  <li>Do not use <code class="language-plaintext highlighter-rouge">\newpage</code> for formatting reasons, trying to fit floating figures or tables.</li>
+  <li>Do not <code class="language-plaintext highlighter-rouge">\usepackage{hyperref}</code>. If you want to use <code class="language-plaintext highlighter-rouge">hyperref</code>, use <code class="language-plaintext highlighter-rouge">\usepackage[hidelinks]{hyperref}</code>.</li>
+  <li>Do not <code class="language-plaintext highlighter-rouge">\usepackage{caption}</code>.</li>
+  <li>Do not use <code class="language-plaintext highlighter-rouge">\mainmatter</code>; this is a command only for the whole volume, for papers inside the volume this is rather undesirable.</li>
+  <li>Do not use <code class="language-plaintext highlighter-rouge">\sloppy</code>; a simple solution for overfull errors could be to rephrase the sentences causing problems; in many cases <code class="language-plaintext highlighter-rouge">\usepackage{microtype}</code> helps too.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">\email{...}</code> to include author’s email. If you want <code class="language-plaintext highlighter-rouge">{author1,author2,...}@...</code> in your manuscript, please use <code class="language-plaintext highlighter-rouge">\email{$\{$author1,... $\}$@...}</code>.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">\fnmsep</code> (i.e. footnote mark separator) to separate <code class="language-plaintext highlighter-rouge">\thanks</code> by <code class="language-plaintext highlighter-rouge">\inst</code>.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">algorithm2e</code> for listings of algorithms. I often use the options <code class="language-plaintext highlighter-rouge">linesnumbered,ruled,noend</code> for the <code class="language-plaintext highlighter-rouge">algorithm2e</code> package.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">\figurename~\ref{fig:a}</code> instead of <code class="language-plaintext highlighter-rouge">Fig.~\ref{fig:a}</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">pdflatex</code> processes a bit better than the sequence <code class="language-plaintext highlighter-rouge">latex</code>, <code class="language-plaintext highlighter-rouge">dvips</code>, <code class="language-plaintext highlighter-rouge">pspdf</code>. Thus, using together
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="se">\u</span>sepackage[pdftex]<span class="o">{</span>graphicx<span class="o">}</span>
 <span class="se">\u</span>sepackage<span class="o">{</span>epstopdf<span class="o">}</span>
 </code></pre></div>    </div>
-    <p>could help to switch from <code class="highlighter-rouge">latex</code> to <code class="highlighter-rouge">pdflatex</code>.</p>
+    <p>could help to switch from <code class="language-plaintext highlighter-rouge">latex</code> to <code class="language-plaintext highlighter-rouge">pdflatex</code>.</p>
   </li>
-  <li><code class="highlighter-rouge">\usepackage[hyphens]{url}</code> improves the aspects of hyperlinks in the final document.</li>
+  <li><code class="language-plaintext highlighter-rouge">\usepackage[hyphens]{url}</code> improves the aspects of hyperlinks in the final document.</li>
   <li>Use
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="se">\m</span>akeatletter
 <span class="se">\r</span>enewcommand<span class="se">\p</span>aragraph<span class="o">{</span><span class="se">\@</span>startsection<span class="o">{</span>paragraph<span class="o">}{</span>4<span class="o">}{</span><span class="se">\z</span>@<span class="o">}</span>%
@@ -169,18 +169,18 @@
                      <span class="o">{</span><span class="se">\n</span>ormalfont<span class="se">\n</span>ormalsize<span class="se">\b</span>fseries<span class="o">}}</span>
 <span class="se">\m</span>akeatother
 </code></pre></div>    </div>
-    <p>to re-define <code class="highlighter-rouge">\paragraph</code> with <strong>bold</strong> text style instead of <em>italic</em>.</p>
+    <p>to re-define <code class="language-plaintext highlighter-rouge">\paragraph</code> with <strong>bold</strong> text style instead of <em>italic</em>.</p>
   </li>
-  <li>In case we wish to avoid the warning message <code class="highlighter-rouge">Package amsmath Warning: Unable to redefine math accent \vec</code>, use
+  <li>In case we wish to avoid the warning message <code class="language-plaintext highlighter-rouge">Package amsmath Warning: Unable to redefine math accent \vec</code>, use
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="se">\l</span>et<span class="se">\a</span>ccentvec<span class="se">\v</span>ec
 <span class="se">\d</span>ocumentclass[runningheads, envcountsame, a4paper]<span class="o">{</span>llncs<span class="o">}</span>
 <span class="se">\l</span>et<span class="se">\s</span>pvec<span class="se">\v</span>ec
 <span class="se">\l</span>et<span class="se">\v</span>ec<span class="se">\a</span>ccentvec
 </code></pre></div>    </div>
   </li>
-  <li>For tables giving an Overfull Errors, we can simply correct with <code class="highlighter-rouge">\resizebox{\textwidth}{!}{\begin{tabular}{|l||c|c|c|c|c|}...\end{tabular}}</code>.</li>
+  <li>For tables giving an Overfull Errors, we can simply correct with <code class="language-plaintext highlighter-rouge">\resizebox{\textwidth}{!}{\begin{tabular}{|l||c|c|c|c|c|}...\end{tabular}}</code>.</li>
   <li>If we need subfigures, then we could
-<code class="highlighter-rouge">\usepackage[caption=false]{subfig}</code> …and when needed the subfigures…
+<code class="language-plaintext highlighter-rouge">\usepackage[caption=false]{subfig}</code> …and when needed the subfigures…
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="se">\b</span>egin<span class="o">{</span>figure<span class="o">}</span>
 <span class="se">\c</span>entering
 <span class="se">\s</span>ubfloat[label <span class="o">(</span>a<span class="o">)</span><span class="se">\l</span>abel<span class="o">{</span>fig:label:a<span class="o">}]{</span>
@@ -200,7 +200,7 @@
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"

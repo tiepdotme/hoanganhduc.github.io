@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
 </head>
 
 
@@ -117,18 +117,18 @@
   <p>This post aims to record the process of installing the MinionPro font for TeXLive 2012 in Ubuntu 12.04 LTS. The post from <a href="https://carlo-hamalainen.net/2007/12/11/installing-minion-pro-fonts/">Carlo Hamalainen’s blog</a> was very helpful for me to work with the install process.</p>
 </div>
 
-<h1>Locate <code class="highlighter-rouge">$TEXMFLOCAL</code></h1>
-<p>First, find the <code class="highlighter-rouge">$TEXMFLOCAL</code> folder using the following commands</p>
+<h1>Locate <code class="language-plaintext highlighter-rouge">$TEXMFLOCAL</code></h1>
+<p>First, find the <code class="language-plaintext highlighter-rouge">$TEXMFLOCAL</code> folder using the following commands</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kpsexpand <span class="s1">'$TEXMFLOCAL'</span>
 </code></pre></div></div>
 
-<p>The result in my terminal was <code class="highlighter-rouge">/usr/local/texlive/2012/../texmf-local</code>, which indicates that the <code class="highlighter-rouge">$TEXMFLOCAL</code> folder is <code class="highlighter-rouge">/usr/local/texlive/texmf-local/</code>. We shall install the fonts to that folder. Assume that all the required files are placed in <code class="highlighter-rouge">~/Downloads</code> folder.</p>
+<p>The result in my terminal was <code class="language-plaintext highlighter-rouge">/usr/local/texlive/2012/../texmf-local</code>, which indicates that the <code class="language-plaintext highlighter-rouge">$TEXMFLOCAL</code> folder is <code class="language-plaintext highlighter-rouge">/usr/local/texlive/texmf-local/</code>. We shall install the fonts to that folder. Assume that all the required files are placed in <code class="language-plaintext highlighter-rouge">~/Downloads</code> folder.</p>
 
 <h1>Install MnSymbol</h1>
 
 <p>Download the file <a href="/static/posts/install-minionpro-font-for-texlive-2012-in-ubuntu-12-04-lts/MnSymbol-1.4.zip">MnSymbol-1.4.zip</a>
- and extract it to <code class="highlighter-rouge">~/Downloads</code>. In terminal, type</p>
+ and extract it to <code class="language-plaintext highlighter-rouge">~/Downloads</code>. In terminal, type</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/Downloads/MnSymbol-1.4/tex
 latex MnSymbol.ins
@@ -172,7 +172,7 @@ cd..
   </li>
 </ul>
 
-<p>Next, extract <code class="highlighter-rouge">scripts.zip</code> to get the <code class="highlighter-rouge">scripts</code> folder. Then, extract all the OTF fonts in <code class="highlighter-rouge">MinionProFonts.zip</code> to the <code class="highlighter-rouge">scripts/otf</code> folder. In terminal, type</p>
+<p>Next, extract <code class="language-plaintext highlighter-rouge">scripts.zip</code> to get the <code class="language-plaintext highlighter-rouge">scripts</code> folder. Then, extract all the OTF fonts in <code class="language-plaintext highlighter-rouge">MinionProFonts.zip</code> to the <code class="language-plaintext highlighter-rouge">scripts/otf</code> folder. In terminal, type</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/Downloads/scripts
 ./convert.sh
@@ -184,10 +184,10 @@ cd..
 <span class="nb">sudo </span>unzip ~/Downloads/enc-1.001.zip
 </code></pre></div></div>
 
-<p>Edit the file <code class="highlighter-rouge">updmap.cfg</code></p>
+<p>Edit the file <code class="language-plaintext highlighter-rouge">updmap.cfg</code></p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>gedit /usr/local/texlive/2012/texmf-dist/web2c/updmap.cfg
 </code></pre></div></div>
-<p>by adding <code class="highlighter-rouge">Map MinionPro.map</code> to the end of the file.</p>
+<p>by adding <code class="language-plaintext highlighter-rouge">Map MinionPro.map</code> to the end of the file.</p>
 
 <p>Then, in terminal, type</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>mktexlsr
@@ -204,7 +204,7 @@ cd..
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"

@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
 </head>
 
 
@@ -117,9 +117,9 @@
   <p>This post contains a collection of tips and tricks for installing and configuring Ubuntu 16.04 LTS. The system was pre-installed with the <a href="http://releases.ubuntu.com/16.04/">official release</a> of Ubuntu 16.04 LTS. All commands are executed in a Ubuntu Terminal–the default commandline interface of Ubuntu. For a brief introduction on Ubuntu commands, see, e.g., <a href="https://fullcirclemagazine.org/2017/10/17/command-conquer-special-editions-1-3/">this tutorial</a>. Several useful tips and tricks for using Ubuntu and other Linux distribution can be found at <a href="https://sites.google.com/site/easylinuxtipsproject/Home">this page</a>.</p>
 </div>
 
-<h1>Enable Ubuntu <code class="highlighter-rouge">partner</code> repository</h1>
+<h1>Enable Ubuntu <code class="language-plaintext highlighter-rouge">partner</code> repository</h1>
 
-<p>Edit the file <code class="highlighter-rouge">/etc/apt/sources.list</code> by adding the following lines.</p>
+<p>Edit the file <code class="language-plaintext highlighter-rouge">/etc/apt/sources.list</code> by adding the following lines.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://archive.canonical.com/ubuntu xenial partner
 deb-src http://archive.canonical.com/ubuntu xenial partner
@@ -218,7 +218,7 @@ cd</span> ..
 
 <h2>Disable Guest account</h2>
 
-<p>Edit the file <code class="highlighter-rouge">/etc/lightdm/lightdm.conf</code> by adding the following lines.</p>
+<p>Edit the file <code class="language-plaintext highlighter-rouge">/etc/lightdm/lightdm.conf</code> by adding the following lines.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>SeatDefaults]
 greeter-session<span class="o">=</span>unity-greeter
@@ -272,11 +272,11 @@ allow-guest<span class="o">=</span><span class="nb">false</span>
 
 <h2>Dual monitor</h2>
 
-<p>I use a <a href="http://www.eizo.co.jp/products/lcd/ev2116wa/index.html">FlexScan EV2116W-A</a> monitor as a second monitor (beside the built-in monitor in my laptop). A note is that you need to configure the monitor to make it recieve <a href="https://en.wikipedia.org/wiki/D-subminiature">D-SUB input</a> or <a href="https://en.wikipedia.org/wiki/Digital_Visual_Interface">DVI input</a> signals (using the <code class="highlighter-rouge">SIGNAL</code> button at the bottom of the monitor), depending on the connector you use.</p>
+<p>I use a <a href="http://www.eizo.co.jp/products/lcd/ev2116wa/index.html">FlexScan EV2116W-A</a> monitor as a second monitor (beside the built-in monitor in my laptop). A note is that you need to configure the monitor to make it recieve <a href="https://en.wikipedia.org/wiki/D-subminiature">D-SUB input</a> or <a href="https://en.wikipedia.org/wiki/Digital_Visual_Interface">DVI input</a> signals (using the <code class="language-plaintext highlighter-rouge">SIGNAL</code> button at the bottom of the monitor), depending on the connector you use.</p>
 
 <h2>Fix error: Network Manager wired Ethernet stuck in ``getting IP config’’ after resume from suspend</h2>
 
-<p>Create a file named <code class="highlighter-rouge">ethernet_fix</code> in <code class="highlighter-rouge">/usr/bin</code> with the following contents</p>
+<p>Create a file named <code class="language-plaintext highlighter-rouge">ethernet_fix</code> in <code class="language-plaintext highlighter-rouge">/usr/bin</code> with the following contents</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
 
@@ -289,7 +289,7 @@ allow-guest<span class="o">=</span><span class="nb">false</span>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo chmod </span>a+x /usr/bin/ethernet_fix
 </code></pre></div></div>
 
-<p>Then, create a file <code class="highlighter-rouge">ethernet_fix</code> in <code class="highlighter-rouge">/lib/systemd/system-sleep</code> with the following contents</p>
+<p>Then, create a file <code class="language-plaintext highlighter-rouge">ethernet_fix</code> in <code class="language-plaintext highlighter-rouge">/lib/systemd/system-sleep</code> with the following contents</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
 
@@ -304,7 +304,7 @@ allow-guest<span class="o">=</span><span class="nb">false</span>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo chmod </span>a+x /lib/systemd/system-sleep/ethernet_fix
 </code></pre></div></div>
 
-<p>Finally, create a file <code class="highlighter-rouge">ethernet_fix.service</code> in <code class="highlighter-rouge">/etc/systemd/system</code> with the following contents</p>
+<p>Finally, create a file <code class="language-plaintext highlighter-rouge">ethernet_fix.service</code> in <code class="language-plaintext highlighter-rouge">/etc/systemd/system</code> with the following contents</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>Unit]
 <span class="nv">Description</span><span class="o">=</span>Restart ethernet after resume
@@ -328,14 +328,14 @@ allow-guest<span class="o">=</span><span class="nb">false</span>
 
 <h2>Change SSH default port</h2>
 
-<p>The SSH default port is <code class="highlighter-rouge">22</code>. To avoid anonymous security theft, you may want to change it by editing the file <code class="highlighter-rouge">/etc/ssh/sshd_config</code>. The port option are at the lines.</p>
+<p>The SSH default port is <code class="language-plaintext highlighter-rouge">22</code>. To avoid anonymous security theft, you may want to change it by editing the file <code class="language-plaintext highlighter-rouge">/etc/ssh/sshd_config</code>. The port option are at the lines.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># What ports, IPs and protocols we listen for</span>
 Port 22
 <span class="c"># Use these options to restrict which interfaces/protocols sshd will bind to </span>
 </code></pre></div></div>
 
-<p>After changing the port, say from <code class="highlighter-rouge">22</code> to <code class="highlighter-rouge">220</code>, restart the SSH service</p>
+<p>After changing the port, say from <code class="language-plaintext highlighter-rouge">22</code> to <code class="language-plaintext highlighter-rouge">220</code>, restart the SSH service</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>service ssh restart
 </code></pre></div></div>
@@ -355,7 +355,7 @@ Port 22
 
 <p>Visit <a href="http://www.tug.org/texlive/acquire-iso.html">this page</a>. JAIST also maintains a CTAN mirror, so you can download the ISO image at <a href="http://ftp.jaist.ac.jp/pub/CTAN/systems/texlive/Images/">http://ftp.jaist.ac.jp/pub/CTAN/systems/texlive/Images/</a>.</p>
 
-<p>For TexLive 2017, I downloaded the file <code class="highlighter-rouge">texlive2017-20170524.iso</code> and put it at my <code class="highlighter-rouge">$HOME</code> folder.</p>
+<p>For TexLive 2017, I downloaded the file <code class="language-plaintext highlighter-rouge">texlive2017-20170524.iso</code> and put it at my <code class="language-plaintext highlighter-rouge">$HOME</code> folder.</p>
 
 <h2>How to Install</h2>
 
@@ -371,23 +371,23 @@ Port 22
 <span class="nb">sudo </span>umount mnt
 </code></pre></div></div>
 
-<h2>Setting <code class="highlighter-rouge">PATH</code>, <code class="highlighter-rouge">MANPATH</code>, <code class="highlighter-rouge">INFOPATH</code></h2>
+<h2>Setting <code class="language-plaintext highlighter-rouge">PATH</code>, <code class="language-plaintext highlighter-rouge">MANPATH</code>, <code class="language-plaintext highlighter-rouge">INFOPATH</code></h2>
 
-<p>For 64-bit OS, add the followings to <code class="highlighter-rouge">/etc/bash.bashrc</code>.</p>
+<p>For 64-bit OS, add the followings to <code class="language-plaintext highlighter-rouge">/etc/bash.bashrc</code>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">MANPATH</span><span class="o">=</span>/usr/local/texlive/2017/texmf-dist/doc/man:<span class="nv">$MANPATH</span><span class="p">;</span> <span class="nb">export </span>MANPATH
 <span class="nv">INFOPATH</span><span class="o">=</span>/usr/local/texlive/2017/texmf-dist/doc/info:<span class="nv">$INFOPATH</span><span class="p">;</span> <span class="nb">export </span>INFOPATH
 <span class="nv">PATH</span><span class="o">=</span>/usr/local/texlive/2017/bin/x86_64-linux:<span class="nv">$PATH</span><span class="p">;</span> <span class="nb">export </span>PATH
 </code></pre></div></div>
 
-<p>Next, add the following after the line <code class="highlighter-rouge"># set up PATH to MANPATH mapping</code> in <code class="highlighter-rouge">/etc/manpath.config</code>.</p>
+<p>Next, add the following after the line <code class="language-plaintext highlighter-rouge"># set up PATH to MANPATH mapping</code> in <code class="language-plaintext highlighter-rouge">/etc/manpath.config</code>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MANPATH_MAP /usr/local/texlive/2017/bin/x86_64-linux /usr/local/texlive/2017/texmf-dist/doc/man
 </code></pre></div></div>
 
-<p>For 32-bit OS, replace <code class="highlighter-rouge">x86_64-linux</code> by <code class="highlighter-rouge">i386-linux</code>.</p>
+<p>For 32-bit OS, replace <code class="language-plaintext highlighter-rouge">x86_64-linux</code> by <code class="language-plaintext highlighter-rouge">i386-linux</code>.</p>
 
-<h2>Tell <code class="highlighter-rouge">APT</code> about your TexLive installation using a dummy package</h2>
+<h2>Tell <code class="language-plaintext highlighter-rouge">APT</code> about your TexLive installation using a dummy package</h2>
 
 <p>The original instruction is at <a href="https://www.tug.org/texlive/debian.html">https://www.tug.org/texlive/debian.html</a>.</p>
 
@@ -400,7 +400,7 @@ equivs-build texlive-local
 <span class="nb">sudo </span>apt-get <span class="nb">install </span>tex-common texinfo lmodern
 </code></pre></div></div>
 
-<p>At the step <code class="highlighter-rouge">edit texlive-local</code>, edit the Maintainer field and the list of the packages provided by your local TeX Live installation as appropriate. If you installed scheme-full except collection-texinfo as recommended, the file should look like the following example file for TexLive 2017.</p>
+<p>At the step <code class="language-plaintext highlighter-rouge">edit texlive-local</code>, edit the Maintainer field and the list of the packages provided by your local TeX Live installation as appropriate. If you installed scheme-full except collection-texinfo as recommended, the file should look like the following example file for TexLive 2017.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Section: misc
 Priority: optional
@@ -445,7 +445,7 @@ Description: My <span class="nb">local </span>installation of TeX Live 2017.
  http://tug.org/texlive/debian#vanilla
 </code></pre></div></div>
 
-<h2>Install <code class="highlighter-rouge">getnonfreefonts</code></h2>
+<h2>Install <code class="language-plaintext highlighter-rouge">getnonfreefonts</code></h2>
 
 <p>For 64-bit OS.</p>
 
@@ -459,21 +459,21 @@ getnonfreefonts <span class="nt">--sys</span> <span class="nt">-a</span>
 rm </span>install-getnonfreefonts
 </code></pre></div></div>
 
-<p>For 32-bit OS, replace <code class="highlighter-rouge">x86_64-linux</code> by <code class="highlighter-rouge">i386-linux</code>.</p>
+<p>For 32-bit OS, replace <code class="language-plaintext highlighter-rouge">x86_64-linux</code> by <code class="language-plaintext highlighter-rouge">i386-linux</code>.</p>
 
 <h1>Texmaker</h1>
 
-<h2>Install via <code class="highlighter-rouge">APT</code></h2>
+<h2>Install via <code class="language-plaintext highlighter-rouge">APT</code></h2>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>texmaker
 </code></pre></div></div>
 
-<p>In Ubuntu 16.04, it may happen that the English spell check does not work. To fix this, re-set the spelling dictionary as <code class="highlighter-rouge">/usr/share/hunspell/en_US.dic</code>.</p>
+<p>In Ubuntu 16.04, it may happen that the English spell check does not work. To fix this, re-set the spelling dictionary as <code class="language-plaintext highlighter-rouge">/usr/share/hunspell/en_US.dic</code>.</p>
 
 <h2>Solarized theme</h2>
 
 <p>The original instruction is at <a href="https://tex.stackexchange.com/a/196020">https://tex.stackexchange.com/a/196020</a>.
-Edit <code class="highlighter-rouge">$HOME/.config/xm1/texmaker.ini</code></p>
+Edit <code class="language-plaintext highlighter-rouge">$HOME/.config/xm1/texmaker.ini</code></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Color<span class="se">\B</span><span class="nv">ackground</span><span class="o">=</span>@Variant<span class="o">(</span><span class="se">\0\0\0\x</span>43<span class="se">\x</span>1<span class="se">\x</span>ff<span class="se">\x</span>ff<span class="se">\0\0</span>++66<span class="se">\0\0</span><span class="o">)</span>
 Color<span class="se">\C</span><span class="nv">ommand</span><span class="o">=</span>@Variant<span class="o">(</span><span class="se">\0\0\0\x</span>43<span class="se">\x</span>1<span class="se">\x</span>ff<span class="se">\x</span>ff&amp;&amp;<span class="se">\x</span>8b<span class="se">\x</span>8b<span class="se">\x</span>d2<span class="se">\x</span>d2<span class="se">\0\0</span><span class="o">)</span>
@@ -516,7 +516,7 @@ make <span class="nv">IPEPREFIX</span><span class="o">=</span>/usr/local
 <span class="nb">sudo </span>ldconfig
 </code></pre></div></div>
 
-<p>Finally, create <code class="highlighter-rouge">/usr/share/applications/ipe.desktop</code> with the following contents</p>
+<p>Finally, create <code class="language-plaintext highlighter-rouge">/usr/share/applications/ipe.desktop</code> with the following contents</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>Desktop Entry]
 <span class="nv">Type</span><span class="o">=</span>Application
@@ -536,7 +536,7 @@ make <span class="nv">IPEPREFIX</span><span class="o">=</span>/usr/local
 
 <h1>Secured login with Google Authenticator</h1>
 
-<h2>Install <code class="highlighter-rouge">libpam-google-authenticator</code> package</h2>
+<h2>Install <code class="language-plaintext highlighter-rouge">libpam-google-authenticator</code> package</h2>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>libpam-google-authenticator
 </code></pre></div></div>
@@ -546,16 +546,16 @@ make <span class="nv">IPEPREFIX</span><span class="o">=</span>/usr/local
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>google-authenticator
 </code></pre></div></div>
 
-<p>Allow the command to update your Google Authenticator file by typing <code class="highlighter-rouge">y</code>. Google Authenticator will present you with a secret key and several ``emergency scratch codes.’’, which will be used in case you lose your phone. Enter the secret key in the Google Authenticator app on your phone (official apps are available for Android, iOS, and Blackberry). You’ll now have a constantly changing verification code on your phone.</p>
+<p>Allow the command to update your Google Authenticator file by typing <code class="language-plaintext highlighter-rouge">y</code>. Google Authenticator will present you with a secret key and several ``emergency scratch codes.’’, which will be used in case you lose your phone. Enter the secret key in the Google Authenticator app on your phone (official apps are available for Android, iOS, and Blackberry). You’ll now have a constantly changing verification code on your phone.</p>
 
 <h2>Activate authentication for SSH login</h2>
 
-<p>Edit the file <code class="highlighter-rouge">/etc/pam.d/sshd</code> by adding the following line.</p>
+<p>Edit the file <code class="language-plaintext highlighter-rouge">/etc/pam.d/sshd</code> by adding the following line.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>auth required pam_google_authenticator.so
 </code></pre></div></div>
 
-<p>Next, open the <code class="highlighter-rouge">/etc/ssh/sshd_config</code> file, locate the <code class="highlighter-rouge">ChallengeResponseAuthentication</code> line, and change it to <code class="highlighter-rouge">ChallengeResponseAuthentication yes</code>.</p>
+<p>Next, open the <code class="language-plaintext highlighter-rouge">/etc/ssh/sshd_config</code> file, locate the <code class="language-plaintext highlighter-rouge">ChallengeResponseAuthentication</code> line, and change it to <code class="language-plaintext highlighter-rouge">ChallengeResponseAuthentication yes</code>.</p>
 
 <p>Finally, restart the SSH service</p>
 
@@ -564,14 +564,14 @@ make <span class="nv">IPEPREFIX</span><span class="o">=</span>/usr/local
 
 <h2>Activate authentication for graphical logins</h2>
 
-<p>Here’s how to do this with LightDM login manager. Similar to the case of SSH login, edit the file <code class="highlighter-rouge">/etc/pam.d/lightdm</code> by adding the following line.</p>
+<p>Here’s how to do this with LightDM login manager. Similar to the case of SSH login, edit the file <code class="language-plaintext highlighter-rouge">/etc/pam.d/lightdm</code> by adding the following line.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>auth required pam_google_authenticator.so nullok
 </code></pre></div></div>
 
-<p>In this case, the <code class="highlighter-rouge">nullok</code> option allows the system to let a user log in even if they haven’t run the google-authenticator command to set up two-factor authentication. If they have set it up, they’ll have to enter a time-baesd code — otherwise they won’t. Remove the <code class="highlighter-rouge">nullok</code> and user accounts who haven’t set up a Google Authenticator code just won’t be able to log in graphically.</p>
+<p>In this case, the <code class="language-plaintext highlighter-rouge">nullok</code> option allows the system to let a user log in even if they haven’t run the google-authenticator command to set up two-factor authentication. If they have set it up, they’ll have to enter a time-baesd code — otherwise they won’t. Remove the <code class="language-plaintext highlighter-rouge">nullok</code> and user accounts who haven’t set up a Google Authenticator code just won’t be able to log in graphically.</p>
 
-<p>You could also force Google Authenticator to be required for other types of logins - potentially even all system logins - by adding the line <code class="highlighter-rouge">auth required pam_google_authenticator.so</code> to other PAM configuration files. Be careful if you do this. And remember, you may want to add <code class="highlighter-rouge">nullok</code> so users who haven’t gone through the setup process can still log in.</p>
+<p>You could also force Google Authenticator to be required for other types of logins - potentially even all system logins - by adding the line <code class="language-plaintext highlighter-rouge">auth required pam_google_authenticator.so</code> to other PAM configuration files. Be careful if you do this. And remember, you may want to add <code class="language-plaintext highlighter-rouge">nullok</code> so users who haven’t gone through the setup process can still log in.</p>
 
 <h1>ClamAV</h1>
 
@@ -629,7 +629,7 @@ gpg <span class="nt">--export</span> A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | 
 
 <h3>With Ruby Version Manager</h3>
 
-<p>First of all, install <code class="highlighter-rouge">curl</code>.</p>
+<p>First of all, install <code class="language-plaintext highlighter-rouge">curl</code>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>curl
 </code></pre></div></div>
@@ -639,7 +639,7 @@ gpg <span class="nt">--export</span> A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-sSL</span> https://get.rvm.io | bash <span class="nt">-s</span> stable
 </code></pre></div></div>
 
-<p>You will get some output report like the followings. Here <code class="highlighter-rouge">username</code> is my username and <code class="highlighter-rouge">YOUR-PC</code> is my computer name.</p>
+<p>You will get some output report like the followings. Here <code class="language-plaintext highlighter-rouge">username</code> is my username and <code class="language-plaintext highlighter-rouge">YOUR-PC</code> is my computer name.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>username@YOUR-PC: <span class="nv">$ </span>curl <span class="nt">-sSL</span> https://get.rvm.io | bash <span class="nt">-s</span> stable
 Downloading https://github.com/wayneeseguin/rvm/archive/stable.tar.gz
@@ -662,9 +662,9 @@ Installation of RVM <span class="k">in</span> /home/username/.rvm/ is almost <sp
 In <span class="k">case</span> of problems: http://rvm.io/help and https://twitter.com/rvm_io 
 </code></pre></div></div>
 
-<p>To run RVM, you neend to use the command <code class="highlighter-rouge">source /home/username/.rvm/scripts/rvm</code>.</p>
+<p>To run RVM, you neend to use the command <code class="language-plaintext highlighter-rouge">source /home/username/.rvm/scripts/rvm</code>.</p>
 
-<p>See <a href="https://www.ruby-lang.org/en/downloads/">this page</a> for information about the latest Ruby version. At the time I wrote this guide, the latest version is <code class="highlighter-rouge">2.5.3</code>.</p>
+<p>See <a href="https://www.ruby-lang.org/en/downloads/">this page</a> for information about the latest Ruby version. At the time I wrote this guide, the latest version is <code class="language-plaintext highlighter-rouge">2.5.3</code>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rvm requirements
 rvm <span class="nb">install </span>2.5.3
@@ -673,7 +673,7 @@ rvm use 2.5.3 <span class="nt">--default</span>
 
 <h3>With Rbenv</h3>
 
-<p>An alternative option is to install Ruby with <code class="highlighter-rouge">rbenv</code>. Note that <code class="highlighter-rouge">rbenv</code> and <code class="highlighter-rouge">rvm</code> may be conflicted, so it is recommended to install just one of them.</p>
+<p>An alternative option is to install Ruby with <code class="language-plaintext highlighter-rouge">rbenv</code>. Note that <code class="language-plaintext highlighter-rouge">rbenv</code> and <code class="language-plaintext highlighter-rouge">rvm</code> may be conflicted, so it is recommended to install just one of them.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>git zsh libssl-dev zlib1g-dev libreadline-dev libyaml-dev
 <span class="nb">cd
@@ -698,14 +698,14 @@ rbenv rehash
 
 <h2>Install Jekyll</h2>
 
-<p>Since I’ve already got my own <code class="highlighter-rouge">Gemfile</code> and <code class="highlighter-rouge">Gemfile.lock</code> files, I install Jekyll and all other dependencies using <code class="highlighter-rouge">bundler</code>.</p>
+<p>Since I’ve already got my own <code class="language-plaintext highlighter-rouge">Gemfile</code> and <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> files, I install Jekyll and all other dependencies using <code class="language-plaintext highlighter-rouge">bundler</code>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bundler
 <span class="c"># Move to the folder that contains `Gemfile` and `Gemfile.lock`</span>
 bundle <span class="nb">install</span>
 </code></pre></div></div>
 
-<p>The content of my file <code class="highlighter-rouge">Gemfile</code></p>
+<p>The content of my file <code class="language-plaintext highlighter-rouge">Gemfile</code></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> <span class="s1">'https://rubygems.org'</span>
 
@@ -720,7 +720,7 @@ gem <span class="s1">'jekyll-feed'</span>
 gem <span class="s1">'jekyll-email-protect'</span>
 </code></pre></div></div>
 
-<p>The content of my file <code class="highlighter-rouge">Gemfile.lock</code></p>
+<p>The content of my file <code class="language-plaintext highlighter-rouge">Gemfile.lock</code></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GEM
   remote: https://rubygems.org/
@@ -829,7 +829,7 @@ BUNDLED WITH
 
 <h2>Download VMWare Horizon Client and Install</h2>
 
-<p>One can download VMware Horizon Clients for 64-bit Linux from <a href="https://my.vmware.com/web/vmware/info/slug/desktop_end_user_computing/vmware_horizon_clients/4_0">here</a>. At the time of writing this tutorial, the downloaded file is <code class="highlighter-rouge">VMware-Horizon-Client-4.6.0-6617224.x64.bundle</code>.</p>
+<p>One can download VMware Horizon Clients for 64-bit Linux from <a href="https://my.vmware.com/web/vmware/info/slug/desktop_end_user_computing/vmware_horizon_clients/4_0">here</a>. At the time of writing this tutorial, the downloaded file is <code class="language-plaintext highlighter-rouge">VMware-Horizon-Client-4.6.0-6617224.x64.bundle</code>.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod</span> +x VMware-Horizon-Client-4.6.0-6617224.x64.bundle
 <span class="nb">sudo</span> ./VMware-Horizon-Client-4.6.0-6617224.x64.bundle
@@ -837,14 +837,14 @@ BUNDLED WITH
 
 <h2>Some errors after install VMWare Horizon Client</h2>
 
-<h3>Missing <code class="highlighter-rouge">libffi.so.5</code></h3>
+<h3>Missing <code class="language-plaintext highlighter-rouge">libffi.so.5</code></h3>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo ln</span> <span class="nt">-s</span> /usr/lib/x86_64-linux-gnu/libffi.so.6 /usr/lib/x86_64-linux-gnu/libffi.so.5
 </code></pre></div></div>
 
 <h3>Cannot share folder</h3>
 
-<p>The original solution is available <a href="https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.5/com.vmware.horizon-client.linux-45.doc/GUID-CFB7E9B1-63E0-418A-8814-572296507783.html">here</a>. The reason of this error is that, on Ubuntu 16.04 x64 distributions, the <code class="highlighter-rouge">libglibmm-2.4.so.1.3.0</code> library included in the distribution is incompatible with the current Client Drive Redirection (CDR) implementation. To work around this limitation, copy the <code class="highlighter-rouge">libglibmm-2.4.so.1.3.0</code> library file from an Ubuntu 14.04 x64 distribution (which can be downloaded from <a href="https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.5/com.vmware.horizon-client.linux-45.doc/GUID-CFB7E9B1-63E0-418A-8814-572296507783.html">here</a>) to your Ubuntu 16.04 x64 distribution.</p>
+<p>The original solution is available <a href="https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.5/com.vmware.horizon-client.linux-45.doc/GUID-CFB7E9B1-63E0-418A-8814-572296507783.html">here</a>. The reason of this error is that, on Ubuntu 16.04 x64 distributions, the <code class="language-plaintext highlighter-rouge">libglibmm-2.4.so.1.3.0</code> library included in the distribution is incompatible with the current Client Drive Redirection (CDR) implementation. To work around this limitation, copy the <code class="language-plaintext highlighter-rouge">libglibmm-2.4.so.1.3.0</code> library file from an Ubuntu 14.04 x64 distribution (which can be downloaded from <a href="https://docs.vmware.com/en/VMware-Horizon-Client-for-Linux/4.5/com.vmware.horizon-client.linux-45.doc/GUID-CFB7E9B1-63E0-418A-8814-572296507783.html">here</a>) to your Ubuntu 16.04 x64 distribution.</p>
 
 <h1>pdf2htmlEX</h1>
 
@@ -884,7 +884,7 @@ make
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"

@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
 </head>
 
 
@@ -127,7 +127,7 @@
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>username] <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> NOPASSWD: ALL
 </code></pre></div></div>
-<p>where <code class="highlighter-rouge">[username]</code> is your username. The configuration required at least 15 - 20 GB of free disk space. The following packages are also needed</p>
+<p>where <code class="language-plaintext highlighter-rouge">[username]</code> is your username. The configuration required at least 15 - 20 GB of free disk space. The following packages are also needed</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>grub2 xorriso squashfs-tools debootstrap qemu subversion rar unrar zip unzip p7zip-full p7zip-rar
 </code></pre></div></div>
@@ -200,7 +200,7 @@
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>unzip <span class="k">${</span><span class="nv">WORK</span><span class="k">}</span>/rootfs/apt.zip <span class="nt">-d</span> <span class="k">${</span><span class="nv">WORK</span><span class="k">}</span>/rootfs/etc
 </code></pre></div></div>
 
-<p>Answer <code class="highlighter-rouge">A</code> (which means overwrite all) for the question. Next, in terminal, type</p>
+<p>Answer <code class="language-plaintext highlighter-rouge">A</code> (which means overwrite all) for the question. Next, in terminal, type</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for </span>i <span class="k">in</span> /etc/resolv.conf /etc/hosts /etc/hostname<span class="p">;</span> <span class="k">do </span><span class="nb">sudo cp</span> <span class="nt">-pv</span> <span class="nv">$i</span> <span class="k">${</span><span class="nv">WORK</span><span class="k">}</span>/rootfs/etc/<span class="p">;</span> <span class="k">done
 </span><span class="nb">sudo </span>mount <span class="nt">--bind</span> /dev <span class="k">${</span><span class="nv">WORK</span><span class="k">}</span>/rootfs/dev
@@ -220,7 +220,7 @@ apt-get update <span class="nt">--allow-unauthenticated</span>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get <span class="nb">install</span> <span class="nt">--yes</span> wget linux-generic
 </code></pre></div></div>
-<p>If you were asked for installing <code class="highlighter-rouge">grub-pc</code>, continue without installing it.</p>
+<p>If you were asked for installing <code class="language-plaintext highlighter-rouge">grub-pc</code>, continue without installing it.</p>
 
 <ul>
   <li>Other packages</li>
@@ -483,7 +483,7 @@ teamviewer_linux.deb mrim-prpl_0.1.28-2_i386.deb foobnix_2.5.36p_i386.deb xvidca
 
 <ul>
   <li>
-    <p>Download the ISO file <code class="highlighter-rouge">texlive2012-20120701.iso</code> from <a href="http://ftp.ctex.org/mirrors/CTAN/systems/texlive/Images/">http://ftp.ctex.org/mirrors/CTAN/systems/texlive/Images/</a> and put it in your host system <code class="highlighter-rouge">$HOME</code> folder.</p>
+    <p>Download the ISO file <code class="language-plaintext highlighter-rouge">texlive2012-20120701.iso</code> from <a href="http://ftp.ctex.org/mirrors/CTAN/systems/texlive/Images/">http://ftp.ctex.org/mirrors/CTAN/systems/texlive/Images/</a> and put it in your host system <code class="language-plaintext highlighter-rouge">$HOME</code> folder.</p>
   </li>
   <li>
     <p>Open a new terminal, and type</p>
@@ -501,7 +501,7 @@ teamviewer_linux.deb mrim-prpl_0.1.28-2_i386.deb foobnix_2.5.36p_i386.deb xvidca
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>mnt
 ./install-tl
 </code></pre></div></div>
-<p>Respectively type <code class="highlighter-rouge">O</code> and <code class="highlighter-rouge">L</code>. After configuring the symbolic links, type respectively <code class="highlighter-rouge">R</code> and <code class="highlighter-rouge">I</code>.</p>
+<p>Respectively type <code class="language-plaintext highlighter-rouge">O</code> and <code class="language-plaintext highlighter-rouge">L</code>. After configuring the symbolic links, type respectively <code class="language-plaintext highlighter-rouge">R</code> and <code class="language-plaintext highlighter-rouge">I</code>.</p>
 
 <ul>
   <li>After the install process finished, some informations will appear in the chroot terminal</li>
@@ -518,7 +518,7 @@ Logfile: /usr/local/texlive/2012/install-tl.log
 </code></pre></div></div>
 
 <ul>
-  <li>Now, open the file <code class="highlighter-rouge">bash.bashrc</code></li>
+  <li>Now, open the file <code class="language-plaintext highlighter-rouge">bash.bashrc</code></li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /etc/bash.bashrc
@@ -532,13 +532,13 @@ Logfile: /usr/local/texlive/2012/install-tl.log
 </code></pre></div></div>
 
 <ul>
-  <li>Open the file <code class="highlighter-rouge">manpath.config</code></li>
+  <li>Open the file <code class="language-plaintext highlighter-rouge">manpath.config</code></li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /etc/manpath.config
 </code></pre></div></div>
 
-<p>Under <code class="highlighter-rouge"># set up PATH to MANPATH mapping</code>, add the line</p>
+<p>Under <code class="language-plaintext highlighter-rouge"># set up PATH to MANPATH mapping</code>, add the line</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MANPATH_MAP /usr/local/texlive/2012/bin/i386-linux /usr/local/texlive/2012/texmf/doc/man
 </code></pre></div></div>
@@ -589,7 +589,7 @@ dpkg <span class="nt">-i</span> texmaker_ubuntu_12.04_3.5_i386.deb
 
 <ul>
   <li>
-    <p>Put file <code class="highlighter-rouge">OALD8.iso</code> (ISO image of the CD dictionary) in <code class="highlighter-rouge">$HOME</code> folder, just like the <code class="highlighter-rouge">texlive2012-20120701.iso</code> before.</p>
+    <p>Put file <code class="language-plaintext highlighter-rouge">OALD8.iso</code> (ISO image of the CD dictionary) in <code class="language-plaintext highlighter-rouge">$HOME</code> folder, just like the <code class="language-plaintext highlighter-rouge">texlive2012-20120701.iso</code> before.</p>
   </li>
   <li>
     <p>Open a new terminal, type</p>
@@ -610,7 +610,7 @@ dpkg <span class="nt">-i</span> texmaker_ubuntu_12.04_3.5_i386.deb
 <span class="nb">cd</span> /mnt/linux
 ./setup.sh
 </code></pre></div></div>
-<p>and setup OALD8 to the folder <code class="highlighter-rouge">/usr/local/OALD8</code>. Next, open <code class="highlighter-rouge">oald8.desktop</code></p>
+<p>and setup OALD8 to the folder <code class="language-plaintext highlighter-rouge">/usr/local/OALD8</code>. Next, open <code class="language-plaintext highlighter-rouge">oald8.desktop</code></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano <span class="nv">$HOME</span>/Desktop/oald8.desktop
 </code></pre></div></div>
@@ -663,7 +663,7 @@ wget http://www.debugmode.com/wink/winklogo.gif
 </code></pre></div></div>
 
 <ul>
-  <li>Create <code class="highlighter-rouge">wink.desktop</code> file</li>
+  <li>Create <code class="language-plaintext highlighter-rouge">wink.desktop</code> file</li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /usr/share/applications/wink.desktop
@@ -717,12 +717,12 @@ GenericName[en]<span class="o">=</span>
   <li>Desktop background and theme</li>
 </ul>
 
-<p>Unzip <code class="highlighter-rouge">backgrounds.zip</code></p>
+<p>Unzip <code class="language-plaintext highlighter-rouge">backgrounds.zip</code></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>unzip backgrounds.zip <span class="nt">-d</span> /usr/share/backgrounds
 </code></pre></div></div>
 
-<p>Edit <code class="highlighter-rouge">10_gsettings-desktop-schemas.gschema.override</code></p>
+<p>Edit <code class="language-plaintext highlighter-rouge">10_gsettings-desktop-schemas.gschema.override</code></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /usr/share/glib-2.0/schemas/10_gsettings-desktop-schemas.gschema.override
 </code></pre></div></div>
@@ -765,7 +765,7 @@ unmaximize <span class="o">=</span> <span class="o">[</span><span class="s1">'&l
 show-desktop <span class="o">=</span> <span class="o">[</span><span class="s1">'&lt;Primary&gt;&lt;Alt&gt;d'</span>,<span class="s1">'&lt;Primary&gt;&lt;Super&gt;d'</span>,<span class="s1">'&lt;Super&gt;d'</span><span class="o">]</span>
 </code></pre></div></div>
 
-<p>Change gnome-shell favourite by replacing the content of <code class="highlighter-rouge">10_gnome-shell.gschema.override</code></p>
+<p>Change gnome-shell favourite by replacing the content of <code class="language-plaintext highlighter-rouge">10_gnome-shell.gschema.override</code></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /usr/share/glib-2.0/schemas/10_gnome-shell.gschema.override
 </code></pre></div></div>
@@ -800,7 +800,7 @@ button-layout<span class="o">=</span><span class="s2">"menu:minimize,maximize,cl
   <li>Lightdm</li>
 </ul>
 
-<p>Edit the file <code class="highlighter-rouge">lightdm.conf</code></p>
+<p>Edit the file <code class="language-plaintext highlighter-rouge">lightdm.conf</code></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /etc/lightdm/lightdm.conf
 </code></pre></div></div>
@@ -869,7 +869,7 @@ DMZ-icons.zip backgrounds.zip add.firefox.extension.sh 59794-Original.tar.gz
 </code></pre></div></div>
 
 <ul>
-  <li>Make <code class="highlighter-rouge">filesystem.size</code></li>
+  <li>Make <code class="language-plaintext highlighter-rouge">filesystem.size</code></li>
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="nt">-n</span> <span class="si">$(</span><span class="nb">sudo du</span> <span class="nt">-s</span> <span class="nt">--block-size</span><span class="o">=</span>1 <span class="k">${</span><span class="nv">WORK</span><span class="k">}</span>/rootfs | <span class="nb">tail</span> <span class="nt">-1</span> | <span class="nb">awk</span> <span class="s1">'{print $1}'</span><span class="si">)</span> | <span class="nb">sudo tee</span> <span class="k">${</span><span class="nv">CD</span><span class="k">}</span>/<span class="k">${</span><span class="nv">FS_DIR</span><span class="k">}</span>/filesystem.size
@@ -886,7 +886,7 @@ DMZ-icons.zip backgrounds.zip add.firefox.extension.sh 59794-Original.tar.gz
   <li>Make Grub the bootloader of the CD</li>
 </ul>
 
-<p>Make the <code class="highlighter-rouge">grub.cfg</code></p>
+<p>Make the <code class="language-plaintext highlighter-rouge">grub.cfg</code></p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano <span class="k">${</span><span class="nv">CD</span><span class="k">}</span>/boot/grub/grub.cfg
 </code></pre></div></div>
@@ -974,7 +974,7 @@ chainloader +1
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"

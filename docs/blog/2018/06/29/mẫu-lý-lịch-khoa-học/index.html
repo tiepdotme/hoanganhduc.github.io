@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
 </head>
 
 
@@ -116,14 +116,14 @@
   <h1 class="alert-heading">Tóm tắt</h1>
   <p>Trong nhiều trường hợp, bên cạnh CV tiếng Anh, tôi cần sử dụng CV (lý lịch khoa học) tiếng Việt. 
 Sau một thời gian tìm kiếm, tôi thấy một trong số các mẫu được sử dụng khá nhiều bởi các nhà khoa học cũng như các trường đại học ở Việt Nam là mẫu kèm theo <a href="http://vanban.chinhphu.vn/portal/page/portal/chinhphu/hethongvanban?class_id=1&amp;_page=1&amp;mode=detail&amp;document_id=100339">Thông tư số 08/2011/TT-BGDĐT ngày 17/02/2011 của Bộ trưởng Bộ GDĐT</a>.
-Bản Word (*.doc) của mẫu này có rất nhiều và có thể dễ dàng tìm kiếm trên mạng (bản gốc <code class="highlighter-rouge">Phụ lục V.doc</code> được nén trong <a href="http://datafile.chinhphu.vn/file-remote-v2/DownloadServlet?filePath=vbpq/2011/05/106138_TT8BGDDT2.RAR">106138_TT8BGDDT2.RAR</a>).
+Bản Word (*.doc) của mẫu này có rất nhiều và có thể dễ dàng tìm kiếm trên mạng (bản gốc <code class="language-plaintext highlighter-rouge">Phụ lục V.doc</code> được nén trong <a href="http://datafile.chinhphu.vn/file-remote-v2/DownloadServlet?filePath=vbpq/2011/05/106138_TT8BGDDT2.RAR">106138_TT8BGDDT2.RAR</a>).
 Tôi quen thuộc với LaTeX hơn nên muốn tự tạo mẫu này bằng LaTeX để phục vụ cho mục đích sử dụng của bản thân.
 Bài viết này ghi lại quá trình tự tạo mẫu CV tiếng Việt của tôi.</p>
 </div>
 
 <h1>LaTeX class</h1>
 
-<p>Tôi sử dụng <code class="highlighter-rouge">article</code> class. 
+<p>Tôi sử dụng <code class="language-plaintext highlighter-rouge">article</code> class. 
 Đây là một trong số các class thông dụng khi sử dụng LaTeX.</p>
 
 <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[a4paper, 11pt]</span><span class="p">{</span>article<span class="p">}</span>
@@ -139,11 +139,11 @@ Bài viết này ghi lại quá trình tự tạo mẫu CV tiếng Việt của 
 <span class="k">\usepackage</span><span class="na">[vietnamese,american]</span><span class="p">{</span>babel<span class="p">}</span>
 </code></pre></div></div>
 
-<h1>Định nghĩa lại <code class="highlighter-rouge">\maketitle</code></h1>
+<h1>Định nghĩa lại <code class="language-plaintext highlighter-rouge">\maketitle</code></h1>
 
-<p>Tôi muốn định nghĩa lại lệnh <code class="highlighter-rouge">\maketitle</code> để chèn thêm hai dòng chữ: “CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM” và “Độc lập - Tự do - Hạnh phúc”. 
+<p>Tôi muốn định nghĩa lại lệnh <code class="language-plaintext highlighter-rouge">\maketitle</code> để chèn thêm hai dòng chữ: “CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM” và “Độc lập - Tự do - Hạnh phúc”. 
 Do đây không phải văn bản hành chính theo đúng nghĩa, tôi thấy việc trình bày có thể không cần theo đúng quy chuẩn (định nghĩa ở <a href="http://www.moj.gov.vn/vbpq/lists/vn%20bn%20php%20lut/view_detail.aspx?itemid=26230">đây</a>).
-Tôi sử dụng cỡ chữ 11pt cho cả hai dòng trên, và dùng lệnh <code class="highlighter-rouge">\underline</code> cho dòng “Độc lập - Tự do - Hạnh phúc”.</p>
+Tôi sử dụng cỡ chữ 11pt cho cả hai dòng trên, và dùng lệnh <code class="language-plaintext highlighter-rouge">\underline</code> cho dòng “Độc lập - Tự do - Hạnh phúc”.</p>
 
 <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">% Redefine Maketitle</span>
 
@@ -166,19 +166,19 @@ Tôi sử dụng cỡ chữ 11pt cho cả hai dòng trên, và dùng lệnh <cod
 <span class="k">\makeatother</span>
 </code></pre></div></div>
 
-<h1>Gói <code class="highlighter-rouge">tabularx</code> và <code class="highlighter-rouge">multirow</code></h1>
+<h1>Gói <code class="language-plaintext highlighter-rouge">tabularx</code> và <code class="language-plaintext highlighter-rouge">multirow</code></h1>
 
 <p>Để đơn giản, tôi dự định chuyển tất cả các nội dung cần điền sang dạng bảng.
-Tôi sử dụng môi trường <code class="highlighter-rouge">tabularx</code> thay vì <code class="highlighter-rouge">tabular</code> để tận dụng tính năng căn chỉnh theo chiều rộng của trang giấy của <code class="highlighter-rouge">tabularx</code>.</p>
+Tôi sử dụng môi trường <code class="language-plaintext highlighter-rouge">tabularx</code> thay vì <code class="language-plaintext highlighter-rouge">tabular</code> để tận dụng tính năng căn chỉnh theo chiều rộng của trang giấy của <code class="language-plaintext highlighter-rouge">tabularx</code>.</p>
 
 <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">% Table</span>
 <span class="k">\usepackage</span><span class="p">{</span>tabularx<span class="p">}</span>
 <span class="k">\usepackage</span><span class="p">{</span>multirow<span class="p">}</span>
 </code></pre></div></div>
 
-<h1>Định nghĩa lại cách đánh số <code class="highlighter-rouge">\section</code> và <code class="highlighter-rouge">\subsection</code></h1>
+<h1>Định nghĩa lại cách đánh số <code class="language-plaintext highlighter-rouge">\section</code> và <code class="language-plaintext highlighter-rouge">\subsection</code></h1>
 
-<p>Các mục lớn (<code class="highlighter-rouge">\section</code>) được đánh số La Mã, trong khi các mục nhỏ (<code class="highlighter-rouge">\subsection</code>) được đánh số Ả Rập.</p>
+<p>Các mục lớn (<code class="language-plaintext highlighter-rouge">\section</code>) được đánh số La Mã, trong khi các mục nhỏ (<code class="language-plaintext highlighter-rouge">\subsection</code>) được đánh số Ả Rập.</p>
 
 <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">% Section/Subsection Numbering</span>
 
@@ -223,7 +223,7 @@ Tôi cũng thay đổi màu của các URL trong CV để tiện phân biệt.</
 
 <h1>Danh sách các công trình khoa học đã công bố</h1>
 
-<p>Tôi thường liệt kê tất cả các công bố của mình trong một file <code class="highlighter-rouge">pubs.bib</code>.
+<p>Tôi thường liệt kê tất cả các công bố của mình trong một file <code class="language-plaintext highlighter-rouge">pubs.bib</code>.
 Tôi sửa <a href="https://robjhyndman.com/hyndsight/cv/">mẫu CV của Rob J. Hyndman</a> để phù hợp với danh sách công bố của tôi.
 Cụ thể, trong LaTeX preamble, tôi làm như sau (các bạn có thể copy nguyên hoặc sửa chữa cho phù hợp với bản thân):</p>
 
@@ -325,9 +325,9 @@ Hoang2018phd,
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>Ở đây, <code class="highlighter-rouge">journals-tcs-DemaineDFHIOOUY15</code> là từ khóa tham khảo (citation key) của một bài báo tôi đã công bố, <code class="highlighter-rouge">conf-isaac-HoangU16</code> là citation key của một bài báo trong kỷ yếu của một hội thảo quốc tế.
+<p>Ở đây, <code class="language-plaintext highlighter-rouge">journals-tcs-DemaineDFHIOOUY15</code> là từ khóa tham khảo (citation key) của một bài báo tôi đã công bố, <code class="language-plaintext highlighter-rouge">conf-isaac-HoangU16</code> là citation key của một bài báo trong kỷ yếu của một hội thảo quốc tế.
 Nếu bạn quen thuộc với BibTeX thì không khó để hiểu quá trình này.
-Ngược lại, nếu bạn không quen thuộc với BibTeX, bạn có thể tự liệt kê các công bố, ví dụ như bằng cách sử dụng môi trường <code class="highlighter-rouge">itemize</code> hoặc <code class="highlighter-rouge">enumerate</code>.</p>
+Ngược lại, nếu bạn không quen thuộc với BibTeX, bạn có thể tự liệt kê các công bố, ví dụ như bằng cách sử dụng môi trường <code class="language-plaintext highlighter-rouge">itemize</code> hoặc <code class="language-plaintext highlighter-rouge">enumerate</code>.</p>
 
 <h1>Title</h1>
 
@@ -336,7 +336,7 @@ Ngược lại, nếu bạn không quen thuộc với BibTeX, bạn có thể t�
 
 <h1>Nội dung cụ thể</h1>
 
-<p>Phần nội dung cụ thể (đặt trong môi trường <code class="highlighter-rouge">document</code>) như sau.
+<p>Phần nội dung cụ thể (đặt trong môi trường <code class="language-plaintext highlighter-rouge">document</code>) như sau.
 Các bạn có thể tự điền các thông tin cho phù hợp.</p>
 
 <div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\selectlanguage</span><span class="p">{</span>vietnamese<span class="p">}</span>
@@ -439,14 +439,14 @@ Hà Nội, <span class="k">\today</span> <span class="k">\\</span>
 
 <h1>Tạo file PDF</h1>
 
-<p>Các lệnh cụ thể tôi thường dùng như sau (giả sử tên file là <code class="highlighter-rouge">CV-vi.tex</code>).</p>
+<p>Các lệnh cụ thể tôi thường dùng như sau (giả sử tên file là <code class="language-plaintext highlighter-rouge">CV-vi.tex</code>).</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pdflatex CV-vi.tex
 biber CV-vi.bcf
 pdflatex CV-vi.tex
 </code></pre></div></div>
 
-<p>Để thực hiện lệnh này, các bạn cần cài đặt các phầm mềm liên quan đến việc sử dụng LaTeX và BibLaTeX (với <code class="highlighter-rouge">backend=biber</code>).
+<p>Để thực hiện lệnh này, các bạn cần cài đặt các phầm mềm liên quan đến việc sử dụng LaTeX và BibLaTeX (với <code class="language-plaintext highlighter-rouge">backend=biber</code>).
 Có rất nhiều hướng dẫn trên mạng (cả tiếng Việt lẫn tiếng Anh).
 Một trong những phần mềm soạn thảo LaTeX nổi tiếng cho người Việt là <a href="https://nhdien.wordpress.com/">VieTeX</a> của thầy Nguyễn Hữu Điển.
 Ở trang chủ của VieTeX bạn cũng có thể tìm được rất nhiều các hướng dẫn cài đặt cũng như sử dụng TeX, kể cả cho người mới dùng cũng như người dùng lâu năm.
@@ -456,14 +456,14 @@ Các bạn cũng có thể tham khảo cách tôi cài các phần mềm liên q
 
 <h1>Bỏ đánh số trang</h1>
 
-<p>Nếu muốn bỏ đánh số trang, có thể thêm <code class="highlighter-rouge">\pagestyle{empty}</code> ngay sau <code class="highlighter-rouge">\begin{document}</code> và thêm <code class="highlighter-rouge">\thispagestyle{empty}</code> ngay sau <code class="highlighter-rouge">\maketitle</code> (nếu không thêm dòng này thì trang đầu sẽ bị đánh số do <code class="highlighter-rouge">\maketitle</code> sử dụng mặc định pagestyle <code class="highlighter-rouge">plain</code>).</p>
+<p>Nếu muốn bỏ đánh số trang, có thể thêm <code class="language-plaintext highlighter-rouge">\pagestyle{empty}</code> ngay sau <code class="language-plaintext highlighter-rouge">\begin{document}</code> và thêm <code class="language-plaintext highlighter-rouge">\thispagestyle{empty}</code> ngay sau <code class="language-plaintext highlighter-rouge">\maketitle</code> (nếu không thêm dòng này thì trang đầu sẽ bị đánh số do <code class="language-plaintext highlighter-rouge">\maketitle</code> sử dụng mặc định pagestyle <code class="language-plaintext highlighter-rouge">plain</code>).</p>
 
 
 <hr>
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"

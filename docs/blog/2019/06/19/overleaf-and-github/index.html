@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
 </head>
 
 
@@ -117,15 +117,15 @@
   <p>In this post, I describe how I sync LaTeX papers between <a href="https://github.com/">GitHub</a> and <a href="https://www.overleaf.com/">Overleaf</a>.</p>
 </div>
 
-<p>Suppose you have an Overleaf project <a href="https://www.overleaf.com/project/5ce5fb7abb7ad36e4a0f60bf">https://www.overleaf.com/project/<span style="color:red">5ce5fb7abb7ad36e4a0f60bf</span></a>. Overleaf will also provide you a link <a href="https://git.overleaf.com/5ce5fb7abb7ad36e4a0f60bf">https://git.overleaf.com/<span style="color:red">5ce5fb7abb7ad36e4a0f60bf</span></a> for using with <code class="highlighter-rouge">git</code>.
-Create a Github repository called, say <code class="highlighter-rouge">paper</code>, at the address, say <code class="highlighter-rouge">git@github.com/[your-github-username]/paper.git</code>.</p>
+<p>Suppose you have an Overleaf project <a href="https://www.overleaf.com/project/5ce5fb7abb7ad36e4a0f60bf">https://www.overleaf.com/project/<span style="color:red">5ce5fb7abb7ad36e4a0f60bf</span></a>. Overleaf will also provide you a link <a href="https://git.overleaf.com/5ce5fb7abb7ad36e4a0f60bf">https://git.overleaf.com/<span style="color:red">5ce5fb7abb7ad36e4a0f60bf</span></a> for using with <code class="language-plaintext highlighter-rouge">git</code>.
+Create a Github repository called, say <code class="language-plaintext highlighter-rouge">paper</code>, at the address, say <code class="language-plaintext highlighter-rouge">git@github.com/[your-github-username]/paper.git</code>.</p>
 
 <h1>Clone Overleaf project</h1>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://git.overleaf.com/5ce5fb7abb7ad36e4a0f60bf paper
 </code></pre></div></div>
 
-<p>Overleaf may asks you to input your Overleaf’s username and password. To enable credentials storage in <code class="highlighter-rouge">git</code>, use <code class="highlighter-rouge">git config --global credential.helper store</code>. For convenience, I want to rename the <code class="highlighter-rouge">origin</code> endpoint to <code class="highlighter-rouge">overleaf</code> using <code class="highlighter-rouge">git remote rename origin overleaf</code>. Then, when pushing and pulling Overleaf’s project, I can simply use <code class="highlighter-rouge">git push -u overleaf master</code> and <code class="highlighter-rouge">git pull overleaf master</code>.</p>
+<p>Overleaf may asks you to input your Overleaf’s username and password. To enable credentials storage in <code class="language-plaintext highlighter-rouge">git</code>, use <code class="language-plaintext highlighter-rouge">git config --global credential.helper store</code>. For convenience, I want to rename the <code class="language-plaintext highlighter-rouge">origin</code> endpoint to <code class="language-plaintext highlighter-rouge">overleaf</code> using <code class="language-plaintext highlighter-rouge">git remote rename origin overleaf</code>. Then, when pushing and pulling Overleaf’s project, I can simply use <code class="language-plaintext highlighter-rouge">git push -u overleaf master</code> and <code class="language-plaintext highlighter-rouge">git pull overleaf master</code>.</p>
 
 <h1>Pushing to GitHub</h1>
 
@@ -137,7 +137,7 @@ git push <span class="nt">-u</span> github master
 
 <h1>Other configuration</h1>
 
-<p>I also created a <code class="highlighter-rouge">Makefile</code> but do not want to put it in the repository. A simple way is to create <code class="highlighter-rouge">.gitignore</code> file and put the name <code class="highlighter-rouge">Makefile</code> in that file. An example of a <code class="highlighter-rouge">Makefile</code> I created may be as follows.</p>
+<p>I also created a <code class="language-plaintext highlighter-rouge">Makefile</code> but do not want to put it in the repository. A simple way is to create <code class="language-plaintext highlighter-rouge">.gitignore</code> file and put the name <code class="language-plaintext highlighter-rouge">Makefile</code> in that file. An example of a <code class="language-plaintext highlighter-rouge">Makefile</code> I created may be as follows.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>update:
 	git pull overleaf master
@@ -159,7 +159,7 @@ clean:
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"
