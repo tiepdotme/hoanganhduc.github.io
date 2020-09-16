@@ -5,16 +5,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> Install LaTeX2HTML in Windows </title>
+	<title> Arch Linux </title>
 	
 	
-	<meta name="description" content="This post describes how Duc A. Hoang install LaTeX2HTML in Windows">
+	<meta name="description" content="This page contains some personal Arch Linux settings of Duc A. Hoang">
 	
 	
 	<meta name="author" content="Duc A. Hoang">
 	
 	
-	<meta name="keywords" content="latex2html, installation, Duc A. Hoang">
+	<meta name="keywords" content="arch linux, repository, installation, live ISO">
 	
 	
 	<meta name="generator" content="Jekyll, MathJax, Travis CI">
@@ -102,83 +102,53 @@
 
 <div class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-<h1>Install LaTeX2HTML in Windows</h1>
+<h1>Arch Linux</h1>
 <div style="text-align: right	;">
-<strong>Created:</strong> 2018-05-26 &emsp;
+<strong>Created:</strong> 2020-03-15 &emsp;
+ <strong>Updated:</strong> 2020-09-15 &emsp; 
 
-<strong>Category:</strong> windows, tex &emsp; 
 <a href="#" onclick="window.print();return false;">Print this page</a> &emsp;
 <a href="/">Back to Home</a>
 </div>
 <hr>
 
-<div class="alert alert-info">
-  <h1 class="alert-heading">Summary</h1>
-  <p>This post contains a guide on how to install <a href="http://www.latex2html.org/">LaTeX2HTML</a> in Windows 64-bit OS.</p>
-</div>
-
-<h1>Perl 5.22.4.2205</h1>
-<p>Download from <a href="https://www.activestate.com/activeperl/downloads">https://www.activestate.com/activeperl/downloads</a>.</p>
-
-<h1>Netpbm</h1>
-<p>Install from GNUWin32 <a href="http://gnuwin32.sourceforge.net/packages/netpbm.htm">http://gnuwin32.sourceforge.net/packages/netpbm.htm</a></p>
-
-<p><strong>Note:</strong> Install to <code class="language-plaintext highlighter-rouge">C:\GNUWin32</code> directory (or any directory such that the name does not contain a blank space)</p>
-
-<h1>Ghoscript AFPL 8.54</h1>
-<p>Download from <a href="http://pages.cs.wisc.edu/~ghost/doc/AFPL/">http://pages.cs.wisc.edu/~ghost/doc/AFPL/</a>.</p>
-
-<p><strong>Note:</strong> Install to <code class="language-plaintext highlighter-rouge">C:\gs</code> directory.</p>
-
-<h1>GSView 5.0</h1>
-<p>Download from <a href="http://pages.cs.wisc.edu/~ghost/gsview/get50.htm">http://pages.cs.wisc.edu/~ghost/gsview/get50.htm</a>.</p>
-
-<h1>LaTeX2HTML</h1>
-<p>Download from <a href="https://github.com/latex2html/latex2html/">https://github.com/latex2html/latex2html/</a>.</p>
-
-<h1>Some notes after installing</h1>
+<h2>User Repository Information</h2>
 
 <ul>
-  <li>Add the following to <code class="language-plaintext highlighter-rouge">PATH</code> in Windows via <code class="language-plaintext highlighter-rouge">Control Panel &gt; System and Security &gt; System &gt; Advanced System Settings &gt; Advanced &gt; Environment Variables ...</code></li>
+  <li><strong>Maintainer:</strong> Duc A. Hoang.</li>
+  <li><strong>Description:</strong> A repo containing <a href="/blog/2018/05/26/some-notes-on-installing-arch-linux/">some packages I often use</a>, following <a href="https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks#Custom_local_repository">this ArchWiki tutorial</a>. (Packages of size larger than 100MB are not available due to <a href="https://help.github.com/en/github/managing-large-files/what-is-my-disk-quota#file-and-repository-size-limitations">GitHub’s file size limit</a>.)</li>
+  <li><strong>PGP Key ID:</strong> <code class="language-plaintext highlighter-rouge">FBEAAAD6C193858F7D9BCFD73D544026D4E51506</code>.</li>
+  <li><strong>Upstream page:</strong> <a href="https://hoanganhduc.github.io/archlinux">https://hoanganhduc.github.io/archlinux</a>.</li>
+  <li><strong>Usage:</strong>
+    <ul>
+      <li>Run the following as <code class="language-plaintext highlighter-rouge">root</code>.
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman-key <span class="nt">--keyserver</span> pool.sks-keyservers.net <span class="nt">--recv-keys</span> FBEAAAD6C193858F7D9BCFD73D544026D4E51506
+pacman-key <span class="nt">--lsign-key</span> FBEAAAD6C193858F7D9BCFD73D544026D4E51506
+</code></pre></div>        </div>
+      </li>
+      <li>Add the following to <code class="language-plaintext highlighter-rouge">/etc/pacman.conf</code>.
+        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>hoanganhduc]
+Server <span class="o">=</span> https://hoanganhduc.github.io/archlinux/<span class="nv">$arch</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\GnuWin32\bin;C:\gs\gs8.54\bin
-</code></pre></div></div>
+<h2>Build Live Arch ISO</h2>
+
+<p>Using this repository, <a href="https://wiki.archlinux.org/index.php/Archiso">Archiso</a> and some additional configurations, one can build a live Arch ISO image. To recreate what I have built, download <a href="/misc/livearch.tar.gz">livearch.tar.gz</a>, extract it with <code class="language-plaintext highlighter-rouge">tar -xvf livearch.tar.gz</code> to obtain the <code class="language-plaintext highlighter-rouge">livearch</code> folder, then <code class="language-plaintext highlighter-rouge">sudo chown -R root:root livearch</code>, and run <code class="language-plaintext highlighter-rouge">./build.sh -v</code> inside the <code class="language-plaintext highlighter-rouge">livearch</code> folder as <code class="language-plaintext highlighter-rouge">root</code>. (You may need around 25 - 30 GB of free disk space.)</p>
+
+<h3>archlinux-2020.03.14-x86_64.iso [unofficial]</h3>
 
 <ul>
-  <li>Fix error</li>
+  <li><strong>Dowload:</strong> <a href="https://drive.google.com/open?id=1AlQm9OnWJ24AY5R69Q7vGyxFGzUVBNN4">Google Drive</a> (4.3 GB - 4,261,412,864 bytes)</li>
+  <li><strong>Created:</strong> 2020-03-15 00:46:18.699853700 +0900</li>
+  <li><strong>Included Kernel:</strong> linux-lts 4.19.101-2</li>
+  <li><strong>PGP Signature:</strong> <a href="/archlinux/iso/archlinux-2020.03.14-x86_64.iso.sig">archlinux-2020.03.14-x86_64.iso.sig</a></li>
+  <li><strong>MD5:</strong> a6de7d31ddabad70a9cc693d3bf022af</li>
+  <li><strong>SHA1SUM:</strong> 40458b4d2fd6ce0a8aba6b3b328c54f2d670847d</li>
 </ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Unmatched [ in regex; marked by &lt;-- HERE in m/^[ &lt;-- HERE .\]/ at C:\latex2html\bin/latex2html.bat line 432.
-</code></pre></div></div>
-
-<p>when compile with <code class="language-plaintext highlighter-rouge">.latex2html-init</code>. See <a href="http://tug.org/pipermail/latex2html/2017-October/003977.html">http://tug.org/pipermail/latex2html/2017-October/003977.html</a>.</p>
-
-<ul>
-  <li>Use command:</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>latex2html -tmp C:\Windows\TEMP somefile.tex 
-</code></pre></div></div>
-
-<p>for compilation to avoid the error</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'/tmp' not usable as temporary directory.
-</code></pre></div></div>
-
-<ul>
-  <li>Fix error when using latex2html with option <code class="language-plaintext highlighter-rouge">-html_version 3.2,latin2,unicode</code> in Windows</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Extension: loading C:\latex2html\versions\latin1.pl
-HTML version: loading C:\latex2html\versions\html3_2.pl
-
- *** processing declarations ***
-
-Resetting image-cacheCannot read .\latin2.tex
-</code></pre></div></div>
-
-<p>See <a href="http://tug.org/pipermail/latex2html/2017-October/003985.html">http://tug.org/pipermail/latex2html/2017-October/003985.html</a> or <a href="http://tug.org/pipermail/latex2html/2017-October/003988.html">http://tug.org/pipermail/latex2html/2017-October/003988.html</a>.</p>
 
 
 

@@ -35,7 +35,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!" >
+    <link type="application/atom+xml" rel="alternate" href="http://hoanganhduc.github.io/feed.xml" title="Welcome to Đức's personal webpage!">
 </head>
 
 
@@ -137,39 +137,39 @@
 <ul>
   <li>
     <p><code class="language-plaintext highlighter-rouge">-OV</code> 
-<br >backup your PC and verify your backup</p>
+<br>backup your PC and verify your backup</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">-[0-9]</code> 
-<br >Specify the compression level. Default is 3. No compression is 0.</p>
+<br>Specify the compression level. Default is 3. No compression is 0.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">-G</code> 
-<br >Use gzip, the standard and quicker Linux compression engine, instead of bzip2.</p>
+<br>Use gzip, the standard and quicker Linux compression engine, instead of bzip2.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">-E "dir|..."</code> 
-<br >Exclude dir(s) from backup. The dirs should be separated with a pipe and surrounded by quotes. This is the prefered and recommended option when doing partial archiving. Note that mondo automatically excludes removable media (<code class="language-plaintext highlighter-rouge">/mnt/floppy</code>, <code class="language-plaintext highlighter-rouge">/mnt/cdrom</code>, <code class="language-plaintext highlighter-rouge">/proc</code>, <code class="language-plaintext highlighter-rouge">/sys</code>, <code class="language-plaintext highlighter-rouge">/run</code>, <code class="language-plaintext highlighter-rouge">/tmp</code>). For example, if you are backing up to an NFS mount but you do not want to include the contents of the mount in a backup, exclude your local mount-point with this switch.</p>
+<br>Exclude dir(s) from backup. The dirs should be separated with a pipe and surrounded by quotes. This is the prefered and recommended option when doing partial archiving. Note that mondo automatically excludes removable media (<code class="language-plaintext highlighter-rouge">/mnt/floppy</code>, <code class="language-plaintext highlighter-rouge">/mnt/cdrom</code>, <code class="language-plaintext highlighter-rouge">/proc</code>, <code class="language-plaintext highlighter-rouge">/sys</code>, <code class="language-plaintext highlighter-rouge">/run</code>, <code class="language-plaintext highlighter-rouge">/tmp</code>). For example, if you are backing up to an NFS mount but you do not want to include the contents of the mount in a backup, exclude your local mount-point with this switch.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">-i</code> 
-<br >Use ISO files (CD images) as backup media. This is good for backing up your system to a spare hard drive.</p>
+<br>Use ISO files (CD images) as backup media. This is good for backing up your system to a spare hard drive.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">-p "prefix-name"</code> 
-<br >Use prefix to generate the name of your ISO images. By default, mondoarchive names images <code class="language-plaintext highlighter-rouge">mondorescue-1.iso</code>, <code class="language-plaintext highlighter-rouge">mondorescue-2.iso</code>,… Using <code class="language-plaintext highlighter-rouge">-p "machine"</code> will name your images <code class="language-plaintext highlighter-rouge">machine-1.iso</code>, <code class="language-plaintext highlighter-rouge">machine-2.iso</code>,…</p>
+<br>Use prefix to generate the name of your ISO images. By default, mondoarchive names images <code class="language-plaintext highlighter-rouge">mondorescue-1.iso</code>, <code class="language-plaintext highlighter-rouge">mondorescue-2.iso</code>,… Using <code class="language-plaintext highlighter-rouge">-p "machine"</code> will name your images <code class="language-plaintext highlighter-rouge">machine-1.iso</code>, <code class="language-plaintext highlighter-rouge">machine-2.iso</code>,…</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">-s size</code> 
-<br >How much can each of your backup media hold? You may use <code class="language-plaintext highlighter-rouge">m</code> and <code class="language-plaintext highlighter-rouge">g</code> on the end of the number, e.g. <code class="language-plaintext highlighter-rouge">700m</code> for an extra-large CD-R, or <code class="language-plaintext highlighter-rouge">4480m</code> for a normal DVD-R.</p>
+<br>How much can each of your backup media hold? You may use <code class="language-plaintext highlighter-rouge">m</code> and <code class="language-plaintext highlighter-rouge">g</code> on the end of the number, e.g. <code class="language-plaintext highlighter-rouge">700m</code> for an extra-large CD-R, or <code class="language-plaintext highlighter-rouge">4480m</code> for a normal DVD-R.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">-I "dir|..."</code> 
-<br >Include dirs(s) in backup. The dirs should be separated with a pipe and surrounded by quotes. This option is mainly used to perform tests in order to reduce the time taken by the archiving operation. The default backup dir is / but you may specify alternatives.</p>
+<br>Include dirs(s) in backup. The dirs should be separated with a pipe and surrounded by quotes. This option is mainly used to perform tests in order to reduce the time taken by the archiving operation. The default backup dir is / but you may specify alternatives.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">-d dev|dir</code> 
-<br >Specify the backup device (CD/tape/USB) or directory (NFS/ISO). For CD-R[W] drives, this is the SCSI node where the drive may be found, e.g. <code class="language-plaintext highlighter-rouge">0,1,0</code>. For tape users, this is the tape streamers <code class="language-plaintext highlighter-rouge">/dev</code> entry, e.g. <code class="language-plaintext highlighter-rouge">/dev/st0</code>. For USB users, this is the device name of your key or external disk. For ISO users, this is the directory where the ISO images are stored. For NFS users, this is the subdirectory under the NFS mount where the backups are stored. The default for ISO and NFS is <code class="language-plaintext highlighter-rouge">/var/cache/mondo</code>.</p>
+<br>Specify the backup device (CD/tape/USB) or directory (NFS/ISO). For CD-R[W] drives, this is the SCSI node where the drive may be found, e.g. <code class="language-plaintext highlighter-rouge">0,1,0</code>. For tape users, this is the tape streamers <code class="language-plaintext highlighter-rouge">/dev</code> entry, e.g. <code class="language-plaintext highlighter-rouge">/dev/st0</code>. For USB users, this is the device name of your key or external disk. For ISO users, this is the directory where the ISO images are stored. For NFS users, this is the subdirectory under the NFS mount where the backups are stored. The default for ISO and NFS is <code class="language-plaintext highlighter-rouge">/var/cache/mondo</code>.</p>
   </li>
 </ul>
 
@@ -181,7 +181,7 @@
 
 <div>
 	<span style="float: right;">
-<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed" ></a>-->
+<!--		<a href="https://validator.w3.org/feed/check.cgi?url=http%3A//hoanganhduc.github.io/feed.xml"><img src="/static/img/valid-atom.png" alt="[Valid Atom 1.0]" title="Validate my Atom 1.0 feed"></a>-->
 		<a href="https://jigsaw.w3.org/css-validator/check/referer">
 			<img style="border:0;width:88px;height:31px"
 				src="/static/img/vcss"

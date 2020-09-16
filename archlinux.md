@@ -4,23 +4,23 @@ title: Arch Linux
 author: Duc A. Hoang
 permalink: /archlinux/
 date: 2020-03-15
-updated: 2020-03-15
+updated: 2020-09-15
 <!--comment: true-->
 description: This page contains some personal Arch Linux settings of Duc A. Hoang
 keywords: arch linux, repository, installation, live ISO
-published: false
+<!--published: false-->
 ---
 
 ## User Repository Information
 
 * **Maintainer:** Duc A. Hoang.
-* **Description:** A repo containing [packages I often use]({% post_url 2018-05-26-some-notes-on-installing-arch-linux %}), following [this ArchWiki tutorial](https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks#Custom_local_repository). (Packages of size larger than 100MB are not available due to [GitHub's file size limit](https://help.github.com/en/github/managing-large-files/what-is-my-disk-quota#file-and-repository-size-limitations).)
-* **PGP Key ID:** [FBEAAAD6C193858F7D9BCFD73D544026D4E51506](https://keybase.io/hoanganhduc/pgp_keys.asc?fingerprint=fbeaaad6c193858f7d9bcfd73d544026d4e51506).
+* **Description:** A repo containing [some packages I often use]({% post_url 2018-05-26-some-notes-on-installing-arch-linux %}), following [this ArchWiki tutorial](https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks#Custom_local_repository). (Packages of size larger than 100MB are not available due to [GitHub's file size limit](https://help.github.com/en/github/managing-large-files/what-is-my-disk-quota#file-and-repository-size-limitations).)
+* **PGP Key ID:** `FBEAAAD6C193858F7D9BCFD73D544026D4E51506`.
 * **Upstream page:** [https://hoanganhduc.github.io/archlinux](https://hoanganhduc.github.io/archlinux).
 * **Usage:**
   * Run the following as `root`.
 ```bash
-pacman-key --recv-keys FBEAAAD6C193858F7D9BCFD73D544026D4E51506
+pacman-key --keyserver pool.sks-keyservers.net --recv-keys FBEAAAD6C193858F7D9BCFD73D544026D4E51506
 pacman-key --lsign-key FBEAAAD6C193858F7D9BCFD73D544026D4E51506
 ```
   * Add the following to `/etc/pacman.conf`.
