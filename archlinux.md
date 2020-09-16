@@ -31,7 +31,7 @@ Server = https://hoanganhduc.github.io/archlinux/$arch
 
 ## Build Live Arch ISO
 
-Using this repository, [Archiso](https://wiki.archlinux.org/index.php/Archiso) and some additional configurations, one can build a live Arch ISO image. To recreate what I have built, download [livearch.tar.gz]({{ site.baseurl }}/misc/livearch.tar.gz), extract it with `tar -xvf livearch.tar.gz` to obtain the `livearch` folder, then `sudo chown -R root:root livearch`, and run `./build.sh -v` inside the `livearch` folder as `root`. (You may need around 25 - 30 GB of free disk space.)
+Using this repository, [Archiso](https://wiki.archlinux.org/index.php/Archiso) and some additional configurations, one can build a live Arch ISO image. To recreate what I have built, download [livearch.tar.gz]({{ site.baseurl }}/misc/livearch.tar.gz), extract it with `tar -xvf livearch.tar.gz` to obtain the `livearch` folder, then `sudo chown -R root:root livearch`, and run `./build.sh -v` inside the `livearch` folder as `root`. (You may need around 25 - 30 GB of free disk space, and the package [archiso](https://wiki.archlinux.org/index.php/archiso).)
 
 ### archlinux-2020.03.14-x86_64.iso [unofficial]
 

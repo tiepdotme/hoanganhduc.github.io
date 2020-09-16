@@ -11,9 +11,9 @@
 		</a>
 	</span>
 	<a href="#">
-	Back to Top
+	{% if page.lang == "vi" %}Trở về đầu trang{% else %}Back to top{% endif %}
 	</a>
-	<br>Powered by <a href="https://jekyllrb.com/">Jekyll</a>
-	<br>The content on this site is shared under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 license</a>, unless otherwise noted
+	<br>{% if page.lang == "vi" %}Được xây dựng bằng{% else %}Powered by{% endif %} <a href="https://jekyllrb.com/">Jekyll</a>
+	<br>{% if page.lang == "vi" %}Nội dung của trang này được chia sẻ theo <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">giấy phép CC BY-SA 4.0</a>, trừ khi có ghi chú khác{% else %}The content on this site is shared under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 license</a>, unless otherwise noted{% endif %}
 </div>
   

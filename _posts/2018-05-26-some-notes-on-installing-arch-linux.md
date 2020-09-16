@@ -757,6 +757,14 @@ cd /path/to/backup/directory
 rsync -arvz -H --progress --numeric-ids $HOME/ .
 ```
 
+## Full backup with `rsync`
+
+See also the [ArchWiki](https://wiki.archlinux.org/index.php/Rsync#Full_system_backup).
+
+```bash
+rsync -aAXHv --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} / /path/to/backup
+```
+
 ## Error "Failed to start User Manager for UID 120. See `systemctl status user@120.service` for details"
 
 To resolve this error, simply press <kbd>Alt</kbd> + <kbd>F2</kbd>, login to the TTY shell as `root`, and run `systemctl restart gdm`. See [this page](https://bbs.archlinux.org/viewtopic.php?id=225817) for more information.
@@ -782,7 +790,8 @@ To restore the connection files, simply copy (as `root` user) all the backup fil
 
 ## Rollback/Restore a `pacman -Su` sytem update/upgrade with `aura`
 
-Install the `aura` or `aura-bin` or `aura-git` package using `yay`.
+Install the `aura` or `aura-bin` or `aura-git` package using `yay`. 
+(I would suggest `aura-bin`.)
 To save the list of installed packages and versions, run `sudo aura -B`.
 To select a previous restore point from date-stamped list, run `sudo aura -B --restore`.
 To remove all but the last 3 restore points, run `sudo aura -Bc 3`.
