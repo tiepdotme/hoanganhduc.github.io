@@ -28,16 +28,29 @@
 <hr>
 -->
 
+{% if page.lang == "vi" %}
 <div class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <h1>{{ page.title }}</h1>
 <div style="text-align: right	;">
-<strong>{% if page.lang == "vi" %}Khởi tạo{% else %}Created{% endif %}:</strong> {{ page.date | date: '%Y-%m-%d' }} &emsp;
-{% if page.updated %} <strong>{% if page.lang == "vi" %}Cập nhật{% else %}Updated{% endif %}:</strong> {{ page.updated | date: '%Y-%m-%d' }} &emsp; {% endif %}
-{% if page.categories %}<strong>{% if page.lang == "vi" %}Phân loại{% else %}Category{% endif %}:</strong> {{ page.categories | join: ', ' }} &emsp; {% endif %}
-<a href="#" onclick="window.print();return false;">{% if page.lang == "vi" %}In trang này{% else %}Print this page{% endif %}</a> &emsp;
-<a href="{{ site.baseurl }}/">{% if page.lang == "vi" %}Trở lại trang chủ{% else %}Back to Home{% endif %}</a>
+<strong>Khởi tạo:</strong> {{ page.date | date: '%Y-%m-%d' }} &emsp;
+{% if page.updated %} <strong>Cập nhật:</strong> {{ page.updated | date: '%Y-%m-%d' }} &emsp; {% endif %}
+{% if page.categories %}<strong>Phân loại:</strong> {{ page.categories | join: ', ' }} &emsp; {% endif %}
+<a href="#" onclick="window.print();return false;">In trang này</a> &emsp;
+<a href="{{ site.baseurl }}/">Trở lại trang chủ</a>
 </div>
+{% else %}
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<h1>{{ page.title }}</h1>
+<div style="text-align: right	;">
+<strong>Created:</strong> {{ page.date | date: '%Y-%m-%d' }} &emsp;
+{% if page.updated %} <strong>Updated:</strong> {{ page.updated | date: '%Y-%m-%d' }} &emsp; {% endif %}
+{% if page.categories %}<strong>Category:</strong> {{ page.categories | join: ', ' }} &emsp; {% endif %}
+<a href="#" onclick="window.print();return false;">Print this page</a> &emsp;
+<a href="{{ site.baseurl }}/">Back to Home</a>
+</div>
+{% endif %}
 <hr>
 
 {{ content }}
